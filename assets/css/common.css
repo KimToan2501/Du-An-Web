@@ -1,0 +1,126 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+/* Start: Header */
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#header {
+    background-color: #F2E2FF;
+}
+
+#header > div {
+    /* Căn nội dung header cùng nằm trên một hàng ngang */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Căn giữa các phần tử */
+    padding: 33px 0;
+}
+
+/* Start: Logo */
+
+#header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 13px;
+}
+
+/* End: Logo */
+
+/* Start: Navigation */
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item > a {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #999999;
+    padding: 0 16px;
+}
+
+/* Ghi đè khi mà có class active */
+.nav-link-item.active > a {
+    color: #410075;
+}
+
+/* End: Navigation */
+
+/* Start: Icon + Action */
+
+#header-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.icon-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: #E5C3FF;
+    /* Căn icon vô giữa hình tròn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-links {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #999999;
+}
+
+.auth-link {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #999999;
+}
+
+/* End: Icon + Action */
+
+/* End: Header */
+
+/* Start: Main */
+
+main {
+    height: 200px;
+}
+
+/* End: Main */
+
+/* Start: Footer */
+.footer {
+    background-image: url(../images/footer/background.svg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0;
+}
+/* End: Footer */
