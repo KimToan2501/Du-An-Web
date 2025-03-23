@@ -183,6 +183,7 @@ body {
 
 .pawspa-form__checkbox {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
     font-size: 14px;
@@ -217,14 +218,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 }
 
 .pawspa-btn--primary {
     background-color: #410075;
     color: #FFFFFF;
     font-size: 18px;
-    font-weight: 500;
+    line-height: 22px;
+    color: #999999;
 }
 
 .pawspa-btn--primary:hover {
