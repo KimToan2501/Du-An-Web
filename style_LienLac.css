@@ -1,107 +1,184 @@
-body {
+:root {
+    --primary-purple-dark: #410075;
+    --primary-purple-light: #E5C3FF;
+    --neutral-gray: #999;
+    --header-bg: #F2E2FF;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-.header
-{
-    background: #F2E2FF;
-    display: flex;
-    height: 111px;
-    padding: 0px 120px;
-    justify-content: space-between;
-    align-items: center;
-}   
-.logo {
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-.logo p
-{
-    width: 117px;
-    height: 25px;
-    flex-shrink: 0;
-    color: #410075;
-    text-align: center;
-    font-family: Audiowide;
+  }
+  
+  /* Header styles */
+  .header-main {
+    background: var(--header-bg);
+  }
+  
+  .header-logo {
+    font-family: 'Audiowide', cursive;
     font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px; /* 166.667% */
-}
-.header h1 {
-    margin: 0;
-    font-size: 24px;
-    padding-left: 20px;
-}
-.header nav {
+    color: var(--primary-purple-dark);
+  }
+  
+  .header-nav-link {
+    color: var(--neutral-gray);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 0;
+    display: inline-block;
+  }
+  
+  .header-nav-link:hover, 
+  .header-nav-link.active {
+    color: var(--primary-purple-dark);
+    font-weight: 600;
+  }
+  
+  .header-auth-link {
+    color: var(--neutral-gray);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .header-auth-link:hover {
+    text-decoration: underline;
+  }
+  /* Icon container styles */
+  .info {
     display: flex;
-    gap: 20px;
-    padding-right: 20px;
-}
-.header nav a {
-    color: var(--Neutral-300, #999);
-    display: flex;
-    padding: 15px 0px;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    text-decoration: none;
-}
-.header nav a:hover {
-    text-decoration: none;
-    color: var(--Primary-Purple3, #410075);
-}
-.header .info {
-    display: flex;
     gap: 20px;
-    font-size: 14px;
-    padding-right: 20px;
-}
-.icon_container {
-    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
-    width: 44px; /* Chiều rộng của container */
-    height: 44px; /* Chiều cao của container */
-    padding: 10px 12px; /* Padding bên trong container */
-    justify-content: center; /* Căn giữa các phần tử con theo chiều ngang */
-    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
-    gap: 10px; /* Khoảng cách giữa các phần tử con */
-}
-.icon_thongbao, .icon_giohang {
+  }
+  
+  .icon_container {
     display: flex;
-width: 44px;
-height: 44px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-
-}
-.icon_thongbao img, .icon_giohang img {
-    padding: 5px;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+  
+  .icon_container a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 10px 12px;
     border-radius: 300px;
     background: var(--Primary-Purple4, #E5C3FF);
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
-}   
-.auth_links {
+    
+  }
+  
+  .icon_container img {
+    
+    object-fit: contain;
+  }
+  
+  .auth_links {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-
-.auth_links a {
-    color: var(--Neutral-300, #999);
-text-align: center;
-font-family: Nunito;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 22px; /* 122.222% */
-text-decoration: none;
-}
-
-.auth_links a:hover {
+  }
+  
+  .auth_links a {
+    color: var(--neutral-gray);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .auth_links a:hover {
+    color: var(--primary-purple-dark);
     text-decoration: underline;
+  }
+  
+  /* Menu mobile styles - CHỈ HIỆN TRÊN MOBILE */
+  .navbar-collapse {
+    display: none;
+    background-color: var(--header-bg);
+    padding: 0 15px;
+  }
+  /* Button styles */
+  .btn-purple {
+    background-color: var(--primary-purple-dark);
+    color: white;
+  }
+  
+  .btn-purple:hover {
+    background-color: #350060;
+    color: white;
+  }
+  
+  /* Text color */
+  .text-purple {
+    color: var(--primary-purple-dark);
+  }
+  
+  /* Footer background */
+  footer {
+    background-color: var(--header-bg);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    /* Trên mobile - hiển thị menu dạng danh sách */
+    body {
+      padding-top: 80px; /* Tạo khoảng trống cho fixed header */
+    }
+    
+    .header-main {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1020;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-collapse.show {
+      display: block;
+      max-height: 500px;
+      padding: 15px;
+    }
+    
+    #navbarCollapse .header-nav-link {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* Trên desktop - ẩn menu mobile */
+    .navbar-collapse {
+      display: none !important;
+    }
+    
+    /* Hiển thị menu ngang */
+    .header-nav-desktop {
+      display: flex !important;
+    }
+  }
+.btn
+{
+    background-color: #410075;
+}
+.btn-primary-purple-dark 
+{
+    background-color: #410075;
 }
