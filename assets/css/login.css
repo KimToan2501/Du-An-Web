@@ -1,0 +1,115 @@
+.form-login {
+    display: flex;
+    margin-top: 85px;
+    margin-bottom: 96px;
+}
+
+.form-login > form {
+    flex: 50%;
+    padding: 60px;
+    background-color: #FBF6FF;
+    border-radius: 20px;
+}
+
+.form-login-title {
+    position: relative;
+}
+
+.form-login-title > img {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-title {
+    text-transform: uppercase;
+    color: #410075;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.form-description {
+    color: #595959;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.login-background {
+    flex: 50%;
+}
+
+.form-login-action {
+    margin-top: 50px;
+}
+
+.login-link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #595959;
+}
+
+.login-or {
+    color: #999999;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.login-or::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: #999999;
+}
+
+.login-or::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: #999999;
+}
+
+.btn-login {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.login-background {
+    position: relative;
+    background-color: #70B2C0;
+    padding: 40px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.login-background > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+}
+
+.login-background > p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.login-background > div > img {
+}

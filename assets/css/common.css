@@ -103,9 +103,9 @@ body {
 
 /* Start: Main */
 
-main {
+/* main {
     height: 1000px;
-}
+} */
 
 /* End: Main */
 
@@ -243,3 +243,54 @@ main {
 /* End: Hình con chó */
 
 /* End: Footer */
+
+/* Start: Form input */
+
+.form-input {
+    border-radius: 10px;
+    padding: 16px 20px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #CCCCCC;
+}
+
+.form-group {
+    margin-bottom: 31px;
+}
+
+.form-checkbox {
+    display: flex;
+}
+
+.form-checkbox > label {
+    margin-left: 10px;
+    color: #595959;
+    font-size: 12px;
+}
+
+/* End: Form input */
+
+.btn {
+    outline: none;
+    border: 0;
+    padding: 12px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn.btn-primary {
+    background-color: #410075;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn.btn-outline {
+    color: #595959;
+    border: 1px solid #CCCCCC;
+}
