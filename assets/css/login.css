@@ -82,9 +82,6 @@
     padding: 40px 30px;
     border-radius: 20px;
     margin-left: 20px;
-}
-
-.login-background > div {
     display: flex;
     flex-direction: column;
     position: relative;
