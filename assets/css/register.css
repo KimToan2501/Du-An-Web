@@ -1,6 +1,6 @@
 /* Start: Login Form Wrapper */
 
-.login-form {
+.register-form {
     display: flex;
     margin-top: 85px;
     margin-bottom: 96px;
@@ -8,7 +8,7 @@
 
 /* Start: Login Form */
 
-.login-form-body {
+.register-form-body {
     flex: 50%;
     padding: 60px;
     background-color: #FBF6FF;
@@ -17,37 +17,29 @@
 
 /* Start: Header */
 
-.login-form-header {
+.register-form-header {
     position: relative;
+    margin-bottom: 36px;
 }
 
-.login-form-icon {
+.register-form-icon {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.login-form-brand {
+.register-form-title {
     text-transform: uppercase;
     color: #410075;
     font-weight: bold;
     font-size: 36px;
 }
 
-.login-form-description {
-    color: #595959;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 22px;
-    margin-top: 15px;
-    margin-bottom: 50px;
-}
-
 /* End: Header */
 
 /* Start: Input */
-.login-form-group {
+.register-form-group {
     margin-bottom: 31px;
 }
 
@@ -55,13 +47,13 @@
 
 /* Start: Action */
 
-.login-form-action {
+.register-form-action {
     margin-top: 50px;
 }
 
 /* Start: Register Link */
 
-.login-form-link {
+.register-form-link {
     margin-top: 10px;
     text-align: center;
     font-size: 18px;
@@ -75,13 +67,13 @@
 /* End: Login Form */
 
 /* Start: Background Visual */
-.login-form-background {
+.register-form-background {
     flex: 50%;
     background: radial-gradient(circle at center,
             #ffffff 0%,
             #d7f1f6 25%,
-            #a6dce6 50%,
-            #70b2c0 100%);
+            #A1BE97 50%,
+            #A1BE97 100%);
 
     padding: 40px 30px;
     border-radius: 20px;
@@ -95,7 +87,7 @@
     overflow: hidden;
 }
 
-.login-form-slogan {
+.register-form-slogan {
     font-size: 28px;
     font-weight: bold;
     color: #ffffff;
@@ -105,13 +97,13 @@
     max-width: 400px;
 }
 
-.login-form-background-img {
+.register-form-background-img {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-form-background-img img {
+.register-form-background-img img {
     max-width: 100%;
     height: auto;
     object-fit: contain;

@@ -16,7 +16,8 @@
 
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/register.css">
+    <title>Đăng ký</title>
 </head>
 
 <body>
@@ -72,7 +73,95 @@
     <!-- End: Header -->
 
     <!-- Start: Main -->
-    <main>
+    <main class="container">
+
+        <!-- Start: Login Form Wrapper -->
+        <div class="register-form">
+            <!-- Start: Login Form -->
+            <form class="register-form-body" action="#">
+
+                <!-- Start: Header -->
+                <div class="register-form-header">
+                    <h3 class="register-form-title">Đăng ký</h3>
+                    <img src="../assets/images/Union01.svg" alt="" class="register-form-icon">
+                </div>
+                <!-- End: Header -->
+
+                <!-- Start: Input - Full name -->
+                <div class="register-form-group">
+                    <input type="text" class="form-input" placeholder="Họ và tên" required aria-label="Họ và tên"
+                        aria-hidden="true">
+                </div>
+                <!-- End: Input - Full name -->
+
+                <!-- Start: Input - Phone number -->
+                <div class="register-form-group">
+                    <input type="text" class="form-input" placeholder="Số điện thoại" required aria-label="Số điện thoại"
+                        aria-hidden="true">
+                </div>
+                <!-- End: Input - Phone number -->
+
+                <!-- Start: Input - Email -->
+                <div class="register-form-group">
+                    <input type="text" class="form-input" placeholder="Email" required aria-label="Email"
+                        aria-hidden="true">
+                </div>
+                <!-- End: Input - Email -->
+
+                <!-- Start: Input - Password -->
+                <div class="register-form-group">
+                    <input type="text" class="form-input" placeholder="Mật khẩu" required aria-label="Mật khẩu"
+                        aria-hidden="true">
+                </div>
+                <!-- End: Input - Password -->
+
+                <!-- Start: Actions -->
+                <div class="register-form-action">
+                    <input type="submit" value="Xác nhận" class="btn btn-primary">
+
+                    <!-- Start: Register Link -->
+                    <p class="register-form-link">
+                        Bạn đã có tài khoản ?
+                        <a href="./login.html" class="register-form-link-highlight">Đăng nhập</a>
+                    </p>
+                    <!-- End: Register Link -->
+
+                    <!-- Start: OR Separator -->
+                    <div class="form-separator">
+                        <span>Or</span>
+                    </div>
+                    <!-- End: OR Separator -->
+
+                    <!-- Start: Social Login Buttons -->
+                    <a href="#" class="btn btn-outline btn-login">
+                        <img src="../assets/images/icons/social-media/google.svg" alt="">
+                        Đăng nhập bằng google
+                    </a>
+                    <a href="#" class="btn btn-outline btn-login">
+                        <img src="../assets/images/icons/social-media/facebook.svg" alt="">
+                        Đăng nhập bằng facebook
+                    </a>
+                    <!-- End: Social Login Buttons -->
+
+                </div>
+                <!-- End: Actions -->
+
+            </form>
+            <!-- End: Login Form -->
+
+            <!-- Start: Background Visual -->
+            <div class="register-form-background">
+                <p class="register-form-slogan">
+                    Become a member today and help protect animals!
+                </p>
+                <div class="register-form-background-img">
+                    <img src="../assets/images/pngwing02.svg" alt="Chó và mèo nhìn nhau">
+                </div>
+            </div>
+            <!-- End: Background Visual -->
+
+        </div>
+        <!-- End: Login Form Wrapper -->
 
     </main>
     <!-- End: Main -->
