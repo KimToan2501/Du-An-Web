@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/register.css">
+    <link rel="stylesheet" href="../assets/css/form.css" />
+
+
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.min.css" />
     <title>Đăng ký</title>
 </head>
 
@@ -75,10 +80,10 @@
     <!-- Start: Main -->
     <main class="container">
 
-        <!-- Start: Login Form Wrapper -->
-        <div class="register-form">
-            <!-- Start: Login Form -->
-            <form class="register-form-body" action="#">
+        <!-- Start: Register Form Wrapper -->
+        <div class="form-wrapper">
+            <!-- Start: Register Form -->
+            <form id="register-form" class="form-body" action="#">
 
                 <!-- Start: Header -->
                 <div class="register-form-header">
@@ -88,39 +93,46 @@
                 <!-- End: Header -->
 
                 <!-- Start: Input - Full name -->
-                <div class="register-form-group">
-                    <input type="text" class="form-input" placeholder="Họ và tên" required aria-label="Họ và tên"
-                        aria-hidden="true">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Họ và tên" required aria-label="Họ và tên">
                 </div>
                 <!-- End: Input - Full name -->
 
                 <!-- Start: Input - Phone number -->
-                <div class="register-form-group">
-                    <input type="text" class="form-input" placeholder="Số điện thoại" required aria-label="Số điện thoại"
-                        aria-hidden="true">
+                <div class="form-group">
+                    <input id="phone" name="phone" type="tel" class="form-input" placeholder="Số điện thoại" required>
                 </div>
                 <!-- End: Input - Phone number -->
 
+                <!-- Input ẩn để gửi về backend -->
+                <input type="hidden" name="phone_full" id="phone_full" />
+
                 <!-- Start: Input - Email -->
-                <div class="register-form-group">
-                    <input type="text" class="form-input" placeholder="Email" required aria-label="Email"
-                        aria-hidden="true">
+                <div class="form-group">
+                    <input type="email" class="form-input" placeholder="Email" required aria-label="Email">
                 </div>
                 <!-- End: Input - Email -->
 
                 <!-- Start: Input - Password -->
-                <div class="register-form-group">
-                    <input type="text" class="form-input" placeholder="Mật khẩu" required aria-label="Mật khẩu"
-                        aria-hidden="true">
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Mật khẩu" required minlength="6"
+                        aria-label="Mật khẩu">
                 </div>
                 <!-- End: Input - Password -->
 
+                <!-- Start: Input - Confirm password -->
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Nhập lại mật khẩu" required minlength="6"
+                        aria-label="Nhập lại mật khẩu">
+                </div>
+                <!-- End: Input - Confirm password -->
+
                 <!-- Start: Actions -->
-                <div class="register-form-action">
+                <div class="form-action">
                     <input type="submit" value="Xác nhận" class="btn btn-primary">
 
                     <!-- Start: Register Link -->
-                    <p class="register-form-link">
+                    <p class="form-link">
                         Bạn đã có tài khoản ?
                         <a href="./login.html" class="register-form-link-highlight">Đăng nhập</a>
                     </p>
@@ -147,21 +159,21 @@
                 <!-- End: Actions -->
 
             </form>
-            <!-- End: Login Form -->
+            <!-- End: Register Form -->
 
             <!-- Start: Background Visual -->
-            <div class="register-form-background">
-                <p class="register-form-slogan">
+            <div class="form-background register-form-background">
+                <p class="form-slogan">
                     Become a member today and help protect animals!
                 </p>
-                <div class="register-form-background-img">
+                <div class="form-background-img">
                     <img src="../assets/images/pngwing02.svg" alt="Chó và mèo nhìn nhau">
                 </div>
             </div>
             <!-- End: Background Visual -->
 
         </div>
-        <!-- End: Login Form Wrapper -->
+        <!-- End: Register Form Wrapper -->
 
     </main>
     <!-- End: Main -->
@@ -250,6 +262,10 @@
         </div>
     </footer>
     <!-- End: Footer -->
+
+    <!-- intl-tel-input JS -->
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
+    <script src="../assets/js/intl-phone.js"></script>
 </body>
 
 </html>

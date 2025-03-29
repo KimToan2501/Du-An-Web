@@ -1,19 +1,6 @@
 /* Start: Login Form Wrapper */
 
-.login-form {
-    display: flex;
-    margin-top: 85px;
-    margin-bottom: 96px;
-}
-
 /* Start: Login Form */
-
-.login-form-body {
-    flex: 50%;
-    padding: 60px;
-    background-color: #FBF6FF;
-    border-radius: 20px;
-}
 
 /* Start: Header */
 
@@ -46,32 +33,6 @@
 
 /* End: Header */
 
-/* Start: Input */
-.login-form-group {
-    margin-bottom: 31px;
-}
-
-/* End: Input */
-
-/* Start: Action */
-
-.login-form-action {
-    margin-top: 50px;
-}
-
-/* Start: Register Link */
-
-.login-form-link {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 18px;
-    color: #595959;
-}
-
-/* End: Register Link */
-
-/* End: Action */
-
 /* End: Login Form */
 
 /* Start: Background Visual */
@@ -93,28 +54,6 @@
     text-align: center; */
     position: relative;
     overflow: hidden;
-}
-
-.login-form-slogan {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    line-height: 1.4;
-    max-width: 400px;
-}
-
-.login-form-background-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-form-background-img img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
 }
 
 /* End: Background Visual */
