@@ -74,30 +74,74 @@
 
     <!-- Start: Main -->
     <main class="container">
-        <div class="form-login">
-            <form action="#">
-                <div class="form-login-title">
-                    <h3 class="form-title">Pawspa</h3>
-                    <p class="form-description">Nơi mang đến dịch vụ chăm sóc thú cưng uy tín hàng đầu Việt Nam</p>
-                    <img src="../assets/images/Union01.svg" alt="">
+
+        <!-- Start: Login Form Wrapper -->
+        <div class="login-form">
+            <!-- Start: Login Form -->
+            <form class="login-form-body" action="#">
+
+                <!-- Start: Header -->
+                <div class="login-form-header">
+                    <h3 class="login-form-brand">Pawspa</h3>
+                    <p class="login-form-description">Nơi mang đến dịch vụ chăm sóc thú cưng uy tín hàng đầu Việt Nam</p>
+                    <img src="../assets/images/Union01.svg" alt="" class="login-form-icon">
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Tên đăng nhập" class="form-input">
+                <!-- End: Header -->
+                
+                <!-- Start: Input - Username -->
+                <div class="login-form-group">
+                    <input
+                        type="text" 
+                        class="form-input"
+                        placeholder="Tên đăng nhập" 
+                        required
+                        aria-label="Tên đăng nhập"
+                        aria-hidden="true"
+                        >
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Mật khẩu" class="form-input">
+                <!-- End: Input - Username -->
+                
+                <!-- Start: Input - Password -->
+                <div class="login-form-group">
+                    <input
+                        type="text" 
+                        class="form-input"
+                        placeholder="Mật khẩu" 
+                        required
+                        aria-label="Mật khẩu"
+                        aria-hidden="true"
+                        >
                 </div>
+                <!-- End: Input - Password -->
+                
+                <!-- Start: Checkbox Remember -->
                 <div class="form-checkbox">
-                    <input type="checkbox" id="ghi-nho">
-                    <label for="ghi-nho">Luôn ghi nhớ ?</label>
+                    <input type="checkbox" id="remember-me" class="form-checkbox-input">
+                    <label for="remember-me" class="form-checkbox-label">Luôn ghi nhớ ?</label>
                 </div>
-                <div class="form-login-action">
-                    <input type="submit" value="Đăng nhập" class="btn btn-primary">
-                    <p class="login-link">
+                <!-- End: Checkbox Remember -->
+                
+                <!-- Start: Actions -->
+                <div class="login-form-action">
+                    <input 
+                        type="submit" 
+                        value="Đăng nhập" 
+                        class="btn btn-primary">
+
+                    <!-- Start: Register Link -->
+                    <p class="login-form-link">
                         Bạn chưa có tài khoản ?
-                        <a href="./register.html">Đăng ký</a>
+                        <a href="./register.html" class="login-form-link-highlight">Đăng ký</a>
                     </p>
-                    <p class="login-or">Or</p>
+                    <!-- End: Register Link -->
+                    
+                    <!-- Start: OR Separator -->
+                     <div class="login-form-separator">
+                        <span>Or</span>
+                     </div>
+                    <!-- End: OR Separator -->
+                    
+                    <!-- Start: Social Login Buttons -->
                     <a href="#" class="btn btn-outline btn-login">
                         <img src="../assets/images/icons/social-media/google.svg" alt="">
                         Đăng nhập bằng google
@@ -106,17 +150,28 @@
                         <img src="../assets/images/icons/social-media/facebook.svg" alt="">
                         Đăng nhập bằng facebook
                     </a>
+                    <!-- End: Social Login Buttons -->
+                    
                 </div>
+                <!-- End: Actions -->
+                
             </form>
-            <!-- Strat: Background -->
-            <div class="login-background">
-                <p>Healthy pets bring joy and enrich your life.</p>
-                <div>
-                    <img src="../assets/images/pngwing.svg" alt="">
+            <!-- End: Login Form -->
+            
+            <!-- Start: Background Visual -->
+            <div class="login-form-background">
+                <p class="login-form-slogan">
+                    Healthy pets bring joy and enrich your life.
+                </p>
+                <div class="login-form-background-img">
+                    <img src="../assets/images/pngwing.svg" alt="Chó con giơ tay chào">
                 </div>
             </div>
-            <!-- End: Background -->
+            <!-- End: Background Visual -->
+            
         </div>
+        <!-- End: Login Form Wrapper -->
+        
     </main>
     <!-- End: Main -->
 
