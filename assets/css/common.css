@@ -332,36 +332,3 @@ body {
     font-weight: bold;
     font-size: 16px;
 }
-
-/* Start: OR Separator */
-
-.form-separator {
-    color: #999999;
-    font-size: 12px;
-    position: relative;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.form-separator::after {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    content: "";
-    width: 40%;
-    height: 1.8px;
-    background-color: #999999;
-}
-
-.form-separator::before {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    content: "";
-    width: 40%;
-    height: 1.8px;
-    background-color: #999999;
-}
-
-/* End: OR Separator */

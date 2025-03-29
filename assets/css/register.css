@@ -1,19 +1,6 @@
-/* Start: Login Form Wrapper */
+/* Start: Register Form Wrapper */
 
-.register-form {
-    display: flex;
-    margin-top: 85px;
-    margin-bottom: 96px;
-}
-
-/* Start: Login Form */
-
-.register-form-body {
-    flex: 50%;
-    padding: 60px;
-    background-color: #FBF6FF;
-    border-radius: 20px;
-}
+/* Start: Register Form */
 
 /* Start: Header */
 
@@ -39,32 +26,32 @@
 /* End: Header */
 
 /* Start: Input */
-.register-form-group {
-    margin-bottom: 31px;
+
+/* Tăng chiều rộng của input bên trong thư viện */
+.iti {
+    width: 100%;
+}
+
+.iti__tel-input {
+    width: 100%;
+    padding-left: 90px !important;
+    /* Dời text sang phải để không đè lên cờ + mã vùng */
+    box-sizing: border-box;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: #fff;
+    /* Màu nền cùng màu input */
+    border-right: 1px solid #ccc;
+}
+
+.iti__flag-container {
+    padding-left: 10px;
 }
 
 /* End: Input */
 
-/* Start: Action */
-
-.register-form-action {
-    margin-top: 50px;
-}
-
-/* Start: Register Link */
-
-.register-form-link {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 18px;
-    color: #595959;
-}
-
-/* End: Register Link */
-
-/* End: Action */
-
-/* End: Login Form */
+/* End: Register Form */
 
 /* Start: Background Visual */
 .register-form-background {
@@ -87,29 +74,7 @@
     overflow: hidden;
 }
 
-.register-form-slogan {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    line-height: 1.4;
-    max-width: 400px;
-}
-
-.register-form-background-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.register-form-background-img img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
 /* End: Background Visual */
 
 
-/* End: Login Form Wrapper */
+/* End: Register Form Wrapper */
