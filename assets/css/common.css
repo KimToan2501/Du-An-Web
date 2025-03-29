@@ -231,13 +231,14 @@ main {
     right: 0;
     left: 0;
     transform: rotate(30deg);
+    overflow: hidden;
 }
 
 .footer-image > div > div > img {
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-30deg) scale(1.4) rotateY(180deg);
+    transform: translate(-50%, -50%) rotate(-20deg) scale(1.4) rotateY(180deg);
 }
 /* End: Hình con chó */
 
