@@ -1,35 +1,41 @@
-.form-login {
+/* Start: Login Form Wrapper */
+
+.login-form {
     display: flex;
     margin-top: 85px;
     margin-bottom: 96px;
 }
 
-.form-login > form {
+/* Start: Login Form */
+
+.login-form-body {
     flex: 50%;
     padding: 60px;
     background-color: #FBF6FF;
     border-radius: 20px;
 }
 
-.form-login-title {
+/* Start: Header */
+
+.login-form-header {
     position: relative;
 }
 
-.form-login-title > img {
+.login-form-icon {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.form-title {
+.login-form-brand {
     text-transform: uppercase;
     color: #410075;
     font-weight: bold;
     font-size: 36px;
 }
 
-.form-description {
+.login-form-description {
     color: #595959;
     font-weight: 300;
     font-size: 18px;
@@ -38,22 +44,35 @@
     margin-bottom: 50px;
 }
 
-.login-background {
-    flex: 50%;
+/* End: Header */
+
+/* Start: Input */
+.login-form-group {
+    margin-bottom: 31px;
 }
 
-.form-login-action {
+/* End: Input */
+
+/* Start: Action */
+
+.login-form-action {
     margin-top: 50px;
 }
 
-.login-link {
+/* Start: Register Link */
+
+.login-form-link {
     margin-top: 10px;
     text-align: center;
     font-size: 18px;
     color: #595959;
 }
 
-.login-or {
+/* End: Register Link */
+
+/* Start: OR Separator */
+
+.login-form-separator {
     color: #999999;
     font-size: 12px;
     position: relative;
@@ -62,54 +81,83 @@
     margin-bottom: 10px;
 }
 
-.login-or::after {
+.login-form-separator::after {
     position: absolute;
     top: 50%;
     left: 0;
     content: "";
     width: 40%;
-    height: 1px;
+    height: 1.8px;
     background-color: #999999;
 }
 
-.login-or::before {
+.login-form-separator::before {
     position: absolute;
     top: 50%;
     right: 0;
     content: "";
     width: 40%;
-    height: 1px;
+    height: 1.8px;
     background-color: #999999;
 }
+
+/* End: OR Separator */
+
+/* End: Action */
+
+/* End: Login Form */
+
+/* Start: Background Visual */
+.login-form-background {
+    flex: 50%;
+    background: radial-gradient(circle at center,
+            #ffffff 0%,
+            #d7f1f6 25%,
+            #a6dce6 50%,
+            #70b2c0 100%);
+
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: center;
+    text-align: center; */
+    position: relative;
+    overflow: hidden;
+}
+
+.login-form-slogan {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    line-height: 1.4;
+    max-width: 400px;
+}
+
+.login-form-background-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-background-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* End: Background Visual */
+
+
+/* End: Login Form Wrapper */
 
 .btn-login {
     margin-bottom: 10px;
     text-transform: capitalize;
     font-weight: bold;
     font-size: 16px;
-}
-
-.login-background {
-    position: relative;
-    background-color: #70B2C0;
-    padding: 40px;
-    border-radius: 20px;
-    margin-left: 20px;
-}
-
-.login-background > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 56px;
-}
-
-.login-background > p {
-    font-size: 28px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-transform: uppercase;
-}
-
-.login-background > div > img {
 }
