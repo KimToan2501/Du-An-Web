@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_LienLac.css">
+    <link rel="stylesheet" href="style_LienLac.css">    
     <link rel="stylesheet" href="./asset/bootstrap/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 
     <title>LienLac</title>
+    <style>
+        /* Button styles */
+  
+  .btn-purple {
+    background-color: var(--primary-purple-dark);
+    color: white;
+  }
+  
+  .btn-purple:hover {
+    background-color: #350060;
+    color: white;
+  }
+  
+  /* Text color */
+  .text-purple {
+    color: var(--primary-purple-dark);
+  }
+  
+  /* Footer background */
+  footer {
+    background-color: var(--header-bg);
+  }
+    </style>
 </head>
 <body> 
     <!-- Phần header -->
@@ -86,88 +109,94 @@
         </div>
     </div>
 </main>
-<footer id="footer">
-    <div class="container footer-container">
-        <div class="footer-info">
-            <img src="./assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
-            <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm
-                sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
-            <div class="footer-contact">
-                <div class="contact-item">
-                    <img src="./assets/images/icons/letter.svg" alt="Email" aria-label="Email icon"
-                        class="contact-icon">
-                    <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <img src="./assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon"
-                        class="contact-icon">
-                    <a href="tel:0345663153" class="contact-address">0345663153</a>
-                </div>
+<footer class="py-5">
+    <div class="container">
+    <!-- Nội dung footer giữ nguyên -->
+        <div class="row g-4">
+            <h2>hello</h2>
+            <div class="col-lg-5">
+                <div class="d-flex align-items-start">
+                    <img alt="Paw logo" class="h-10" src="./IMG/Union.svg" style="width: 40px; height: 40px;"/>
+                    <div class="ms-3">
+                        <p class="text-dark">
+                            Chào mừng đến với PAWSPA! Chúng tôi cung cấp các dịch vụ chăm sóc cho thú cưng của bạn
+                        </p>
+            <div class="d-flex flex-wrap gap-3 mt-2">
+                <a class="text-dark text-decoration-none" href="mailto:anhdanskyn@gmail.com">
+                  <i class="fas fa-envelope me-1"></i>
+                  anhdanskyn@gmail.com
+                </a>
+                <a class="text-dark text-decoration-none" href="mailto:thienphuc033@gmail.com">
+                  <i class="fas fa-envelope me-1"></i>
+                  thienphuc033@gmail.com
+                </a>
+                <a class="text-dark text-decoration-none" href="tel:+84938772146">
+                  <i class="fas fa-phone me-1"></i>
+                  +84938772146
+                </a>
+                <a class="text-dark text-decoration-none" href="tel:+84909403482">
+                  <i class="fas fa-phone me-1"></i>
+                  +84909403482
+                </a>
+              </div>
+              <div class="d-flex gap-3 mt-2">
+                <a class="text-dark" href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a class="text-dark" href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a class="text-dark" href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
             </div>
-            <div class="footer-social">
-                <a href="#" title="Instagram">
-                    <img src="./assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
-                </a>
-                <a href="#" title="Facebook">
-                    <img src="./assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
-                </a>
-                <a href="#" title="LinkedIn">
-                    <img src="./assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
-                </a>
-            </div>
+          </div>
         </div>
+            <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="text-purple fw-bold mb-3">Dịch vụ</h3>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a class="text-dark text-decoration-none" href="#">Spa</a>
+                            </li>
+                            <li>
+                                <a class="text-dark text-decoration-none" href="#">Chăm sóc sức khỏe</a>
+                            </li>
+                            <li>
+                                <a class="text-dark text-decoration-none" href="#">Khách sạn lưu trú</a>
+                            </li>
+                        </ul>
+            </div>
+            
+                    <div class="col-md-6">
+                        <h3 class="text-purple fw-bold mb-3">Nền tảng</h3>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li>
+                                <a class="text-dark text-decoration-none" href="#">Dịch vụ</a>
+                            </li>
+                            <li>
+                                <a class="text-dark text-decoration-none" href="#">Blog/Tin tức</a>
+                            </li>
+                            <li>
+                                <a class="text-dark text-decoration-none" href="#">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a class="text-dark text-decoration-none" href="#">Liên lạc</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="col-lg-2 d-flex justify-content-center">
+          <img alt="Dog with a hat" class="img-fluid rounded" src="https://placehold.co/100x100"/>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        <!-- Strat: Hình con chó ở Footer -->
-        <div class="footer-image">
-            <div>
-                <div>
-                    <img src="./assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
-                </div>
-            </div>
-        </div>
-        <!-- End: Hình con chó ở Footer -->
-
-        <div class="footer-category">
-            <div class="footer-category-item">
-                <h3 class="category-title">Dịch vụ</h3>
-                <ul class="category-list">
-                    <li class="category-list-item">
-                        <a href="#" class="category-item-link">Spa</a>
-                    </li>
-                    <li class="category-list-item">
-                        <a href="#" class="category-item-link">Cắt tỉa lông</a>
-                    </li>
-                    <li class="category-list-item">
-                        <a href="#" class="category-item-link">Khách sạn lưu trú</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-category-item">
-                <h3 class="category-title">Nền tảng</h3>
-                <ul class="category-list">
-                    <li class="category-list-item">
-                        <a href="#" class="category-item-link">Dịch vụ</a>
-                    </li>
-                    <li class="category-list-item">
-                        <a href="#" class="category-item-link">Blog/Tin tức</a>
-                    </li>
-                    <li class="category-list-item">
-                        <a href="#" class="category-item-link">Giới thiệu</a>
-                    </li>
-                    <li class="category-list-item">
-                        <a href="#" class="category-item-link">Liên lạc</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-image-left">
-        <img src="./assets/images/footer/footer-01.svg" alt="">
-    </div>
-    <div class="footer-image-right">
-        <img src="./assets/images/footer/footer-02.svg" alt="">
-    </div>
-</footer>
 <!-- End: Footer -->
 
     <script src="./asset/bootstrap/js/bootstrap.bundle.min.js"></script>
