@@ -1,0 +1,157 @@
+:root {
+    --primary-purple-dark: #410075;
+    --primary-purple-light: #E5C3FF;
+    --neutral-gray: #999;
+    --header-bg: #F2E2FF;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header styles */
+  .header-main {
+    background: var(--header-bg);
+  }
+  
+  .header-logo {
+    font-family: 'Audiowide', cursive;
+    font-size: 18px;
+    color: var(--primary-purple-dark);
+  }
+  
+  .header-nav-link {
+    color: var(--neutral-gray);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 0;
+    display: inline-block;
+  }
+  
+  .header-nav-link:hover, 
+  .header-nav-link.active {
+    color: var(--primary-purple-dark);
+    font-weight: 600;
+  }
+  
+  .header-auth-link {
+    color: var(--neutral-gray);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .header-auth-link:hover {
+    text-decoration: underline;
+  }
+  /* Icon container styles */
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .icon_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+  
+  .icon_container a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 10px 12px;
+    border-radius: 300px;
+    background: var(--Primary-Purple4, #E5C3FF);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.10);
+    
+  }
+  
+  .icon_container img {
+    
+    object-fit: contain;
+  }
+  
+  .auth_links {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .auth_links a {
+    color: var(--neutral-gray);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .auth_links a:hover {
+    color: var(--primary-purple-dark);
+    text-decoration: underline;
+  }
+  
+  /* Menu mobile styles - CHỈ HIỆN TRÊN MOBILE */
+  .navbar-collapse {
+    display: none;
+    background-color: var(--header-bg);
+    padding: 0 15px;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    /* Trên mobile - hiển thị menu dạng danh sách */
+    body {
+      padding-top: 80px; /* Tạo khoảng trống cho fixed header */
+    }
+    
+    .header-main {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1020;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-collapse.show {
+      display: block;
+      max-height: 500px;
+      padding: 15px;
+    }
+    
+    #navbarCollapse .header-nav-link {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    /* Trên desktop - ẩn menu mobile */
+    .navbar-collapse {
+      display: none !important;
+    }
+    
+    /* Hiển thị menu ngang */
+    .header-nav-desktop {
+      display: flex !important;
+    }
+  }
