@@ -101,26 +101,7 @@
     background-color: var(--header-bg);
     padding: 0 15px;
   }
-  /* Button styles */
-  .btn-purple {
-    background-color: var(--primary-purple-dark);
-    color: white;
-  }
   
-  .btn-purple:hover {
-    background-color: #350060;
-    color: white;
-  }
-  
-  /* Text color */
-  .text-purple {
-    color: var(--primary-purple-dark);
-  }
-  
-  /* Footer background */
-  footer {
-    background-color: var(--header-bg);
-  }
   
   /* Responsive adjustments */
   @media (max-width: 991.98px) {
@@ -174,11 +155,3 @@
       display: flex !important;
     }
   }
-.btn
-{
-    background-color: #410075;
-}
-.btn-primary-purple-dark 
-{
-    background-color: #410075;
-}
