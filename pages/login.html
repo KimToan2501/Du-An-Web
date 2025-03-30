@@ -14,10 +14,14 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
 
+    <!-- CSS dùng chung -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
+
+    <!-- CSS khác -->
     <link rel="stylesheet" href="../assets/css/login.css">
-    <link rel="stylesheet" href="../assets/css/form.css" />
 
     <title>Đăng nhập</title>
 </head>
@@ -25,9 +29,9 @@
 <body>
     <!-- Start: Header -->
     <header id="header">
-        <div class="container">
+        <div class="container flex-between">
             <!-- Start: Logo -->
-            <a href="../index.html" id="header-logo" aria-label="Go to homepage">
+            <a href="../index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
                 <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
                 <span class="logo-text">Pawspa</span>
             </a>
@@ -36,7 +40,7 @@
             <!-- Start: Navigation -->
             <nav id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a href="../index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
@@ -246,6 +250,9 @@
         </div>
     </footer>
     <!-- End: Footer -->
+
+    <script src="../assets/js/active-link.js"></script>
+
 </body>
 
 </html>
