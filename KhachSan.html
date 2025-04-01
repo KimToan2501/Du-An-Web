@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,22 +14,21 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/common.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
-    <link rel="stylesheet" href="../assets/css/form.css" />
-    <script src="https://cdn.tailwindcss.com">
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <title>KhachSan</title>
+    <!-- CSS dùng chung -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+    <title>Home</title>
 </head>
+
 <body>
-      <!-- Start: Header -->
-      <header id="header">
-        <div class="container">
+    <!-- Start: Header -->
+    <header id="header">
+        <div class="container flex-between">
             <!-- Start: Logo -->
-            <a href="../index.html" id="header-logo" aria-label="Go to homepage">
-                <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
+            <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
+                <img src="./assets/images/icons/Union.svg" alt="Logo" class="logo-image">
                 <span class="logo-text">Pawspa</span>
             </a>
             <!-- End: Logo -->
@@ -36,8 +36,8 @@
             <!-- Start: Navigation -->
             <nav id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item active">
-                        <a href="../index.html">Trang chủ</a>
+                    <li class="nav-item">
+                        <a href="/index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a href="#">Dịch vụ</a>
@@ -58,52 +58,56 @@
             <!-- Start: Icon + Action -->
             <div id="header-icons">
                 <a href="#" class="icon-link" aria-label="Notifications">
-                    <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
+                    <img src="./assets/images/icons/noti.svg" alt="Notify" class="icon-image">
                 </a>
                 <a href="#" class="icon-link" aria-label="Cart">
-                    <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
+                    <img src="./assets/images/icons/cart.svg" alt="Cart" class="icon-image">
                 </a>
                 <div class="auth-links">
-                    <a href="./login.html" class="auth-link">Đăng nhập</a>
+                    <a href="/pages/login.html" class="auth-link">Đăng nhập</a>
                     <span class="auth-separator">/</span>
-                    <a href="./register.html" class="auth-link">Đăng ký</a>
+                    <a href="/pages/register.html" class="auth-link">Đăng ký</a>
                 </div>
             </div>
             <!-- End: Icon + Action -->
         </div>
     </header>
     <!-- End: Header -->
+
+    <!-- Start: Main -->
     <main>
-        
+
     </main>
+    <!-- End: Main -->
+
     <!-- Start: Footer -->
     <footer id="footer">
         <div class="container footer-container">
             <div class="footer-info">
-                <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
+                <img src="./assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
                 <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm
                     sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
                 <div class="footer-contact">
                     <div class="contact-item">
-                        <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon"
+                        <img src="./assets/images/icons/letter.svg" alt="Email" aria-label="Email icon"
                             class="contact-icon">
                         <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
                     </div>
                     <div class="contact-item">
-                        <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon"
+                        <img src="./assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon"
                             class="contact-icon">
                         <a href="tel:0345663153" class="contact-address">0345663153</a>
                     </div>
                 </div>
                 <div class="footer-social">
                     <a href="#" title="Instagram">
-                        <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
+                        <img src="./assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
                     </a>
                     <a href="#" title="Facebook">
-                        <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
+                        <img src="./assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
                     </a>
                     <a href="#" title="LinkedIn">
-                        <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
+                        <img src="./assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
                     </a>
                 </div>
             </div>
@@ -112,7 +116,7 @@
             <div class="footer-image">
                 <div>
                     <div>
-                        <img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
+                        <img src="./assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
                     </div>
                 </div>
             </div>
@@ -153,12 +157,16 @@
             </div>
         </div>
         <div class="footer-image-left">
-            <img src="../assets/images/footer/footer-01.svg" alt="">
+            <img src="./assets/images/footer/footer-01.svg" alt="">
         </div>
         <div class="footer-image-right">
-            <img src="../assets/images/footer/footer-02.svg" alt="">
+            <img src="./assets/images/footer/footer-02.svg" alt="">
         </div>
     </footer>
     <!-- End: Footer -->
+
+    <script src="./assets/js/active-link.js"></script>
+
 </body>
+
 </html>
