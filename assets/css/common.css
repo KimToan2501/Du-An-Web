@@ -2,8 +2,6 @@ body {
     font-family: "Nunito", sans-serif;
 }
 
-/* Start: Header */
-
 .container {
     max-width: 1220px;
     margin: 0 auto;
@@ -11,101 +9,11 @@ body {
     padding-right: 15px;
 }
 
-#header {
-    background-color: #F2E2FF;
-}
-
-#header > div {
-    /* Căn nội dung header cùng nằm trên một hàng ngang */
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Căn giữa các phần tử */
-    padding: 33px 0;
-}
-
-/* Start: Logo */
-
-#header-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-text {
-    font-family: "Audiowide", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    margin-left: 13px;
-}
-
-/* End: Logo */
-
-/* Start: Navigation */
-
-.nav-list {
-    display: flex;
-    justify-content: center;
-}
-
-.nav-item > a {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    color: #999999;
-    padding: 0 16px;
-}
-
-/* Ghi đè khi mà có class active */
-.nav-link-item.active > a {
-    color: #410075;
-}
-
-/* End: Navigation */
-
-/* Start: Icon + Action */
-
-#header-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-}
-
-.icon-link {
-    width: 44px;
-    height: 44px;
-    border-radius: 100%;
-    background-color: #E5C3FF;
-    /* Căn icon vô giữa hình tròn */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.auth-links {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    color: #999999;
-}
-
-.auth-link {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    color: #999999;
-}
-
-/* End: Icon + Action */
-
-/* End: Header */
-
 /* Start: Main */
 
-main {
+/* main {
     height: 1000px;
-}
+} */
 
 /* End: Main */
 
@@ -118,7 +26,7 @@ main {
     background-position: bottom center;
     padding-top: 175px;
     padding-bottom: 175px;
-  }
+}
 
 .footer-image-left {
     position: absolute;
@@ -208,21 +116,22 @@ main {
     position: relative;
 }
 
-.footer-image > div {
+.footer-image>div {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-15deg);
 }
 
-.footer-image > div, .footer-image > div > div {
+.footer-image>div,
+.footer-image>div>div {
     width: 251px;
     height: 284px;
     border: 1.5px dashed #595959;
     border-radius: 4px;
 }
 
-.footer-image > div > div {
+.footer-image>div>div {
     background-color: #A1BE97;
     border: 8px solid white;
     position: absolute;
@@ -234,12 +143,100 @@ main {
     overflow: hidden;
 }
 
-.footer-image > div > div > img {
+.footer-image>div>div>img {
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-20deg) scale(1.4) rotateY(180deg);
 }
+
 /* End: Hình con chó */
 
 /* End: Footer */
+
+/* Start: Form input */
+
+.form-input {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #410075;
+    box-shadow: 0 0 0 3px rgba(65, 0, 117, 0.15);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #595959;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.form-checkbox-input {
+    width: 16px;
+    height: 16px;
+    accent-color: #410075;
+    /* Cho trình duyệt hỗ trợ (Chrome, Edge, Firefox) */
+    cursor: pointer;
+}
+
+.form-checkbox-label {
+    font-size: 14px;
+    line-height: 1.4;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+/* End: Form input */
+
+.btn {
+    outline: none;
+    border: 0;
+    padding: 12px 0;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn.btn-primary {
+    background-color: #410075;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #5b0aa5;
+    box-shadow: 0 4px 10px rgba(65, 0, 117, 0.2);
+}
+
+.btn.btn-outline {
+    background-color: transparent;
+    color: #595959;
+    border: 1px solid #CCCCCC;
+}
+
+.btn-outline:hover {
+    border-color: #410075;
+    color: #410075;
+}
+
+.btn-login {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 16px;
+}

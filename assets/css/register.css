@@ -1,0 +1,80 @@
+/* Start: Register Form Wrapper */
+
+/* Start: Register Form */
+
+/* Start: Header */
+
+.register-form-header {
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.register-form-icon {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-form-title {
+    text-transform: uppercase;
+    color: #410075;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+/* End: Header */
+
+/* Start: Input */
+
+/* Tăng chiều rộng của input bên trong thư viện */
+.iti {
+    width: 100%;
+}
+
+.iti__tel-input {
+    width: 100%;
+    padding-left: 90px !important;
+    /* Dời text sang phải để không đè lên cờ + mã vùng */
+    box-sizing: border-box;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: #fff;
+    /* Màu nền cùng màu input */
+    border-right: 1px solid #ccc;
+}
+
+.iti__flag-container {
+    padding-left: 10px;
+}
+
+/* End: Input */
+
+/* End: Register Form */
+
+/* Start: Background Visual */
+.register-form-background {
+    flex: 50%;
+    background: radial-gradient(circle at center,
+            #ffffff 0%,
+            #d7f1f6 25%,
+            #A1BE97 50%,
+            #A1BE97 100%);
+
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: center;
+    text-align: center; */
+    position: relative;
+    overflow: hidden;
+}
+
+/* End: Background Visual */
+
+
+/* End: Register Form Wrapper */
