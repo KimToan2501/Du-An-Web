@@ -32,6 +32,28 @@
     .text-purple-dark {
       color: #410075;
     }
+    .text-primary-purple1
+    {
+        color:#8F00FF;  
+    }
+    .circle-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E5C4FF, white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .circle-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
     .btn-purple {
       background-color: #7e22ce;
       color: white;
@@ -52,12 +74,19 @@
     outline: none;
     }
     .card-img-top {
-      height: 200px;
+      height: 280px;
       object-fit: cover;
     }
     .original-price {
       text-decoration: line-through;
       color: #6c757d !important;
+    }
+    .card-title {
+    white-space: nowrap;        /* Không xuống dòng */
+    overflow: hidden;           /* Ẩn phần tràn */
+    text-overflow: ellipsis;    /* Hiển thị dấu ... */
+    display: block;
+    width: 100%;
     }
   </style>
     <title>Home</title>
@@ -120,13 +149,17 @@
     <!-- div cho phần dưới header -->
     <div class="bg-purple-light py-4">
         <div class="container text-center">
-            <h1 class="h2 fw-bold text-purple-dark mb-4">
-                Treat your pet to some fun—shop our selection of toys and keep them happy and active!
-            </h1>
-            <div class="d-flex justify-content-center">
-                <img alt="Decorative toy image" class="mx-2" height="50" src="https://storage.googleapis.com/a1aa/image/1q07az6ikRlmhkQP-o3X0F3_jTjhM-PrVuCzlkEhWdA.jpg" width="50"/>
-                <img alt="Decorative toy image" class="mx-2" height="50" src="https://storage.googleapis.com/a1aa/image/1q07az6ikRlmhkQP-o3X0F3_jTjhM-PrVuCzlkEhWdA.jpg" width="50"/>
-                <img alt="Decorative toy image" class="mx-2" height="50" src="https://storage.googleapis.com/a1aa/image/1q07az6ikRlmhkQP-o3X0F3_jTjhM-PrVuCzlkEhWdA.jpg" width="50"/>
+                <h1 class="h2 fw-bold text-purple-dark mb-4">
+                    Hãy mang đến niềm vui cho thú cưng của bạn—hãy mua sắm các loại đồ chơi của chúng tôi và giúp chúng luôn vui vẻ và năng động!
+                </h1>
+            <div class="d-flex justify-content-between">
+                <!-- Ảnh bên trái -->
+                    <div class="circle-wrapper">
+                        <img src="./images-KhachSan/image 6.png " alt="Đồ chơi" class="circle-img">
+                    </div>
+                    <div class="circle-wrapper">
+                        <img src="./images-KhachSan/image 7.png" alt="Bát ăn" class="circle-img">
+                    </div>
             </div>
         </div>
     </div>
@@ -139,48 +172,136 @@
             <h2 class="h2 fw-bold text-purple-dark p-3">Khách sạn</h2>
             <img src="./assets/images/Union01.svg" alt="">
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="service-list">
             <!-- THẺ CART 1 -->
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="https://storage.googleapis.com/a1aa/image/6vVbNy4AzothBhkTQ7ZTW7VfKVOlIKBHuMfCJnxdsh4.jpg" class="card-img-top" alt="Pet hotel basic room">
-                
-                <div class="card-body ">
-                    <h3 class="h5 card-title fw-semibold">LƯU TRÚ CƠ BẢN</h3>
-                        <div class="d-flex align-items-center text-warning mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-                            </svg>
-                            <span class="ms-1">(5.0) 1000+ Sold</span>
-                        </div>
-                        <div class="text-purple-dark fw-bold fs-5 mb-3">
-                        400.000<sup>đ</sup> <span class="original-price fs-6">420000<sup>đ</sup></span>
-                        </div>
-                    <button class="btn btn-purple w-100">Book Now</button>
-                </div>
-                </div>  
-            </div>
-             <!-- THẺ CART 1 -->
-            <div class="col">
-                <div class="card h-100 shadow-sm">
-                    <img src="./images-KhachSan/Image.jpg" class="card-img-top" alt="Pet hotel basic room">
-                
-                <div class="card-body ">
-                    <h3 class="h5 card-title fw-semibold">LƯU TRÚ CƠ BẢN</h3>
-                        <div class="d-flex align-items-center text-warning mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
-                                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
-                            </svg>
-                            <span class="ms-1">(5.0) 1000+ Sold</span>
-                        </div>
-                        <div class="text-purple-dark fw-bold fs-5 mb-3">
-                        400.000<sup>đ</sup> <span class="original-price fs-6">420000<sup>đ</sup></span>
-                        </div>
-                    <button class="btn btn-purple w-100">Book Now</button>
-                </div>
-                </div>  
-            </div>
+            
         </div>
+        <!-- tạo script để lất ra mảng -->
+        <script>
+            // Mảng danh sách dịch vụ
+            const services = [
+            {
+                name: "LƯU TRÚ CƠ BẢN",
+                rating:5.00,
+                sold: 1000,
+                price: 300000,
+                oldPrice: 350000,
+                image: "images-KhachSan/Image.jpg",
+                desc: "chăm sóc thú cơ bản , cho ăn uống ,.."
+            },
+            {
+                name: "DỊCH VỤ ĐƯA ĐÓN",
+                rating:4.9,
+                sold: 500   ,
+                price: 250000,
+                oldPrice: null,
+                image: "images-KhachSan/duadon.png",
+                desc: "đưa đón thú cưng tận nhà tận nơi"
+            },
+            {
+                name: "HUẤN LUYỆN CƠ BẢN",
+                rating:4.9,
+                sold: 500   ,
+                price: 150000,
+                oldPrice: 180000,
+                image: "images-KhachSan/HuanLuyen.png",
+                desc: "thú cưng có thể làm theo điều lệnh: ngồi nằm,..."
+            },
+            {
+                name: "PHÒNG VIP CAP CẤP",
+                rating:4.9,
+                sold: 500   ,
+                price: 500000,
+                oldPrice: 550000,
+                image: "images-KhachSan/caocap.png",
+                desc: "Phòng vip cho thú , rộng rãi , thoáng mát"
+            },
+              // ✅ Khu vui chơi và hoạt động
+            {
+                name: "Khu vui chơi và hoạt động",
+                rating: 4.9,
+                sold: 850,
+                price: 120000,
+                oldPrice: 150000,
+                image: "images-KhachSan/KhuVuiChoi.png",
+                desc: "Khu vận động ngoài trời & trong nhà cho thú cưng hoạt bát, vui vẻ"
+            },
+
+            // ✅ Tiệc sinh nhật và sự kiện
+            {
+                name: "Tiệc sinh nhật và sự kiện",
+                rating: 4.95,
+                sold: 320,
+                price: 400000,
+                oldPrice: 500000,
+                image: "images-KhachSan/SinhNhat.png",
+                desc: "Tổ chức tiệc sinh nhật, sự kiện riêng theo yêu cầu cho thú cưng"
+            },
+
+            // ✅ Chế độ ăn đặc biệt
+            {
+                name: "Chế độ ăn đặc biệt",
+                rating: 4.85,
+                sold: 540,
+                price: 200000,
+                oldPrice: 250000,
+                image: "images-KhachSan/CheDoAn.png",
+                desc: "Thực đơn theo dinh dưỡng riêng, kiểm soát dị ứng và cân nặng"
+            },
+
+            // ✅ Premium Care
+            {
+                name: "Premium Care",
+                rating: 5.00,
+                sold: 105,
+                price: 600000,
+                oldPrice: 700000,
+                image: "images-KhachSan/PremiumCare.png", // lưu ý khoảng trắng => dùng %20 hoặc đổi tên
+                desc: "Chăm sóc toàn diện với phòng riêng, theo dõi sức khỏe 24/7"
+            }
+];
+        
+            // Hàm hiển thị danh sách dịch vụ
+            function renderServices(services) {
+                const container = document.getElementById("service-list");
+                container.innerHTML = "";
+        
+                services.forEach(s => {
+                const col = document.createElement("div");
+                col.className = "col";
+        
+                col.innerHTML = `
+                    <div class="card h-100 shadow-sm">
+                        <img src="${s.image}" class="card-img-top" alt="${s.name}">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">${s.name}</h5>
+                            <div class="d-flex align-items-center text-warning mb-2">
+                                <svg xmlns="http://www.w3.org/2000/sv   g" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+                                </svg>
+                                <span class="ms-1">(${s.rating}) ${s.sold}+ Sold</span>
+                            </div>
+                            <div class="card-text">
+                            <span class=" text-primary-purple1 fw-bold me-2 te">${s.price.toLocaleString()}đ</span>
+                            ${s.oldPrice ? `<span class="original-price">${s.oldPrice.toLocaleString()}đ</span>` : ""}
+                            </div>
+                            <p class="card-text small text-muted">${s.desc}</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <button class="btn btn-purple w-100">Đặt dịch vụ</button>
+                        </div>
+                    </div>
+                `;
+        
+                container.appendChild(col);
+              });
+            }
+        
+            // Gọi hàm render sau khi trang tải xong
+            document.addEventListener("DOMContentLoaded", function () {
+              renderServices(services);
+            });
+          </script>
 </main>
 
 
