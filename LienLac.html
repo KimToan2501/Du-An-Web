@@ -34,49 +34,77 @@
 </head>
 <body> 
     <!-- Phần header -->
-    <header class="header-main">
-        <div class="header-container container d-flex justify-content-between align-items-center py-3">
-          <!-- Phần trái: Logo và tên công ty -->
-          <div class="header-logo d-flex align-items-center">
-            <img alt="Pawspa logo" class="h-10" src="./IMG/Union.svg" style="width: 40px; height: 40px;"/>
-            <span class="ms-2 fs-4 fw-bold text-purple">PAWSPA</span>
-          </div>
-          
-          <!-- Phần giữa: Thanh điều hướng chính -->
-          <nav class=" d-none d-md-flex gap-4">
-            <a class="header-nav-link px-3" href="#">Trang chủ</a>
-            <a class="header-nav-link px-3" href="#">Dịch vụ</a>
-            <a class="header-nav-link px-3" href="#">Blog/Tin tức</a>
-            <a class="header-nav-link px-3" href="#">Giới thiệu</a>
-            <a class="header-nav-link text-purple text-decoration-none px-3" href="#">Liên lạc</a>
-          </nav>
-          
-          <!-- Phần phải: Nút đăng nhập và menu mobile -->
-          <div class="info">
-            <div class="icon_container">
-              <a href="#" class="icon_thongbao"><img src="/IMG/BellSimple.svg" alt="Thông báo"></a>
-              <a href="#" class="icon_giohang"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng"></a>
-            </div>
-            <div class="auth_links">
-              <a href="#">Đăng nhập</a>
-              <span style="color:#999;font-size: 18px;">/</span>
-              <a href="#">Đăng ký</a>
-            </div>
-          </div>
-          
+    <header class="header-main  ">
+      <div class="container d-flex justify-content-between align-items-center py-3">
         
-        <!-- Menu mobile (ẩn cho đến khi click) -->
-        <div class="collapse navbar-collapse bg-purple-light px-3" id="navbarCollapse">
-            <div class="d-flex flex-column gap-2 py-2">
-            <a class="text-dark text-decoration-none hover-text-purple" href="#">Trang chủ</a>
-            <a class="text-dark text-decoration-none hover-text-purple" href="#">Dịch vụ</a>
-            <a class="text-dark text-decoration-none hover-text-purple" href="#">Blog/Tin tức</a>
-            <a class="text-dark text-decoration-none hover-text-purple" href="#">Giới thiệu</a>
-            <a class="text-purple text-decoration-none fw-bold" href="#">Liên lạc</a>
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+          <img src="./IMG/Union.svg" alt="Pawspa logo" style="width: 40px; height: 40px;">
+          <span class="ms-2 fs-4 fw-bold text-purple">PAWSPA</span>
+        </div>
+    
+        <!-- Menu Desktop -->
+        <nav class="d-none d-md-flex gap-4 align-items-center">
+          <a class="header-nav-link px-3" href="#">Trang chủ</a>
+          <a class="header-nav-link px-3" href="#">Dịch vụ</a>
+          <a class="header-nav-link px-3" href="#">Blog/Tin tức</a>
+          <a class="header-nav-link px-3" href="#">Giới thiệu</a>
+          <a class="header-nav-link text-purple text-decoration-none px-3" href="#">Liên lạc</a>
+        </nav>
+    
+        <!-- Icons và Tài khoản -->
+        <!-- <div class="d-none d-md-flex align-items-center gap-4">
+          <div class="d-flex gap-3">
+            <a href="#"><img src="/IMG/BellSimple.svg" alt="Thông báo" width="24"></a>
+            <a href="#"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng" width="24"></a>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <a href="#" class="text-dark text-decoration-none">Đăng nhập</a>
+            <span class="text-muted">/</span>
+            <a href="#" class="text-dark text-decoration-none">Đăng ký</a>
+          </div>
+        </div> -->
+        <div class="info">
+          <div class="icon_container">
+            <a href="#" class="icon_thongbao"><img src="/IMG/BellSimple.svg" alt="Thông báo"></a>
+            <a href="#" class="icon_giohang"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng"></a>
+          </div>
+          <div class="auth_links">
+            <a href="#">Đăng nhập</a>
+            <span style="color:#999;font-size: 18px;">/</span>
+            <a href="#">Đăng ký</a>
           </div>
         </div>
+    
+        <!-- Icon menu mobile -->
+        <button class="d-md-none btn text-purple fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    
+      <!-- Menu Mobile -->
+      <div class="collapse bg-light d-md-none" id="navbarMobile">
+        <div class="container py-3 d-flex flex-column gap-3">
+          <a class="text-dark text-decoration-none" href="#">Trang chủ</a>
+          <a class="text-dark text-decoration-none" href="#">Dịch vụ</a>
+          <a class="text-dark text-decoration-none" href="#">Blog/Tin tức</a>
+          <a class="text-dark text-decoration-none" href="#">Giới thiệu</a>
+          <a class="text-purple fw-bold text-decoration-none" href="#">Liên lạc</a>
+    
+          <hr class="my-2">
+          <div class="d-flex gap-3">
+            <a href="#"><img src="/IMG/BellSimple.svg" alt="Thông báo" width="24"></a>
+            <a href="#"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng" width="24"></a>
+          </div>
+          <div class="d-flex gap-2 mt-2">
+            <a href="#" class="text-dark text-decoration-none">Đăng nhập</a>
+            <span class="text-muted">/</span>
+            <a href="#" class="text-dark text-decoration-none">Đăng ký</a>
+          </div>
+        </div>
+      </div>
     </header>
-
+    
 
     
     <!-- phần thông tin liên hệ  -->
