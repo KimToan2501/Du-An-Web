@@ -1,0 +1,178 @@
+
+/* ====== Booking Page Style (booking.css) ====== */
+
+/* Layout 2 cột */
+.main-wrapper {
+    display: flex;
+    gap: 32px;
+    padding: 40px 0;
+  }
+  
+  /* Sidebar trái */
+  .sidebar {
+    width: 250px;
+  }
+  
+  .user-info {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .user-avatar {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+  }
+  
+  .user-name {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .user-role {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .user-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .user-nav ul li {
+    margin: 16px 0;
+  }
+  
+  .user-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .user-nav ul li.active a {
+    color: #410075;
+    font-weight: 700;
+  }
+  
+  /* Booking content phải */
+  .booking-content {
+    flex: 1;
+  }
+  
+  /* Thanh tìm kiếm + tabs */
+  .booking-filter {
+    margin-bottom: 24px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  
+  .booking-tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .booking-tabs li {
+    padding: 6px 16px;
+    border-radius: 20px;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .booking-tabs li.active {
+    background-color: #410075;
+    color: white;
+  }
+  
+  /* Bảng đặt lịch */
+  .booking-table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .booking-row {
+    display: grid;
+    grid-template-columns: 1.2fr 2.5fr 1.5fr 1.5fr 1.5fr;
+    padding: 14px 20px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .booking-row:last-child {
+    border-bottom: none;
+  }
+  
+  .booking-header {
+    background-color: #f9f5ff;
+    font-weight: 600;
+    color: #410075;
+  }
+  
+  .service-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: #252525;
+  }
+  
+  /* Trạng thái */
+  .status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+  }
+  
+  .status-processing {
+    background-color: #007bff;
+  }
+  
+  .status-pending {
+    background-color: #ffc107;
+  }
+  
+  .status-done {
+    background-color: #28a745;
+  }
+  
+  .status-cancelled {
+    background-color: #dc3545;
+  }
+  
+  /* Pagination */
+  .pagination {
+    margin-top: 24px;
+    text-align: center;
+  }
+  
+  .pagination a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 0 4px;
+    background-color: #eee;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #410075;
+    color: white;
+  }
+  
