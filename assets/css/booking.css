@@ -24,7 +24,6 @@
     display: flex;
     gap: 32px;
     padding: 40px 0;
-    /* background-color: #fdf4ff; tím nhạt như ảnh mẫu */
   }
   
   /* Sidebar trái */
@@ -137,40 +136,15 @@
     margin-right: 40px;
   }
   
-/* Wrapper chứa icon và input */
-.search-wrapper {
-  position: relative;
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-/* Icon kính lúp */
-.search-icon {
-  position: absolute;
-  top: 50%;
-  left: 14px;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  opacity: 0.6;
-}
-
-/* Ô input */
-.search-input {
-  width: 100%;
-  padding: 10px 14px 10px 38px; /* thêm padding-left để chừa chỗ icon */
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  font-size: 14px;
-  background-color: #fdf4ff;
-}
-  
-  /* Khi người dùng click hoặc tab vào input */
-  .search-input:focus {
-    box-shadow: 0 0 0 1px #410075;
+  .search-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
   }
-
+  
   .booking-tabs {
     list-style: none;
     padding: 0;
@@ -217,27 +191,15 @@
     color: #595959;
   }
   
-  .booking-header > div:nth-child(4),
-  .booking-row > div:nth-child(4) {
-    display: flex;
-    justify-content: center;
+  .booking-row:last-child {
+    border-bottom: none;
   }
-
-  /* Căn phải nội dung cột "Thành tiền" */
-.booking-row > div:nth-child(5){
-  display: flex;
-  justify-content: center;
-  /* padding-right: 25px;  */
-  padding-left: 35px; /* tạo khoảng cách với cột trạng thái */
-}
   
-/* Header riêng */
-.booking-header {
-  font-size: 15px; /* Header 15px */
-  font-weight: 700;
-  color: #410075;
-  background-color: #fdf4ff; /* cùng nền */
-}
+  .booking-header {
+    background-color: #f9f5ff;
+    font-weight: 600;
+    color: #410075;
+  }
   
   .service-name {
     font-weight: 500;
@@ -293,30 +255,8 @@
       text-decoration: none;
     }
   
-    .pagination a.active {
-      display: inline-block;
-      background-color: #410075;
-      color: white;
-      border-radius: 6px;
-    }
-    
-    .pagination a:hover {
-      background-color: #410075;
-      color: white;
-      border-radius: 6px;
-    }
-    
-    /* Style riêng cho prev & next */
-  .pagination a.prev,
-  .pagination a.next {
-    background-color: transparent;
-    padding: 6px 12px;
-    border-radius: 0;
-    color: #333;
+  .pagination a.active {
+    background-color: #410075;
+    color: white;
   }
-
-  .pagination a.prev:hover, .pagination a.next:hover{
-      background-color: #410075;
-      color: white;
-      border-radius: 6px;
-  }
+  
