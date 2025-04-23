@@ -48,6 +48,7 @@
   font-size: 18px;
   line-height: 30px;
   margin-left: 13px;
+  text-decoration: none;
 }
 
 /* ===== Navigation ===== */
@@ -101,6 +102,7 @@
 .auth-link {
   color: #999999;
   transition: color 0.2s ease-in-out;
+  text-decoration: none;
 }
 
 .auth-link:hover {
@@ -179,7 +181,7 @@ color: #410075;
     text-align: left;
     font-size: 14px;
 }
-  /* .auth_links {
+  .auth_links {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -196,7 +198,7 @@ color: #410075;
     color: var(--primary-purple-dark);
     text-decoration: none;
   }
-   */
+  
   /* Menu mobile styles - CHỈ HIỆN TRÊN MOBILE */
   .navbar-collapse {
     display: none;
