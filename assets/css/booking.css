@@ -6,6 +6,7 @@
     display: flex;
     gap: 32px;
     padding: 40px 0;
+    background-color: #fdf4ff; /* tím nhạt như ảnh mẫu */
   }
   
   /* Sidebar trái */
@@ -14,44 +15,97 @@
   }
   
   .user-info {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
     margin-bottom: 32px;
+    padding-left: 8px;
   }
   
   .user-avatar {
-    width: 80px;
+    width: 40px;
+    height: 40px;
+    object-fit:cover;
     border-radius: 50%;
-    margin-bottom: 12px;
+    flex-shrink: 0;
   }
   
+  .user-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    flex-grow: 1;
+  }
+
   .user-name {
     font-weight: 700;
     font-size: 18px;
+    color: #111;
   }
   
   .user-role {
     font-size: 14px;
     color: #888;
   }
+
+  .role-type {
+    color: #6a0dad; /* tím đậm */
+    font-weight: 600;
+    margin-left: 4px;
+  }
   
+  .refresh-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .refresh-icon img {
+    width: 16px;
+    height: 16px;
+    filter: invert(21%) sepia(92%) saturate(7481%) hue-rotate(267deg) brightness(94%) contrast(102%);
+    cursor: pointer;
+  }
+
   .user-nav ul {
     list-style: none;
     padding: 0;
+    margin:0;
   }
   
   .user-nav ul li {
-    margin: 16px 0;
+    margin: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
   }
   
   .user-nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #444;
     font-weight: 500;
+    display: block;
+    font-size: 15px;
   }
   
   .user-nav ul li.active a {
     color: #410075;
     font-weight: 700;
+  }
+
+  .user-nav ul li.active{
+    border-bottom: 1.5px solid #410075;
+  }
+
+  .user-nav ul li a:hover{
+    color: #410075;
+    font-weight: 700;
+  }
+
+  .user-nav ul li:hover{
+    border-bottom: 1.5px solid #410075;
   }
   
   /* Booking content phải */
@@ -67,12 +121,18 @@
   .search-input {
     width: 100%;
     padding: 10px 14px;
-    border: 1px solid #ccc;
+    border: none; /* Xóa hẳn viền */
+    outline: none;
     border-radius: 8px;
     margin-bottom: 16px;
     font-size: 14px;
   }
   
+  /* Khi người dùng click hoặc tab vào input */
+  .search-input:focus {
+    box-shadow: 0 0 0 1px #410075;
+  }
+
   .booking-tabs {
     list-style: none;
     padding: 0;
@@ -94,6 +154,11 @@
     color: white;
   }
   
+  .booking-tabs li:hover {
+    background-color: #410075;
+    color: white;
+  }
+
   /* Bảng đặt lịch */
   .booking-table {
     background-color: white;
@@ -117,7 +182,7 @@
   }
   
   .booking-header {
-    background-color: #f9f5ff;
+    /* background-color: #f9f5ff; */
     font-weight: 600;
     color: #410075;
   }
@@ -171,7 +236,7 @@
     text-decoration: none;
   }
   
-  .pagination a.active {
+  .pagination a:hover {
     background-color: #410075;
     color: white;
   }
