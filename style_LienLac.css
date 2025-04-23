@@ -40,6 +40,7 @@
 #header-logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .logo-text {
@@ -48,7 +49,7 @@
   font-size: 18px;
   line-height: 30px;
   margin-left: 13px;
-  text-decoration: none;
+  
 }
 
 /* ===== Navigation ===== */
