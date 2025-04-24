@@ -18,9 +18,6 @@ body {
 /* End: Main */
 
 /* Start: Footer */
-.footer-wrapper {
-    background-color: #fdf4ff;
-}
 #footer {
     position: relative;
     background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 585' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='M609 29.5167C319.8 -7.68333 81.5 -1.98333 0 5.51667V584.517H1440V29.5167C1347.5 53.5167 970.5 76.0167 609 29.5167Z' fill='%23F1E0FF'/></svg>");

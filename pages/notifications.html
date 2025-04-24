@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/booking.css">
-    <title>Profile - order</title>
+    <link rel="stylesheet" href="../assets/css/notifications.css">
+    <title>Profile - Notifications</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
     <header id="header">
         <div class="container flex-between">
             <!-- Start: Logo -->
-            <a href="../index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
+            <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
                 <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
                 <span class="logo-text">Pawspa</span>
             </a>
@@ -37,7 +37,7 @@
             <nav id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="../index.html">Trang chủ</a>
+                        <a href="./index.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a href="#">Dịch vụ</a>
@@ -77,6 +77,8 @@
     <!-- Start: Main -->
     <!-- booking.html -->
 <main class="main-wrapper">
+    
+    <!-- Thanh điều hướng bên trái -->
     <div class="container">
     <aside class="sidebar">
         <div class="user-info">
@@ -94,46 +96,41 @@
         <nav class="user-nav">
             <ul>
                 <li><a href="#">Tài khoản của tôi</a></li>
-                <li class="active"><a href="#">Đặt lịch</a></li>
-                <li><a href="#">Thông báo</a></li>
+                <li><a href="#">Đặt lịch</a></li>
+                <li class="active"><a href="#">Thông báo</a></li>
             </ul>
         </nav>
     </aside>
     </div>
 
-    <section class="booking-content">
-        <!-- Thanh tìm kiếm và bộ lọc tab -->
-        <div class="booking-filter">
-            <input type="text" class="search-input" placeholder="Tìm mã, tên sản phẩm...">
-            <ul class="booking-tabs">
-                <li class="active">Tất cả</li>
-                <li>Chờ thanh toán</li>
-                <li>Đang xử lý</li>
-                <li>Đã đặt</li>
-                <li>Đã huỷ</li>
-            </ul>
-        </div>
-
-        <!-- Bảng danh sách đơn -->
-        <div class="booking-table">
-            <div class="booking-row booking-header">
-                <div>Mã đặt</div>
-                <div>Tên dịch vụ</div>
-                <div>Ngày đặt</div>
-                <div>Trạng thái</div>
-                <div>Thành tiền</div>
+    <section class="notification-content">
+        <div class="notification-list">
+        <h2 class="notification-title"><b>Thông Báo</b></h2>
+        <!-- <div class="notification-list"> -->
+          <div class="notification-item">
+            <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
+            <div class="notification-text">
+              <p>Lịch đặt <strong>#4752321PET</strong> của bạn đã được xử lí, hãy xác nhận</p>
             </div>
-
-            <!-- Một dòng dữ liệu -->
-            <div class="booking-row">
-                <div>#OD120524CD</div>
-                <div class="service-name">
-                    <span>TẮM SPA CHÓ MÈO</span>
-                </div>
-                <div>09-09-2024</div>
-                <div><span class="status status-processing">Đang xử lý</span></div>
-                <div>200.000đ</div>
+            <button class="notification-btn">Xác nhận</button>
+          </div>
+  
+          <div class="notification-item">
+            <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
+            <div class="notification-text">
+                <p>Lịch đặt <strong>#OD120545CD</strong> của bạn đang chờ thanh toán, hãy xác nhận</p>
             </div>
+            <button class="notification-btn">Xác nhận</button>
+          </div>
+
+          <div class="notification-item">
+            <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
+            <div class="notification-text">
+                <p>Lịch đặt <strong>#OD120545CD</strong> của bạn đã hoàn thành</p>
+            </div>
+            <button class="notification-btn">Xem chi tiết</button>
+          </div>
+
         </div>
 
         <!-- Phân trang -->
@@ -150,7 +147,6 @@
     <!-- End: Main -->
 
     <!-- Start: Footer -->
-    <div class="footer-wrapper">
     <footer id="footer">
         <div class="container footer-container">
             <div class="footer-info">
@@ -233,7 +229,6 @@
             <img src="../assets/images/footer/footer-02.svg" alt="">
         </div>
     </footer>
-    </div>
     <!-- End: Footer -->
 
     <script src="../assets/js/active-link.js"></script>

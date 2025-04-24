@@ -1,5 +1,4 @@
-
-/* ====== Booking Page Style (booking.css) ====== */
+/* ====== Notifications Page Style (notifications.css) ====== */
 
 /* Layout 2 cột */
 .main-wrapper {
@@ -9,7 +8,7 @@
     /* background-color: #fdf4ff; tím nhạt như ảnh mẫu */
   }
   
-  /* Sidebar trái */
+  /* Sidebar trái giữ nguyên từ booking.css*/
   .sidebar {
     width: 250px;
   }
@@ -107,124 +106,90 @@
   .user-nav ul li:hover{
     border-bottom: 1.5px solid #410075;
   }
-  
-  /* Booking content phải */
-  .booking-content {
+
+  /* ======================== */
+/*        NOTIFICATION      */
+/* ======================== */
+
+.notification-content {
     flex: 1;
-  }
-  
-  /* Thanh tìm kiếm + tabs */
-  .booking-filter {
-    margin-bottom: 24px;
+    background-color:  #fdf4ff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin-right: 40px;
   }
   
-  .search-input {
-    width: 100%;
-    padding: 10px 14px;
-    border: none; /* Xóa hẳn viền */
-    outline: none;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    background-color: #fdf4ff;
-  }
-  
-  /* Khi người dùng click hoặc tab vào input */
-  .search-input:focus {
-    box-shadow: 0 0 0 1px #410075;
-  }
-
-  .booking-tabs {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  
-  .booking-tabs li {
-    padding: 6px 16px;
-    border-radius: 20px;
-    background-color: #eee;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .booking-tabs li.active {
-    background-color: #410075;
-    color: white;
-  }
-  
-  .booking-tabs li:hover {
-    background-color: #410075;
-    color: white;
-  }
-
-  /* Bảng đặt lịch */
-  .booking-table {
-    /* background-color: white; */
-    background-color: #fdf4ff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    margin-right: 40px;
-  }
-  
-  .booking-row {
-    display: grid;
-    grid-template-columns: 1.2fr 2.5fr 1.5fr 1.5fr 1.5fr;
-    padding: 14px 20px;
-    border-bottom: 1px solid #eee;
-    align-items: center;
-    font-size: 15px;
-    color: #333;
-  }
-  
-  .booking-row:last-child {
-    border-bottom: none;
-  }
-  
-  .booking-header {
-    /* background-color: #f9f5ff; */
+  .notification-title {
+    font-size: 20px;
     font-weight: 700;
     color: #410075;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    /* background-color: white; */
+    /* border-radius: 12px;
+    padding: 10px; */
   }
   
-  .service-name {
-    font-weight: 500;
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #fdf4ff;
+    /* border-radius: 12px;
+    padding: 10px; */
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .notification-item:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .notification-item img.logo-image {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+  
+  .notification-text {
+    flex-grow: 1;
+    margin-right: 16px;
+    color: #333;
     font-size: 15px;
-    color: #252525;
   }
   
-  /* Trạng thái */
-  .status {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 600;
-    color: white;
-    text-align: center;
+  .notification-text strong {
+    font-weight: 700;
   }
   
-  .status-processing {
-    background-color: #007bff;
+  .notification-btn {
+    padding: 8px 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
   }
   
-  .status-pending {
-    background-color: #ffc107;
+  .notification-btn:hover {
+    background-color: #410075;
+    color: #fff;
+    border-color: #410075;
   }
   
-  .status-done {
-    background-color: #28a745;
-  }
-  
-  .status-cancelled {
-    background-color: #dc3545;
-  }
-  
-  /* Pagination */
+  /* Pagination giữ từ booking.css */
   .pagination {
     margin-top: 24px;
     text-align: center;
@@ -240,8 +205,26 @@
     text-decoration: none;
   }
   
+  .pagination a.active {
+    background-color: #410075;
+    color: white;
+  }
+
   .pagination a:hover {
     background-color: #410075;
     color: white;
   }
-  
+
+  /* Phần phân trang riêng, nền trắng
+.notification-pagination-wrapper {
+    background-color: white;
+    margin-top: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+.pagination {
+    margin: 0;
+} */
