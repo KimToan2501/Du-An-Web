@@ -272,3 +272,233 @@
 .pagination {
     margin: 0;
 } */
+/* ====== Notifications Page Style (notifications.css) ====== */
+
+/* Layout 2 cột */
+.main-wrapper {
+    display: flex;
+    gap: 32px;
+    padding: 40px 0;
+    /* background-color: #fdf4ff; tím nhạt như ảnh mẫu */
+  }
+  
+  /* Sidebar trái giữ nguyên từ booking.css*/
+  .sidebar {
+    width: 250px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding-left: 8px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    object-fit:cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .user-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    flex-grow: 1;
+  }
+
+  .user-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #111;
+  }
+  
+  .user-role {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .role-type {
+    color: #6a0dad; /* tím đậm */
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  
+  .refresh-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .refresh-icon img {
+    width: 16px;
+    height: 16px;
+    filter: invert(21%) sepia(92%) saturate(7481%) hue-rotate(267deg) brightness(94%) contrast(102%);
+    cursor: pointer;
+  }
+
+  .user-nav ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+  }
+  
+  .user-nav ul li {
+    margin: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+  
+  .user-nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    display: block;
+    font-size: 15px;
+  }
+  
+  .user-nav ul li.active a {
+    color: #410075;
+    font-weight: 700;
+  }
+
+  .user-nav ul li.active{
+    border-bottom: 1.5px solid #410075;
+  }
+
+  .user-nav ul li a:hover{
+    color: #410075;
+    font-weight: 700;
+  }
+
+  .user-nav ul li:hover{
+    border-bottom: 1.5px solid #410075;
+  }
+
+  /* ======================== */
+/*        NOTIFICATION      */
+/* ======================== */
+
+.notification-content {
+    flex: 1;
+    background-color:  #fdf4ff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-right: 40px;
+  }
+  
+  .notification-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #410075;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    /* background-color: white; */
+    /* border-radius: 12px;
+    padding: 10px; */
+  }
+  
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #fdf4ff;
+    /* border-radius: 12px;
+    padding: 10px; */
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .notification-item:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .notification-item img.logo-image {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+  
+  .notification-text {
+    flex-grow: 1;
+    margin-right: 16px;
+    color: #333;
+    font-size: 15px;
+  }
+  
+  .notification-text strong {
+    font-weight: 700;
+  }
+  
+  .notification-btn {
+    padding: 8px 16px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .notification-btn:hover {
+    background-color: #410075;
+    color: #fff;
+    border-color: #410075;
+  }
+  
+  /* Pagination giữ từ booking.css */
+  .pagination {
+    margin-top: 24px;
+    text-align: center;
+  }
+  
+  .pagination a {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin: 0 4px;
+    background-color: #eee;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #410075;
+    color: white;
+  }
+
+  .pagination a:hover {
+    background-color: #410075;
+    color: white;
+  }
+
+  /* Phần phân trang riêng, nền trắng
+.notification-pagination-wrapper {
+    background-color: white;
+    margin-top: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+.pagination {
+    margin: 0;
+} */
