@@ -1,0 +1,265 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -70px;;
+  }
+  
+  .background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10rem; 
+    gap: 3rem; 
+    
+  }
+  
+  .text-section {
+    max-width: 40%;
+    
+  }
+  
+  .text-section p {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .text-section h1 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .highlight {
+    color: #540f9d;
+    font-weight: bold;
+    
+  }
+  .pet-paw{
+    position: absolute;
+    bottom: -20px;
+    left: -30px;
+    width: 150px;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  .sub-highlight {
+    color: #7db97d;
+    font-weight: bold;
+   
+  }
+  
+  .text-section button {
+    margin-top: 2rem;
+    background-color: #4c1d95;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .image-section {
+    position: relative;
+  }
+  
+  .pet-img {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .circle-decor {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    max-width: 650px;
+    z-index: 0;
+  }
+  
+  /* 
+  css cho trang 2 */
+  
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+  }
+  
+  .image-background {
+    position: relative;
+    z-index: 1;
+    background-color: #FCF7FF;
+    margin-top: 80px;
+    height: 800px;
+  }
+  
+  .bg-circle {
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .center-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    max-width: 80%;
+    z-index: 2;
+    margin-bottom: 90px;
+  }
+  
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4a0072;
+    margin: 40px 0;
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    padding-top: 120px;
+  }
+  
+  .service {
+    position: absolute;
+    width: 250px;
+    text-align: left;
+    z-index: 3;
+  }
+  
+  .service h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #222;
+  }
+  
+  .service p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .circle {
+    background: #560b1c;
+    color: white;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .service1 { top: 70%; left: 16%; }
+  .service2 { top: 45%; left: 25%; }
+  .service3 { top: 32%; left: 50%; transform: translateX(-50%); }
+  .service4 { top: 45%; right: 20%; text-align: left; }
+  .service5 { top: 70%; right: 14%; text-align: left; }
+  
+  /* 
+  css cho trang 3 */
+  .bg-frame3{
+    background-color: #FCF7FF;
+  }
+  .containerrr {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+  }
+  
+  .left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .left img {
+    max-width: 450px;
+    border-radius: 10px;
+  }
+  
+  .right {
+    flex: 1.2;
+    padding-left: 30px;
+  }
+  
+  .h1-frame3 {
+    text-align: center;
+    color: #410075;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding-top: 40px;
+    margin-top:50px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .policy {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    width: 600px;
+  }
+  
+  .policy img {
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+  }
+  
+  .policy h3 {
+    margin: 0 0 8px;
+    color: #222;
+  }
+  
+  .policy p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  
+  .bg-frame4{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #footer {
+    position: relative;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 585' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='M609 29.5167C319.8 -7.68333 81.5 -1.98333 0 5.51667V584.517H1440V29.5167C1347.5 53.5167 970.5 76.0167 609 29.5167Z' fill='%23F1E0FF'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom center;
+    padding-top: 175px;
+    padding-bottom: 175px;
+    z-index: 2;
+    margin-top: -75px;
+  }
