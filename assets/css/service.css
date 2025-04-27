@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  header {
+    background: #3d2d66;
+    padding: 20px 0;
+    color: #fff;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    background: #f4e8f9;
+    padding: 60px 0 20px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero h1 {
+    color: #3d2d66;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-images img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-weight: bold;
+    color: #3d2d66;
+  }
+  
+  .services {
+    padding: 60px 0;
+  }
+  
+  .services h2 {
+    text-align: center;
+    color: #3d2d66;
+  }
+  
+  .subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .service-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .service-item.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .service-item img {
+    flex: 1 1 300px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  
+  .service-item .text {
+    flex: 1 1 300px;
+  }
+  
+  .service-item h3 {
+    color: #3d2d66;
+    margin-bottom: 10px;
+  }
+  
+  .appointment {
+    background: #fff0f6;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .appointment h2 {
+    margin-bottom: 10px;
+    color: #3d2d66;
+  }
+  
+  .appointment p {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background: #6a34d2;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer {
+    background: #3d2d66;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-content .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+    }
+  
+    .service-item {
+      flex-direction: column;
+    }
+  
+    .service-item.reverse {
+      flex-direction: column;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  /* Ẩn menu con */
+.nav-item .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+/* Hiện menu con khi hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Styling cho item bên trong dropdown */
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 20px;
+  white-space: nowrap;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
