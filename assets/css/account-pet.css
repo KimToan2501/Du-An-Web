@@ -1,0 +1,361 @@
+/* ====== Account Page Style (account.css) ====== */
+
+/* Layout 2 cột */
+.main-wrapper {
+    display: flex;
+    gap: 32px;
+    padding: 40px 0;
+    /* background-color: #FBF6FF; */
+  }
+  
+  /* Sidebar trái */
+  .sidebar {
+    width: 250px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding-left: 8px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    object-fit:cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .user-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.4;
+    flex-grow: 1;
+  }
+
+  .user-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #111;
+  }
+  
+  .user-role {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .role-type {
+    color: #6a0dad; /* tím đậm */
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  
+  .refresh-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .refresh-icon img {
+    width: 16px;
+    height: 16px;
+    filter: invert(21%) sepia(92%) saturate(7481%) hue-rotate(267deg) brightness(94%) contrast(102%);
+    cursor: pointer;
+  }
+
+  .user-nav ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+  }
+  
+  .user-nav ul li {
+    margin: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+  
+  .user-nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    display: block;
+    font-size: 15px;
+  }
+  
+  .user-nav ul li.active a {
+    color: #410075;
+    font-weight: 700;
+  }
+
+  .user-nav ul li.active{
+    border-bottom: 1.5px solid #410075;
+  }
+
+  .user-nav ul li a:hover{
+    color: #410075;
+    font-weight: 700;
+  }
+
+  .user-nav ul li:hover{
+    border-bottom: 1.5px solid #410075;
+  }
+  
+  /* account detail */
+
+.account-page {
+    background: #f7f4fb;
+    padding: 40px 20px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 40px; /* Khoảng cách giữa sidebar và content */
+}
+
+.account-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.account-sidebar {
+    width: 260px;
+    background: transparent;
+    margin-right: 30px;
+}
+
+.account-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.user-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.user-role {
+    font-size: 14px;
+    color: #666;
+}
+
+.role {
+    color: #7e22ce;
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.account-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.account-menu li {
+    margin-bottom: 20px;
+}
+
+.account-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.account-menu li.active a {
+    color: #7e22ce;
+    font-weight: bold;
+}
+
+.account-main {
+    flex: 1;
+    width: 894px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.account-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    background: #F9F9F9; 
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: #999;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.tab-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+.tab.active {
+    color: #410075;
+    border-bottom: 3px solid #410075;
+    background: #ffffff;
+}
+
+/* thú cưng của bạn */
+.pet-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .pet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #FFF;
+    padding: 15px;
+    align-self: stretch;
+  }
+  
+  .pet-header h2 {
+    color: #410075;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .pet-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: white;
+    color: #8F00FF;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #7b00c7;
+    color: white;
+  }
+  
+  .edit-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .pet-table {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+  }
+  
+  .pet-table th, .pet-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .pet-table thead {
+    border-bottom: 1px solid #CCC;
+  }
+  
+  .pet-table tr:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .pet-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pet-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+  }
+  
+  .page-btn {
+    background: transparent;
+    border: none;
+    color: #595959;
+    font-weight: 400;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .page-btn.active {
+    background: #410075;
+    color: #FFF;
+  }
+  
+  .page-btn:hover {
+    background: #e0d4f7;
+  }
+  
