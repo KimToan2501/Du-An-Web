@@ -33,6 +33,29 @@
 
 /* End: Header */
 
+/* Start: Remember + Forgot Password */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.form-link-forgot {
+    color: #410075;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.form-link-forgot:hover {
+    text-decoration: underline;
+}
+
+
+/* End: Remember + Forgot Password */
+
 /* End: Login Form */
 
 /* Start: Background Visual */
