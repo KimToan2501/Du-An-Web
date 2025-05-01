@@ -1,6 +1,24 @@
 
 /* ====== Booking Page Style (booking.css) ====== */
 
+/* Cập nhật css cho phần header của trang đơn đã đặt */
+.avatar-wrapper {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* Layout 2 cột */
 .main-wrapper {
     display: flex;
@@ -119,16 +137,34 @@
     margin-right: 40px;
   }
   
-  .search-input {
-    width: 100%;
-    padding: 10px 14px;
-    border: none; /* Xóa hẳn viền */
-    outline: none;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    background-color: #fdf4ff;
-  }
+/* Wrapper chứa icon và input */
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Icon kính lúp */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+/* Ô input */
+.search-input {
+  width: 100%;
+  padding: 10px 14px 10px 38px; /* thêm padding-left để chừa chỗ icon */
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fdf4ff;
+}
   
   /* Khi người dùng click hoặc tab vào input */
   .search-input:focus {
@@ -139,7 +175,7 @@
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 12px;
+    gap: 18px;
     flex-wrap: wrap;
   }
   
@@ -167,81 +203,120 @@
     background-color: #fdf4ff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
     margin-right: 40px;
   }
   
   .booking-row {
     display: grid;
-    grid-template-columns: 1.2fr 2.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-columns: 1.2fr 2.8fr 1.5fr 1.2fr 1.5fr;
     padding: 14px 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #F2E2FF;
     align-items: center;
-    font-size: 15px;
-    color: #333;
+    font-size: 14px;
+    color: #595959;
   }
   
-  .booking-row:last-child {
-    border-bottom: none;
+  .booking-header > div:nth-child(4),
+  .booking-row > div:nth-child(4) {
+    display: flex;
+    justify-content: center;
   }
+
+  /* Căn phải nội dung cột "Thành tiền" */
+.booking-row > div:nth-child(5){
+  display: flex;
+  justify-content: center;
+  /* padding-right: 25px;  */
+  padding-left: 35px; /* tạo khoảng cách với cột trạng thái */
+}
   
-  .booking-header {
-    /* background-color: #f9f5ff; */
-    font-weight: 700;
-    color: #410075;
-  }
+/* Header riêng */
+.booking-header {
+  font-size: 15px; /* Header 15px */
+  font-weight: 700;
+  color: #410075;
+  background-color: #fdf4ff; /* cùng nền */
+}
   
   .service-name {
     font-weight: 500;
-    font-size: 15px;
-    color: #252525;
+    font-size: 14px;
+    color: #595959;
   }
   
-  /* Trạng thái */
   .status {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 13px;
+    display: inline-flex; /* đổi từ inline-block sang inline-flex */
+    align-items: center; 
+    justify-content: center;
+    min-width: 120px; /* cố định chiều rộng tối thiểu */
+    height: 36px; /* cố định chiều cao */
+    padding: 0 12px; /* padding hai bên */
+    border-radius: 20px; /* bo tròn mềm mại */
+    font-size: 14px;
     font-weight: 600;
     color: white;
     text-align: center;
+    background-color: grey; /* màu mặc định, sẽ override bởi class riêng */
+    white-space: nowrap; /* không cho chữ xuống dòng */
   }
-  
+
   .status-processing {
-    background-color: #007bff;
+    background-color: #1778EE;
   }
   
   .status-pending {
-    background-color: #ffc107;
+    background-color: #FFD414;
   }
   
   .status-done {
-    background-color: #28a745;
+    background-color: #13d97a;
   }
   
   .status-cancelled {
-    background-color: #dc3545;
+    background-color: #db1212;
   }
   
-  /* Pagination */
-  .pagination {
-    margin-top: 24px;
-    text-align: center;
-  }
+    /* Pagination */
+    .pagination {
+      margin-top: 24px;
+      text-align: center;
+    }
+    
+    .pagination a {
+      /* display: inline-block; */
+      padding: 6px 12px;
+      /* border-radius: 6px; */
+      margin: 0 4px;
+      /* background-color: #eee; */
+      color: #333;
+      text-decoration: none;
+    }
   
-  .pagination a {
-    display: inline-block;
+    .pagination a.active {
+      display: inline-block;
+      background-color: #410075;
+      color: white;
+      border-radius: 6px;
+    }
+    
+    .pagination a:hover {
+      background-color: #410075;
+      color: white;
+      border-radius: 6px;
+    }
+    
+    /* Style riêng cho prev & next */
+  .pagination a.prev,
+  .pagination a.next {
+    background-color: transparent;
     padding: 6px 12px;
-    border-radius: 6px;
-    margin: 0 4px;
-    background-color: #eee;
+    border-radius: 0;
     color: #333;
-    text-decoration: none;
   }
-  
-  .pagination a:hover {
-    background-color: #410075;
-    color: white;
+
+  .pagination a.prev:hover, .pagination a.next:hover{
+      background-color: #410075;
+      color: white;
+      border-radius: 6px;
   }
-  

@@ -57,16 +57,15 @@
 
             <!-- Start: Icon + Action -->
             <div id="header-icons">
-                <a href="#" class="icon-link" aria-label="Notifications">
+                <a href="../pages/notifications.html" class="icon-link" aria-label="Notifications">
                     <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
                 </a>
                 <a href="#" class="icon-link" aria-label="Cart">
                     <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
                 </a>
-                <div class="auth-links">
-                    <a href="./pages/login.html" class="auth-link">Đăng nhập</a>
-                    <span class="auth-separator">/</span>
-                    <a href="./pages/register.html" class="auth-link">Đăng ký</a>
+                <!-- Thay đổi từ Đăng nhập/đăng ký thành avatar -->
+                <div class="avatar-wrapper">
+                    <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
                 </div>
             </div>
             <!-- End: Icon + Action -->
@@ -97,7 +96,7 @@
             <ul>
                 <li><a href="#">Tài khoản của tôi</a></li>
                 <li class="active"><a href="#">Đặt lịch</a></li>
-                <li><a href="#">Thông báo</a></li>
+                <li><a href="../pages/notifications.html">Thông báo</a></li>
             </ul>
         </nav>
     </aside>
@@ -106,13 +105,16 @@
     <section class="booking-content">
         <!-- Thanh tìm kiếm và bộ lọc tab -->
         <div class="booking-filter">
-            <input type="text" class="search-input" placeholder="Tìm mã, tên sản phẩm...">
+            <div class="search-wrapper">
+                <img src="../assets/images/icons/MagnifyingGlass.png" alt="Magnifying Glass" class="search-icon">
+                <input type="text" class="search-input" placeholder="Tìm mã, tên sản phẩm...">
+            </div>
             <ul class="booking-tabs">
                 <li class="active">Tất cả</li>
                 <li>Chờ thanh toán</li>
                 <li>Đang xử lý</li>
                 <li>Đã đặt</li>
-                <li>Đã huỷ</li>
+                <li>Đã hủy</li>
             </ul>
         </div>
 
@@ -153,7 +155,7 @@
                     <span>KHÁM SỨC KHỎE CHÓ MÈO</span>
                 </div>
                 <div>19-02-2024</div>
-                <div><span class="status status-done">Hoàn thành</span></div>
+                <div><span class="status status-done">Đã đặt</span></div>
                 <div>400.000đ</div>
             </div>
 
@@ -166,16 +168,140 @@
                 <div><span class="status status-cancelled">Đã hủy</span></div>
                 <div>100.000đ</div>
             </div>
+
+            <div class="booking-row">
+                <div>#OD120501CD</div>
+                <div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div>
+                <div>15-03-2024</div>
+                <div><span class="status status-processing">Đang xử lý</span></div>
+                <div>101.000đ</div>
+              </div>
+              
+              <div class="booking-row">
+                <div>#OD120502CD</div>
+                <div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div>
+                <div>20-05-2024</div>
+                <div><span class="status status-done">Đã đặt</span></div>
+                <div>102.000đ</div>
+              </div>
+              
+              <div class="booking-row">
+                <div>#OD120503CD</div>
+                <div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div>
+                <div>09-09-2024</div>
+                <div><span class="status status-cancelled">Đã hủy</span></div>
+                <div>103.000đ</div>
+              </div>
+              
+              <div class="booking-row">
+                <div>#OD120504CD</div>
+                <div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div>
+                <div>01-01-2024</div>
+                <div><span class="status status-pending">Chờ thanh toán</span></div>
+                <div>104.000đ</div>
+              </div>
+              
+              <!-- Dòng 505 đến 521 (tổng 21 dòng đầu) -->
+            <div class="booking-row"><div>#OD120505CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>105.000đ</div></div>
+            <div class="booking-row"><div>#OD120506CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>106.000đ</div></div>
+            <div class="booking-row"><div>#OD120507CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>107.000đ</div></div>
+            <div class="booking-row"><div>#OD120508CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>108.000đ</div></div>
+            <div class="booking-row"><div>#OD120509CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>109.000đ</div></div>
+            <div class="booking-row"><div>#OD120510CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>110.000đ</div></div>
+            <div class="booking-row"><div>#OD120511CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>111.000đ</div></div>
+            <div class="booking-row"><div>#OD120512CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>112.000đ</div></div>
+            <div class="booking-row"><div>#OD120513CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>113.000đ</div></div>
+            <div class="booking-row"><div>#OD120514CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>114.000đ</div></div>
+            <div class="booking-row"><div>#OD120515CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>115.000đ</div></div>
+            <div class="booking-row"><div>#OD120516CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>116.000đ</div></div>
+            <div class="booking-row"><div>#OD120517CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>117.000đ</div></div>
+            <div class="booking-row"><div>#OD120518CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>118.000đ</div></div>
+            <div class="booking-row"><div>#OD120519CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>119.000đ</div></div>
+            <div class="booking-row"><div>#OD120520CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>120.000đ</div></div>
+            <div class="booking-row"><div>#OD120521CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>121.000đ</div></div>
+            <div class="booking-row"><div>#OD120522CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>122.000đ</div></div>
+            <div class="booking-row"><div>#OD120523CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>123.000đ</div></div>
+            <div class="booking-row"><div>#OD120524CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>124.000đ</div></div>
+            <div class="booking-row"><div>#OD120525CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>125.000đ</div></div>
+            <div class="booking-row"><div>#OD120526CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>126.000đ</div></div>
+            <div class="booking-row"><div>#OD120527CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>127.000đ</div></div>
+            <div class="booking-row"><div>#OD120528CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>128.000đ</div></div>
+            <div class="booking-row"><div>#OD120529CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>129.000đ</div></div>
+            <div class="booking-row"><div>#OD120530CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>130.000đ</div></div>
+            <div class="booking-row"><div>#OD120531CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>131.000đ</div></div>
+            <div class="booking-row"><div>#OD120532CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>132.000đ</div></div>
+            <div class="booking-row"><div>#OD120533CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>133.000đ</div></div>
+            <div class="booking-row"><div>#OD120534CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>134.000đ</div></div>
+            <div class="booking-row"><div>#OD120535CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>135.000đ</div></div>
+            <div class="booking-row"><div>#OD120536CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>136.000đ</div></div>
+            <div class="booking-row"><div>#OD120537CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>137.000đ</div></div>
+            <div class="booking-row"><div>#OD120538CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>138.000đ</div></div>
+            <div class="booking-row"><div>#OD120539CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>139.000đ</div></div>
+            <div class="booking-row"><div>#OD120540CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>140.000đ</div></div>
+            <div class="booking-row"><div>#OD120541CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>141.000đ</div></div>
+            <div class="booking-row"><div>#OD120542CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>142.000đ</div></div>
+            <div class="booking-row"><div>#OD120543CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>143.000đ</div></div>
+            <div class="booking-row"><div>#OD120544CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>144.000đ</div></div>
+            <div class="booking-row"><div>#OD120545CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>145.000đ</div></div>
+            <div class="booking-row"><div>#OD120546CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>146.000đ</div></div>
+            <div class="booking-row"><div>#OD120547CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>147.000đ</div></div>
+            <div class="booking-row"><div>#OD120548CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>148.000đ</div></div>
+            <div class="booking-row"><div>#OD120549CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>149.000đ</div></div>
+            <div class="booking-row"><div>#OD120550CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>150.000đ</div></div>
+            <div class="booking-row"><div>#OD120551CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>151.000đ</div></div>
+            <div class="booking-row"><div>#OD120552CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>152.000đ</div></div>
+            <div class="booking-row"><div>#OD120553CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>153.000đ</div></div>
+            <div class="booking-row"><div>#OD120554CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>154.000đ</div></div>
+            <div class="booking-row"><div>#OD120555CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>155.000đ</div></div>
+            <div class="booking-row"><div>#OD120556CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>156.000đ</div></div>
+            <div class="booking-row"><div>#OD120557CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>157.000đ</div></div>
+            <div class="booking-row"><div>#OD120558CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>158.000đ</div></div>
+            <div class="booking-row"><div>#OD120559CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>159.000đ</div></div>
+            <div class="booking-row"><div>#OD120560CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>160.000đ</div></div>
+            <div class="booking-row"><div>#OD120561CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>161.000đ</div></div>
+            <div class="booking-row"><div>#OD120562CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>162.000đ</div></div>
+            <div class="booking-row"><div>#OD120563CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>163.000đ</div></div>
+            <div class="booking-row"><div>#OD120564CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>154.000đ</div></div>
+            <div class="booking-row"><div>#OD120571CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>171.000đ</div></div>
+            <div class="booking-row"><div>#OD120572CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>172.000đ</div></div>
+            <div class="booking-row"><div>#OD120573CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>173.000đ</div></div>
+            <div class="booking-row"><div>#OD120574CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>174.000đ</div></div>
+            <div class="booking-row"><div>#OD120575CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>175.000đ</div></div>
+            <div class="booking-row"><div>#OD120576CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>176.000đ</div></div>
+            <div class="booking-row"><div>#OD120577CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>177.000đ</div></div>
+            <div class="booking-row"><div>#OD120578CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>178.000đ</div></div>
+            <div class="booking-row"><div>#OD120579CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>179.000đ</div></div>
+            <div class="booking-row"><div>#OD120580CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>180.000đ</div></div>
+            <div class="booking-row"><div>#OD120581CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>181.000đ</div></div>
+            <div class="booking-row"><div>#OD120582CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>182.000đ</div></div>
+            <div class="booking-row"><div>#OD120583CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>183.000đ</div></div>
+            <div class="booking-row"><div>#OD120584CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>184.000đ</div></div>
+            <div class="booking-row"><div>#OD120585CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>185.000đ</div></div>
+            <div class="booking-row"><div>#OD120586CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>186.000đ</div></div>
+            <div class="booking-row"><div>#OD120587CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>187.000đ</div></div>
+            <div class="booking-row"><div>#OD120588CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>188.000đ</div></div>
+            <div class="booking-row"><div>#OD120589CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>189.000đ</div></div>
+            <div class="booking-row"><div>#OD120590CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>190.000đ</div></div>
+            <div class="booking-row"><div>#OD120591CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>191.000đ</div></div>
+            <div class="booking-row"><div>#OD120592CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>192.000đ</div></div>
+            <div class="booking-row"><div>#OD120593CD</div><div class="service-name"><span>TẮM SPA CHÓ MÈO</span></div><div>15-03-2024</div><div><span class="status status-processing">Đang xử lý</span></div><div>193.000đ</div></div>
+            <div class="booking-row"><div>#OD120594CD</div><div class="service-name"><span>KHÁM SỨC KHỎE CHÓ MÈO</span></div><div>20-05-2024</div><div><span class="status status-done">Đã đặt</span></div><div>194.000đ</div></div>
+            <div class="booking-row"><div>#OD120595CD</div><div class="service-name"><span>CẮT TỈA LÔNG CHÓ MÈO</span></div><div>09-09-2024</div><div><span class="status status-cancelled">Đã hủy</span></div><div>195.000đ</div></div>
+            <div class="booking-row"><div>#OD120596CD</div><div class="service-name"><span>KHÁCH SẠN CHÓ MÈO</span></div><div>01-01-2024</div><div><span class="status status-pending">Chờ thanh toán</span></div><div>196.000đ</div></div>
+
         </div>
 
         <!-- Phân trang -->
         <div class="pagination">
-            <a href="#">«</a>
+            <a href="#" class="prev">&lt;</a>
             <a href="#" class="active">1</a>
             <a href="#">2</a>
+            <a href="#">3</a>
             <a href="#">…</a>
+            <a href="#">10</a>
+            <a href="#">11</a>
             <a href="#">12</a>
-            <a href="#">»</a>
+            <a href="#" class="next">&gt;</a>
         </div>
     </section>
 </main>
@@ -266,7 +392,7 @@
     </footer>
     <!-- End: Footer -->
     <script src="../assets/js/active-link.js"></script>
-
+    <script src="../assets/js/booking.js"></script>
 </body>
 
 </html>

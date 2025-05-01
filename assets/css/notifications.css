@@ -1,5 +1,24 @@
 /* ====== Notifications Page Style (notifications.css) ====== */
 
+/* Cập nhật css cho phần header của trang thông báo */
+.avatar-wrapper {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
 /* Layout 2 cột */
 .main-wrapper {
     display: flex;
@@ -116,7 +135,7 @@
     background-color:  #fdf4ff;
     border-radius: 12px;
     padding: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); */
     margin-right: 40px;
   }
   
@@ -164,8 +183,8 @@
   
   .notification-text {
     flex-grow: 1;
-    margin-right: 16px;
-    color: #333;
+    margin-right: 18px;
+    color: #252525;
     font-size: 15px;
   }
   
@@ -174,47 +193,72 @@
   }
   
   .notification-btn {
-    padding: 8px 16px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #410075;
+    background-color: #fff;
+    border: 1.5px solid #d8b4f8; /* tím pastel nhạt */
+    border-radius: 15px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
+    width: 140px; /* Đặt cố định */
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .notification-btn:hover {
     background-color: #410075;
     color: #fff;
     border-color: #410075;
+    transform: translateY(-1px);
   }
   
-  /* Pagination giữ từ booking.css */
-  .pagination {
-    margin-top: 24px;
-    text-align: center;
-  }
   
-  .pagination a {
-    display: inline-block;
+    /* Pagination */
+    .pagination {
+      margin-top: 24px;
+      text-align: center;
+    }
+    
+    .pagination a {
+      /* display: inline-block; */
+      padding: 6px 12px;
+      /* border-radius: 6px; */
+      margin: 0 4px;
+      /* background-color: #eee; */
+      color: #333;
+      text-decoration: none;
+    }
+  
+    .pagination a.active {
+      display: inline-block;
+      background-color: #410075;
+      color: white;
+      border-radius: 6px;
+    }
+    
+    .pagination a:hover {
+      background-color: #410075;
+      color: white;
+      border-radius: 6px;
+    }
+    
+    /* Style riêng cho prev & next */
+  .pagination a.prev,
+  .pagination a.next {
+    background-color: transparent;
     padding: 6px 12px;
-    border-radius: 6px;
-    margin: 0 4px;
-    background-color: #eee;
+    border-radius: 0;
     color: #333;
-    text-decoration: none;
-  }
-  
-  .pagination a.active {
-    background-color: #410075;
-    color: white;
   }
 
-  .pagination a:hover {
-    background-color: #410075;
-    color: white;
+  .pagination a.prev:hover, .pagination a.next:hover{
+      background-color: #410075;
+      color: white;
+      border-radius: 6px;
   }
-
   /* Phần phân trang riêng, nền trắng
 .notification-pagination-wrapper {
     background-color: white;
