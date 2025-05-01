@@ -73,6 +73,11 @@
     transform: translateY(-2px);
 }
 
+.icon-image {
+    width: 20px;
+    height: 20px;
+  }
+
 .auth-links {
     display: flex;
     align-items: center;
