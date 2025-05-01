@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/account-pet.css">
+    <link rel="stylesheet" href="../assets/css/booking.css">
     <title>Account - Pet</title>
 </head>
 <body style="background-color: #FBF6FF;">
@@ -53,21 +54,20 @@
             </nav>
             <!-- End: Navigation -->
 
-            <!-- Start: Icon + Action -->
-            <div id="header-icons">
-                <a href="#" class="icon-link" aria-label="Notifications">
-                    <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
-                </a>
-                <a href="#" class="icon-link" aria-label="Cart">
-                    <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
-                </a>
-                <div class="auth-links">
-                    <a href="./pages/login.html" class="auth-link">Đăng nhập</a>
-                    <span class="auth-separator">/</span>
-                    <a href="./pages/register.html" class="auth-link">Đăng ký</a>
-                </div>
+           <!-- Start: Icon + Action -->
+           <div id="header-icons">
+            <a href="../pages/notifications.html" class="icon-link" aria-label="Notifications">
+                <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
+            </a>
+            <a href="#" class="icon-link" aria-label="Cart">
+                <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
+            </a>
+            <!-- Thay đổi từ Đăng nhập/đăng ký thành avatar -->
+            <div class="avatar-wrapper">
+                <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
             </div>
-            <!-- End: Icon + Action -->
+        </div>
+        <!-- End: Icon + Action -->
         </div>
     </header>
     <!-- End: Header -->
@@ -97,18 +97,6 @@
             </nav>
         </aside>
         </div>
-        <!-- Nội dung tài khoản -->
-        <section class="account-main">
-            <div class="account-tabs">
-                <button class="tab">
-                    <img src="/assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon">
-                    <a href="/pages/account-detail.html"> Chi tiết tài khoản </a> 
-                </button>
-                <button class="tab active">
-                    <img src="/assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon">
-                    <a href="/pages/account-pet.html" style = "color: #999">Thú cưng của bạn</a>
-                </button>
-            </div>
             <!-- thú cưng của bạn -->
             <div class="pet-container">
                 <div class="pet-header">
