@@ -1,0 +1,445 @@
+/* ====== Account Page Style (account.css) ====== */
+
+/* Layout 2 cột */
+.main-wrapper {
+    display: flex;
+    gap: 32px;
+    padding: 40px 0;
+  }
+  
+  /* Sidebar trái */
+  .sidebar {
+    width: 270px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding-left: 8px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    object-fit:cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .user-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+    flex-grow: 1;
+    gap: 10px;
+  }
+
+  .user-name {
+    font-weight: 700;
+    font-size: 18px;
+    color: #111;
+  }
+  
+  .user-role {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .role-type {
+    color: #6a0dad; /* tím đậm */
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  
+  .refresh-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .refresh-icon img {
+    width: 14px;
+    height: 14px;
+    /* filter: invert(21%) sepia(92%) saturate(7481%) hue-rotate(267deg) brightness(94%) contrast(102%); */
+    cursor: pointer;
+  }
+
+  .user-nav ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+  }
+  
+  .user-nav ul li {
+    margin: 0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+  }
+  
+  .user-nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    display: block;
+    font-size: 15px;
+  }
+  
+  .user-nav ul li.active a {
+    color: #410075;
+    font-weight: 700;
+  }
+
+  .user-nav ul li.active{
+    border-bottom: 1.5px solid #410075;
+  }
+
+  .user-nav ul li a:hover{
+    color: #410075;
+    font-weight: 700;
+  }
+
+  .user-nav ul li:hover{
+    border-bottom: 1.5px solid #410075;
+  }
+  
+  /* account detail */
+
+.account-page {
+    background: #f7f4fb;
+    padding: 40px 20px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 40px; /* Khoảng cách giữa sidebar và content */
+}
+
+.account-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.account-sidebar {
+    width: 260px;
+    background: transparent;
+    margin-right: 30px;
+}
+
+.account-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.user-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.user-role {
+    font-size: 14px;
+    color: #666;
+}
+
+.role {
+    color: #7e22ce;
+}
+
+.refresh-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.account-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.account-menu li {
+    margin-bottom: 20px;
+}
+
+.account-menu a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.account-menu li.active a {
+    color: #7e22ce;
+    font-weight: bold;
+}
+
+.account-main {
+    flex: 1;
+    width: 894px;
+    height: 700px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.account-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    background: #F9F9F9; 
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    color: #999;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.tab-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+.tab.active {
+    color: #410075;
+    border-bottom: 3px solid #410075;
+    background: #ffffff;
+}
+
+/* loyalty */
+.loyalty-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #E0D7F8;
+    border-radius: 12px;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+
+.loyalty-info {
+    /* max-width: 70%; */
+    flex: 1;
+}
+
+.loyalty-header h3 {
+    font-size: 16px;
+    color: #4B0082;
+    margin-bottom: 10px;
+  }
+
+.loyalty-points {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111;
+}
+
+.points-number {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.points-label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.loyalty-rank {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #666;
+}
+
+.loyalty-bar-wrapper {
+    margin-top: 12px;
+}
+
+.loyalty-bar-bg {
+    background: #ddd;
+    height: 6px;
+    border-radius: 4px;
+    overflow: hidden;
+    /* position: relative; */
+    margin-bottom: 4px;
+}
+
+.loyalty-bar-fill {
+    background: #6B1F9A;
+    height: 100%;
+    width: 50%;
+    /* transition: width 0.5s ease; */
+}
+
+.loyalty-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+    /* margin-top: 5px; */
+}
+
+.view-detail {
+    display: flex;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #001AFF;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    height: 34px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+}
+
+.loyalty-badges img {
+    width: 243px;
+    height: 80px;
+    margin-left: 10px;
+}
+
+/* thông tin tài khoản  */
+.info-card {
+    border: 1px solid #E0D7F8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .card-header h3 {
+    color: #410075; /* tím */
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .edit-btn {
+    background: none;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    color: #001AFF;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .edit-btn img {
+    margin-left: 6px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .card-body {
+    margin-top: 12px;
+  }
+  
+  .info-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    width: 48%;
+    gap: 10px;
+  }
+  
+  .info-icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+  
+  .info-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    font-size: 12px;
+    color: #6b7280; /* xám nhạt */
+  }
+  
+  .info-text {
+    font-size: 14px;
+    color: #111;
+    font-weight: 500;
+  }
+  
+  .account-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .payment-icon {
+    width: 50px;
+    height: 30px;
+  }
+  
+  .payment-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .account-number {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .account-name {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  

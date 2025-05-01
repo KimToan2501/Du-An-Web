@@ -15,6 +15,7 @@
 /* ===== Header ===== */
 #header {
     background-color: #F2E2FF;
+    height: 100px;
 }
 
 #header>div {
