@@ -69,13 +69,12 @@
     transform: translateY(-2px);
 }
 
-.pawspa-icon__image {
-    width: 24px;
-    height: 24px;
-}
+.icon-image {
+    width: 20px;
+    height: 20px;
+  }
 
-/* ===== Auth Links ===== */
-.pawspa-auth__links {
+.auth-links {
     display: flex;
     align-items: center;
     gap: 4px;
