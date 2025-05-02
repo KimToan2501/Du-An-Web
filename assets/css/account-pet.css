@@ -8,9 +8,26 @@
     /* background-color: #FBF6FF; */
   }
   
+  .avatar-wrapper {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avatar-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
   /* Sidebar trái */
   .sidebar {
-    width: 250px;
+    width: 270px;
   }
   
   .user-info {
@@ -34,8 +51,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     line-height: 1.4;
     flex-grow: 1;
+    gap: 10px;
   }
 
   .user-name {
@@ -50,7 +69,7 @@
   }
 
   .role-type {
-    color: #6a0dad; 
+    color: #6a0dad; /* tím đậm */
     font-weight: 600;
     margin-left: 4px;
   }
@@ -62,9 +81,9 @@
   }
   
   .refresh-icon img {
-    width: 16px;
-    height: 16px;
-    filter: invert(21%) sepia(92%) saturate(7481%) hue-rotate(267deg) brightness(94%) contrast(102%);
+    width: 14px;
+    height: 14px;
+    /* filter: invert(21%) sepia(92%) saturate(7481%) hue-rotate(267deg) brightness(94%) contrast(102%); */
     cursor: pointer;
   }
 

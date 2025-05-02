@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/account-pet.css">
-    <link rel="stylesheet" href="../assets/css/booking.css">
     <title>Account - Pet</title>
 </head>
 <body style="background-color: #FBF6FF;">
@@ -75,28 +74,39 @@
     
         <!-- Thanh điều hướng bên trái -->
         <div class="container">
-        <aside class="sidebar">
-            <div class="user-info">
-                <img src="../assets/images/avatar.png" alt="Avatar" class="user-avatar">
-                
-                <div class="user-meta">
-                    <div class="user-name">Katy Nguyen</div>
-                    <div class="user-role">Dashboard <span class="role-type">User</span></div>
+            <aside class="sidebar">
+                <div class="user-info">
+                    <img src="../assets/images/avatar.png" alt="Avatar" class="user-avatar">
+                    
+                    <div class="user-meta">
+                        <div class="user-name">Katy Nguyen</div>
+                        <div class="user-role">Dashboard <span class="role-type">User</span></div>
+                        <img src="../ArrowsCounterClockwise.png" alt="Refresh" class="refresh-icon">
+                    </div>
                 </div>
-    
-                <div class="refresh-icon">
-                    <img src="../ArrowsCounterClockwise.png" alt="Refresh">
-                </div>
+                <nav class="user-nav">
+                    <ul>
+                        <li class="active"><a href="/pages/account.html">Tài khoản của tôi</a></li>
+                        <li><a href="/pages/booking.html">Đặt lịch</a></li>
+                        <li><a href="/pages/notifications.html">Thông báo</a></li>
+                    </ul>
+                </nav>
+            </aside>
             </div>
-            <nav class="user-nav">
-                <ul>
-                    <li class="active"><a href="/pages/account.html">Tài khoản của tôi</a></li>
-                    <li><a href="/pages/booking.html">Đặt lịch</a></li>
-                    <li><a href="/pages/notifications.html">Thông báo</a></li>
-                </ul>
-            </nav>
-        </aside>
         </div>
+        <!-- End: Thanh điều hướng bên trái -->
+
+        <section class="account-main">
+            <div class="account-tabs">
+                <button class="tab">
+                    <img src="/assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon">
+                    <a href="/pages/account-detail.html"> Chi tiết tài khoản </a> 
+                </button>
+                <button class="tab active">
+                    <img src="/assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon">
+                    <a href="/pages/account-pet.html" style = "color: #999">Thú cưng của bạn</a>
+                </button>
+            </div>
             <!-- thú cưng của bạn -->
             <div class="pet-container">
                 <div class="pet-header">
