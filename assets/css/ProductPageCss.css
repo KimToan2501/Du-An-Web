@@ -92,3 +92,30 @@
       margin-top: 15px;
     }
   }
+  .nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1000;
+  }
+  
+  /* Hiện menu con khi hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Styling cho item bên trong dropdown */
+  .dropdown-menu li a {
+    display: block;
+    padding: 8px 20px;
+    white-space: nowrap;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+  }

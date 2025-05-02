@@ -4,8 +4,8 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Segoe UI', sans-serif;
+  body{
+      /* font-family: 'Segoe UI', sans-serif; */
     line-height: 1.6;
     background: #fff;
     color: #333;
@@ -17,11 +17,11 @@
     margin: auto;
   }
   
-  header {
+  /* header {
     background: #3d2d66;
     padding: 20px 0;
     color: #fff;
-  }
+  } */
   
   .nav {
     display: flex;
@@ -157,7 +157,7 @@
   
   footer {
     background: #3d2d66;
-    color: #fff;
+    color: #000000;
     text-align: center;
     padding: 40px 20px;
     margin-top: 40px;

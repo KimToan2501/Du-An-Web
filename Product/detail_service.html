@@ -24,7 +24,7 @@
     <br>
     <!-- Đường dẫn breadcrumb -->
     <nav class="breadcrumb">
-      <a href="#">Dịch vụ</a> &gt; <a href="#">Cắt Tỉa Lông Cho Pet</a> &gt; <span>Cắt Tỉa Lông Tạo Kiểu</span>
+      <a href="/Du-An-Web/Product/service.html">Dịch vụ</a> &gt; <a href="/Du-An-Web/Product/CatTiaLong.html">Cắt Tỉa Lông Cho Pet</a> &gt; <span>Cắt Tỉa Lông Tạo Kiểu</span>
     </nav>
 
     <!-- Chi tiết sản phẩm -->
@@ -105,9 +105,6 @@
           <button class="btn-primary">Đặt lịch ngay</button>
         </div>
 
-        <div class="sold">
-          <span>500 đã bán</span>
-        </div>
       </div>
     </section>
 
@@ -297,6 +294,19 @@
   </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script>
+  document.querySelectorAll('.variant-group').forEach(group => {
+    const buttons = group.querySelectorAll('.variant-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  });
+</script>
+
 </body>
 
 </html>
