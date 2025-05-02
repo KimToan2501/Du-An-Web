@@ -349,13 +349,13 @@
     object-fit: cover;
   }
   
-  .pagination {
+  /* .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
     gap: 5px;
-  }
+  } */
   
   .page-btn {
     background: transparent;
@@ -377,4 +377,57 @@
   .page-btn:hover {
     background: #e0d4f7;
   }
+  
+/* Pagination */
+.pagination {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.pagination a {
+  padding: 6px 12px;
+  margin: 0 4px;
+  color: #333;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  display: inline-block;
+  background-color: #410075;
+  color: white;
+  border-radius: 6px;
+}
+
+.pagination a:hover {
+  background-color: #410075;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Style riêng cho prev & next */
+.pagination a.prev,
+.pagination a.next {
+  background-color: transparent;
+  padding: 6px 12px;
+  border-radius: 0;
+  color: #333;
+}
+
+.pagination a.prev:hover,
+.pagination a.next:hover {
+  background-color: #410075;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Thêm style cho trạng thái vô hiệu hóa */
+.pagination a.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination a.disabled:hover {
+  background-color: transparent;
+  color: #ccc;
+}
   
