@@ -6,78 +6,139 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <!-- CSS dùng chung -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/account-pet.css">
     <title>Account - Pet</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .pet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .pet-table th, .pet-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .pet-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pet-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .pet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .add-pet {
+            background-color: #6b21a8;
+            color: white;
+        }
+        .update-pet {
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .edit-icon {
+            width: 16px;
+            height: 16px;
+        }
+        /* Pagination Styles */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 20px 0;
+        }
+        .pagination li {
+            margin: 0 5px;
+        }
+        .pagination a, .pagination span {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .pagination a:hover {
+            background-color: #e9ecef;
+        }
+        .pagination .active a {
+            background-color: #6b21a8;
+            color: white;
+            border-color: #6b21a8;
+        }
+        .pagination .disabled a, .pagination .disabled span {
+            color: #6c757d;
+            cursor: not-allowed;
+            border-color: #ddd;
+        }
+    </style>
 </head>
 <body style="background-color: #FBF6FF;">
     <!-- Start: Header -->
     <header id="header">
         <div class="container flex-between">
-            <!-- Start: Logo -->
             <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
                 <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
                 <span class="logo-text">Pawspa</span>
             </a>
-            <!-- End: Logo -->
-
-            <!-- Start: Navigation -->
             <nav id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="./index.html">Trang chủ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Dịch vụ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Blog/Tin tức</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Giới thiệu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#">Liên lạc</a>
-                    </li>
+                    <li class="nav-item"><a href="./index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#">Dịch vụ</a></li>
+                    <li class="nav-item"><a href="#">Blog/Tin tức</a></li>
+                    <li class="nav-item"><a href="#">Giới thiệu</a></li>
+                    <li class="nav-item"><a href="#">Liên lạc</a></li>
                 </ul>
             </nav>
-            <!-- End: Navigation -->
-
-           <!-- Start: Icon + Action -->
-           <div id="header-icons">
-            <a href="../pages/notifications.html" class="icon-link" aria-label="Notifications">
-                <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
-            </a>
-            <a href="#" class="icon-link" aria-label="Cart">
-                <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
-            </a>
-            <!-- Thay đổi từ Đăng nhập/đăng ký thành avatar -->
-            <div class="avatar-wrapper">
-                <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
+            <div id="header-icons">
+                <a href="../pages/notifications.html" class="icon-link" aria-label="Notifications">
+                    <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
+                </a>
+                <a href="#" class="icon-link" aria-label="Cart">
+                    <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
+                </a>
+                <div class="avatar-wrapper">
+                    <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
+                </div>
             </div>
-        </div>
-        <!-- End: Icon + Action -->
         </div>
     </header>
     <!-- End: Header -->
+
     <main class="main-wrapper">
-    
-        <!-- Thanh điều hướng bên trái -->
         <div class="container">
             <aside class="sidebar">
                 <div class="user-info">
                     <img src="../assets/images/avatar.png" alt="Avatar" class="user-avatar">
-                    
                     <div class="user-meta">
                         <div class="user-name">Katy Nguyen</div>
                         <div class="user-role">Dashboard <span class="role-type">User</span></div>
@@ -92,22 +153,19 @@
                     </ul>
                 </nav>
             </aside>
-            </div>
         </div>
-        <!-- End: Thanh điều hướng bên trái -->
 
         <section class="account-main">
             <div class="account-tabs">
                 <button class="tab">
                     <img src="/assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon">
-                    <a href="/pages/account-detail.html"> Chi tiết tài khoản </a> 
+                    <a href="/pages/account-detail.html">Chi tiết tài khoản</a>
                 </button>
                 <button class="tab active">
                     <img src="/assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon">
-                    <a href="/pages/account-pet.html" style = "color: #999">Thú cưng của bạn</a>
+                    <a href="/pages/account-pet.html" style="color: #999">Thú cưng của bạn</a>
                 </button>
             </div>
-            <!-- thú cưng của bạn -->
             <div class="pet-container">
                 <div class="pet-header">
                     <h2>Thú Cưng Của Bạn</h2>
@@ -120,7 +178,7 @@
                         </button>
                     </div>
                 </div>
-                <!-- <table class="pet-table">
+                <table class="pet-table">
                     <thead>
                         <tr>
                             <th></th>
@@ -130,162 +188,206 @@
                             <th>Giống loài</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                        <td>></td>
-                        <td>
-                            <div class="pet-info">
-                            <img src="/assets/images/account/webb.png" alt="Webb" class="pet-avatar">
-                            Webb
-                            </div>
-                        </td>
-                        <td>Mèo</td>
-                        <td>2</td>
-                        <td>Mèo anh</td>
-                        </tr>
-
-                        <tr>
-                        <td>></td>
-                        <td>
-                            <div class="pet-info">
-                            <img src="/assets/images/account/rob.png" alt="Rob" class="pet-avatar">
-                            Rob
-                            </div>
-                        </td>
-                        <td>Chó</td>
-                        <td>4</td>
-                        <td>Chó chăn cừu</td>
-                        </tr>
-                        <tr>
-                        <td>></td>
-                        <td>
-                            <div class="pet-info">
-                            <img src="/assets/images/account/miles.png" alt="Miles" class="pet-avatar">
-                            Miles
-                            </div>
-                        </td>
-                        <td>Chim</td>
-                        <td>5</td>
-                        <td>Chim két</td>
-                        </tr>
+                    <tbody id="pet-table-body">
+                        <!-- Dữ liệu sẽ được render vào đây bởi JavaScript -->
                     </tbody>
-                </table> -->
-              
-                <!-- <div class="pagination">
-                    <button class="page-btn">&lt;</button>
-                    <button class="page-btn active">1</button>
-                    <button class="page-btn">2</button>
-                    <button class="page-btn">3</button>
-                    <span>...</span>
-                    <button class="page-btn">10</button>
-                    <button class="page-btn">11</button>
-                    <button class="page-btn">12</button>
-                    <button class="page-btn">&gt;</button>
-                </div> -->
-
-                <table class="pet-table">
-                    <!-- Dữ liệu sẽ được render vào đây bởi JavaScript -->
                 </table>
-                <!-- Phân trang -->
-                <div class="pagination">
-                    <a href="#" class="prev">&lt;</a>
-                    <a href="#" class="active">1</a>
-                    <a href="#">2</a>
-                    <a href="#" class="next">&gt;</a>
+                <ul class="pagination"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
+                <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon" class="contact-icon">
+                        <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon" class="contact-icon">
+                        <a href="tel:0345663153" class="contact-address">0345663153</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="#" title="Instagram"><img src="../assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon"></a>
+                    <a href="#" title="Facebook"><img src="../assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="#" title="LinkedIn"><img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon"></a>
                 </div>
             </div>
-        </section>     
-        </main>
-        <!-- End: Main -->
-    
-        <!-- Start: Footer -->
-        <footer id="footer">
-            <div class="container footer-container">
-                <div class="footer-info">
-                    <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
-                    <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm
-                        sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
-                    <div class="footer-contact">
-                        <div class="contact-item">
-                            <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon"
-                                class="contact-icon">
-                            <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
+            <div class="footer-image">
+                <div><div><img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true"></div></div>
+            </div>
+            <div class="footer-category">
+                <div class="footer-category-item">
+                    <h3 class="category-title">Dịch vụ</h3>
+                    <ul class="category-list">
+                        <li class="category-list-item"><a href="#" class="category-item-link">Spa</a></li>
+                        <li class="category-list-item"><a href="#" class="category-item-link">Cắt tỉa lông</a></li>
+                        <li class="category-list-item"><a href="#" class="category-item-link">Khách sạn lưu trú</a></li>
+                    </ul>
+                </div>
+                <div class="footer-category-item">
+                    <h3 class="category-title">Nền tảng</h3>
+                    <ul class="category-list">
+                        <li class="category-list-item"><a href="#" class="category-item-link">Dịch vụ</a></li>
+                        <li class="category-list-item"><a href="#" class="category-item-link">Blog/Tin tức</a></li>
+                        <li class="category-list-item"><a href="#" class="category-item-link">Giới thiệu</a></li>
+                        <li class="category-list-item"><a href="#" class="category-item-link">Liên lạc</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-image-left"><img src="../assets/images/footer/footer-01.svg" alt=""></div>
+        <div class="footer-image-right"><img src="../assets/images/footer/footer-02.svg" alt=""></div>
+    </footer>
+
+    <script src="../assets/js/active-link.js"></script>
+    <script src="../assets/js/account-pet.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const paginationContainer = document.querySelector('.pagination');
+        const petTableBody = document.querySelector('#pet-table-body');
+        const petsPerPage = 3;
+        let currentPage = 1;
+
+        // Sample pet data
+        const petData = [
+            { name: 'Webb', type: 'Mèo', age: 2, breed: 'Mèo anh', avatar: '/assets/images/account/webb.png' },
+            { name: 'Rob', type: 'Chó', age: 4, breed: 'Chó chăn cừu', avatar: '/assets/images/account/rob.png' },
+            { name: 'Miles', type: 'Chim', age: 5, breed: 'Chim két', avatar: '/assets/images/account/miles.png' },
+            { name: 'Luna', type: 'Mèo', age: 3, breed: 'Mèo Ba Tư', avatar: '/assets/images/account/webb.png' },
+            { name: 'Max', type: 'Chó', age: 6, breed: 'Golden Retriever', avatar: '/assets/images/account/rob.png' },
+            { name: 'Tweety', type: 'Chim', age: 1, breed: 'Vẹt', avatar: '/assets/images/account/miles.png' },
+            { name: 'Bella', type: 'Mèo', age: 4, breed: 'Mèo Xiêm', avatar: '/assets/images/account/webb.png' },
+            { name: 'Rocky', type: 'Chó', age: 2, breed: 'Bulldog', avatar: '/assets/images/account/rob.png' },
+            { name: 'Sunny', type: 'Chim', age: 3, breed: 'Chim hoàng yến', avatar: '/assets/images/account/miles.png' },
+            { name: 'Coco', type: 'Mèo', age: 5, breed: 'Mèo Ragdoll', avatar: '/assets/images/account/webb.png' }
+        ];
+
+        const totalPages = Math.ceil(petData.length / petsPerPage);
+
+        function showPage(pageNumber) {
+            currentPage = pageNumber;
+            const startIndex = (pageNumber - 1) * petsPerPage;
+            const endIndex = startIndex + petsPerPage;
+            const currentPets = petData.slice(startIndex, endIndex);
+
+            // Render pet table
+            petTableBody.innerHTML = '';
+            currentPets.forEach(pet => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>></td>
+                    <td>
+                        <div class="pet-info">
+                            <img src="${pet.avatar}" alt="${pet.name}" class="pet-avatar">
+                            ${pet.name}
                         </div>
-                        <div class="contact-item">
-                            <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon"
-                                class="contact-icon">
-                            <a href="tel:0345663153" class="contact-address">0345663153</a>
-                        </div>
-                    </div>
-                    <div class="footer-social">
-                        <a href="#" title="Instagram">
-                            <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
-                        </a>
-                        <a href="#" title="Facebook">
-                            <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
-                        </a>
-                        <a href="#" title="LinkedIn">
-                            <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Strat: Hình con chó ở Footer -->
-                <div class="footer-image">
-                    <div>
-                        <div>
-                            <img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
-                        </div>
-                    </div>
-                </div>
-                <!-- End: Hình con chó ở Footer -->
-    
-                <div class="footer-category">
-                    <div class="footer-category-item">
-                        <h3 class="category-title">Dịch vụ</h3>
-                        <ul class="category-list">
-                            <li class="category-list-item">
-                                <a href="#" class="category-item-link">Spa</a>
-                            </li>
-                            <li class="category-list-item">
-                                <a href="#" class="category-item-link">Cắt tỉa lông</a>
-                            </li>
-                            <li class="category-list-item">
-                                <a href="#" class="category-item-link">Khách sạn lưu trú</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-category-item">
-                        <h3 class="category-title">Nền tảng</h3>
-                        <ul class="category-list">
-                            <li class="category-list-item">
-                                <a href="#" class="category-item-link">Dịch vụ</a>
-                            </li>
-                            <li class="category-list-item">
-                                <a href="#" class="category-item-link">Blog/Tin tức</a>
-                            </li>
-                            <li class="category-list-item">
-                                <a href="#" class="category-item-link">Giới thiệu</a>
-                            </li>
-                            <li class="category-list-item">
-                                <a href="#" class="category-item-link">Liên lạc</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-image-left">
-                <img src="../assets/images/footer/footer-01.svg" alt="">
-            </div>
-            <div class="footer-image-right">
-                <img src="../assets/images/footer/footer-02.svg" alt="">
-            </div>
-        </footer>
-        <!-- End: Footer -->
-        <script src="../assets/js/active-link.js"></script>
-        <script src="../assets/js/account-pet.js"></script>
-        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    
+                    </td>
+                    <td>${pet.type}</td>
+                    <td>${pet.age}</td>
+                    <td>${pet.breed}</td>
+                `;
+                petTableBody.appendChild(row);
+            });
+
+            updatePagination(pageNumber);
+            document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updatePagination(activePage) {
+            paginationContainer.innerHTML = '';
+
+            // Previous button
+            const prevLi = document.createElement('li');
+            const prevButton = document.createElement('a');
+            prevButton.href = '#';
+            prevButton.textContent = '«';
+            if (activePage === 1) {
+                prevLi.classList.add('disabled');
+            } else {
+                prevButton.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (activePage > 1) showPage(activePage - 1);
+                });
+            }
+            prevLi.appendChild(prevButton);
+            paginationContainer.appendChild(prevLi);
+
+            // Always show first page
+            paginationContainer.appendChild(createPageLink(1, activePage));
+
+            // Add ellipsis if needed
+            if (activePage > 4) {
+                paginationContainer.appendChild(createEllipsis());
+            }
+
+            // Show 3 pages before and after active page
+            let startPage = Math.max(2, activePage - 2);
+            let endPage = Math.min(totalPages - 1, activePage + 2);
+
+            for (let i = startPage; i <= endPage; i++) {
+                paginationContainer.appendChild(createPageLink(i, activePage));
+            }
+
+            // Add ellipsis if needed
+            if (activePage < totalPages - 3) {
+                paginationContainer.appendChild(createEllipsis());
+            }
+
+            // Always show last page
+            if (totalPages > 1) {
+                paginationContainer.appendChild(createPageLink(totalPages, activePage));
+            }
+
+            // Next button
+            const nextLi = document.createElement('li');
+            const nextButton = document.createElement('a');
+            nextButton.href = '#';
+            nextButton.textContent = '»';
+            if (activePage === totalPages) {
+                nextLi.classList.add('disabled');
+            } else {
+                nextButton.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (activePage < totalPages) showPage(activePage + 1);
+                });
+            }
+            nextLi.appendChild(nextButton);
+            paginationContainer.appendChild(nextLi);
+        }
+
+        function createPageLink(pageNumber, activePage) {
+            const pageLi = document.createElement('li');
+            const pageLink = document.createElement('a');
+            pageLink.href = '#';
+            pageLink.textContent = pageNumber;
+            if (pageNumber === activePage) {
+                pageLi.classList.add('active');
+            }
+            pageLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                showPage(pageNumber);
+            });
+            pageLi.appendChild(pageLink);
+            return pageLi;
+        }
+
+        function createEllipsis() {
+            const ellipsisLi = document.createElement('li');
+            const ellipsisSpan = document.createElement('span');
+            ellipsisSpan.textContent = '...';
+            ellipsisLi.classList.add('disabled');
+            ellipsisLi.appendChild(ellipsisSpan);
+            return ellipsisLi;
+        }
+
+        showPage(1);
+    });
+    </script>
 </body>
-    
 </html>
