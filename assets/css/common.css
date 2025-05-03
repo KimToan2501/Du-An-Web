@@ -2,12 +2,19 @@ body {
     font-family: "Nunito", sans-serif;
 }
 
-.container {
+.pawspa__container {
     max-width: 1220px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.pawspa__flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 /* Start: Main */
 
@@ -17,9 +24,9 @@ body {
 
 /* End: Main */
 
-/* Start: Form input */
+/* ========== FORM INPUT ========== */
 
-.form-input {
+.pawspa-form__input {
     width: 100%;
     padding: 16px 20px;
     border-radius: 10px;
@@ -28,12 +35,12 @@ body {
     transition: all 0.3s ease;
 }
 
-.form-input:focus {
+.pawspa-form__input:focus {
     border-color: #410075;
     box-shadow: 0 0 0 3px rgba(65, 0, 117, 0.15);
 }
 
-.form-checkbox {
+.pawspa-form__checkbox {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -43,25 +50,23 @@ body {
     margin-bottom: 10px;
 }
 
-.form-checkbox-input {
+.pawspa-form__checkbox-input {
     width: 16px;
     height: 16px;
     accent-color: #410075;
-    /* Cho trình duyệt hỗ trợ (Chrome, Edge, Firefox) */
     cursor: pointer;
 }
 
-.form-checkbox-label {
+.pawspa-form__checkbox-label {
     font-size: 14px;
     line-height: 1.4;
     user-select: none;
     cursor: pointer;
 }
 
+/* ========== BUTTON STYLE ========== */
 
-/* End: Form input */
-
-.btn {
+.pawspa-btn {
     outline: none;
     border: 0;
     padding: 12px 0;
@@ -74,30 +79,30 @@ body {
     gap: 10px;
 }
 
-.btn.btn-primary {
+.pawspa-btn--primary {
     background-color: #410075;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: 500;
 }
 
-.btn-primary:hover {
+.pawspa-btn--primary:hover {
     background-color: #5b0aa5;
     box-shadow: 0 4px 10px rgba(65, 0, 117, 0.2);
 }
 
-.btn.btn-outline {
+.pawspa-btn--outline {
     background-color: transparent;
     color: #595959;
     border: 1px solid #CCCCCC;
 }
 
-.btn-outline:hover {
+.pawspa-btn--outline:hover {
     border-color: #410075;
     color: #410075;
 }
 
-.btn-login {
+.pawspa-btn--social {
     margin-bottom: 10px;
     text-transform: capitalize;
     font-weight: bold;
