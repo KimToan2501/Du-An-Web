@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<!-- Code cua HThao -->
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,20 +15,11 @@
         rel="stylesheet">
 
     <!-- CSS dùng chung -->
-     <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/form.css">
-
-    <!-- CSS khác -->
-    <link rel="stylesheet" href="../assets/css/register.css">
-
-
-    <!-- intl-tel-input CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.min.css" />
-    
-    <title>Đăng ký</title>
+    <link rel="stylesheet" href="../assets/css/customerHP.css">
+    <title>Home</title>
 </head>
 
 <body>
@@ -36,7 +27,7 @@
     <header id="header">
         <div class="container flex-between">
             <!-- Start: Logo -->
-            <a href="../index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
+            <a href="/customer/homepage.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
                 <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
                 <span class="logo-text">Pawspa</span>
             </a>
@@ -46,7 +37,7 @@
             <nav id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="../index.html">Trang chủ</a>
+                        <a href="/customer/homepage.html">Trang chủ</a>
                     </li>
                     <li class="nav-item">
                         <a href="#">Dịch vụ</a>
@@ -73,9 +64,10 @@
                     <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
                 </a>
                 <div class="auth-links">
-                    <a href="./login.html" class="auth-link">Đăng nhập</a>
+                    <!-- Toàn tự tạo customer/login.html -->
+                    <a href="/customer/login.html" class="auth-link">Đăng nhập</a>
                     <span class="auth-separator">/</span>
-                    <a href="./register.html" class="auth-link">Đăng ký</a>
+                    <a href="/customer/register.html" class="auth-link">Đăng ký</a>
                 </div>
             </div>
             <!-- End: Icon + Action -->
@@ -84,103 +76,107 @@
     <!-- End: Header -->
 
     <!-- Start: Main -->
-    <main class="container">
-
-        <!-- Start: Register Form Wrapper -->
-        <div class="form-wrapper">
-            <!-- Start: Register Form -->
-            <form id="register-form" class="form-body" action="#">
-
-                <!-- Start: Header -->
-                <div class="register-form-header">
-                    <h3 class="register-form-title">Đăng ký</h3>
-                    <img src="../assets/images/Union01.svg" alt="" class="register-form-icon">
-                </div>
-                <!-- End: Header -->
-
-                <!-- Start: Input - Full name -->
-                <div class="form-group">
-                    <input type="text" class="form-input" placeholder="Họ và tên" required aria-label="Họ và tên">
-                </div>
-                <!-- End: Input - Full name -->
-
-                <!-- Start: Input - Phone number -->
-                <div class="form-group">
-                    <input id="phone" name="phone" type="tel" class="form-input" placeholder="Số điện thoại" required>
-                </div>
-                <!-- End: Input - Phone number -->
-
-                <!-- Input ẩn để gửi về backend -->
-                <input type="hidden" name="phone_full" id="phone_full" />
-
-                <!-- Start: Input - Email -->
-                <div class="form-group">
-                    <input type="email" class="form-input" placeholder="Email" required aria-label="Email">
-                </div>
-                <!-- End: Input - Email -->
-
-                <!-- Start: Input - Password -->
-                <div class="form-group">
-                    <input type="password" class="form-input" placeholder="Mật khẩu" required minlength="6"
-                        aria-label="Mật khẩu">
-                </div>
-                <!-- End: Input - Password -->
-
-                <!-- Start: Input - Confirm password -->
-                <div class="form-group">
-                    <input type="password" class="form-input" placeholder="Nhập lại mật khẩu" required minlength="6"
-                        aria-label="Nhập lại mật khẩu">
-                </div>
-                <!-- End: Input - Confirm password -->
-
-                <!-- Start: Actions -->
-                <div class="form-action">
-                    <input type="submit" value="Xác nhận" class="btn btn-primary">
-
-                    <!-- Start: Register Link -->
-                    <p class="form-link">
-                        Bạn đã có tài khoản ?
-                        <a href="./login.html" class="register-form-link-highlight">Đăng nhập</a>
-                    </p>
-                    <!-- End: Register Link -->
-
-                    <!-- Start: OR Separator -->
-                    <div class="form-separator">
-                        <span>Or</span>
-                    </div>
-                    <!-- End: OR Separator -->
-
-                    <!-- Start: Social Login Buttons -->
-                    <a href="#" class="btn btn-outline btn-login">
-                        <img src="../assets/images/icons/social-media/google.svg" alt="">
-                        Đăng nhập bằng google
-                    </a>
-                    <a href="#" class="btn btn-outline btn-login">
-                        <img src="../assets/images/icons/social-media/facebook.svg" alt="">
-                        Đăng nhập bằng facebook
-                    </a>
-                    <!-- End: Social Login Buttons -->
-
-                </div>
-                <!-- End: Actions -->
-
-            </form>
-            <!-- End: Register Form -->
-
-            <!-- Start: Background Visual -->
-            <div class="form-background register-form-background">
-                <p class="form-slogan">
-                    Become a member today and help protect animals!
-                </p>
-                <div class="form-background-img">
-                    <img src="../assets/images/pngwing02.svg" alt="Chó và mèo nhìn nhau">
-                </div>
+    <main>
+        <div class="hero-section">
+            <img src="../assets/images/customerHP/bg-frame1.png" alt="Background" class="background-img">
+        
+            <div class="content">
+              
+              <div class="text-section">
+                <img src="../assets/images/customerHP/Petpawframe1.png" alt="paw" class="pet-paw">
+                <p>Chào mừng bạn đến với<br>nền tảng đặt lịch chăm<br>sóc thú cưng toàn diện!</p>
+                <h1><span class="highlight">DỊCH VỤ TỐT NHẤT</span><br><span class="sub-highlight">CHO THÚ CƯNG CỦA BẠN</span></h1>
+                <button>Đặt lịch chăm sóc thú cưng hôm nay!</button>
+              </div>
+        
+              <div class="image-section">
+                <img src="../assets/images/customerHP/Petframe1.png" alt="Chó và mèo" class="pet-img">
+                <img src="../assets/images/customerHP/circleframe1.png" alt="Vòng tròn trang trí" class="circle-decor">
+              </div>
+              
             </div>
-            <!-- End: Background Visual -->
-
         </div>
-        <!-- End: Register Form Wrapper -->
 
+
+
+
+        
+        <div class="image-background">
+            <h1 class="title">DỊCH VỤ CUNG CẤP</h1>
+            <img src="../assets/images/customerHP/bgframe2.png" alt="Nửa vòng tím" class="bg-circle" />
+            <img src="../assets/images/customerHP/Petframe2.png" alt="Chó và Mèo" class="center-image" />
+         
+
+          <div class="service service1">
+            <div class="circle">1</div>
+            <h3>Cắt Tỉa Lông Chó Mèo</h3>
+            <p>Dịch vụ cắt tỉa lông giúp thú cưng gọn gàng, sạch sẽ, và phù hợp với từng giống loài.</p>
+          </div>
+      
+          <div class="service service2">
+            <div class="circle">2</div>
+            <h3>Tắm Spa Chó Mèo</h3>
+            <p>Foundation skills for young dogs, including potty training and basic commands.</p>
+          </div>
+      
+          <div class="service service3">
+            <div class="circle">3</div>
+            <h3>Khách Sạn Chó Mèo</h3>
+            <p>Customized one-on-one sessions for specific needs.</p>
+          </div>
+      
+          <div class="service service4">
+            <div class="circle">4</div>
+            <h3>Khám Sức Khỏe Chó Mèo</h3>
+            <p>Specialized training, such as agility or therapy dog preparation.</p>
+          </div>
+      
+          <div class="service service5">
+            <div class="circle">5</div>
+            <h3>Hỏi Đáp Thú Y</h3>
+            <p>Online sessions for convenient, at-home learning.</p>
+          </div>
+        </div>
+    </div>
+ <!-- trang 3 -->
+  <div class="bg-frame3">
+    <h1 class="h1-frame3">CHÍNH SÁCH DỊCH VỤ VÀ BẢO MẬT THÔNG TIN</h1>
+  <p class="subtitle">
+    Nền tảng của chúng tôi cung cấp các dịch vụ spa, chăm sóc và khám sức khỏe cho thú cưng.<br>
+    Chính sách này nhằm đảm bảo quyền lợi của khách hàng và trải nghiệm tốt nhất khi sử dụng dịch vụ.
+  </p>
+  <div class="containerrr">
+    <div class="left">
+      <img src="../assets/images/customerHP/doctorframe3.png" alt="Bác sĩ thú y">
+    </div>
+    <div class="right">
+      <div class="policy">
+        <img src="../assets/images/customerHP/heartframe3.png" alt="Chất lượng dịch vụ">
+        <div>
+          <h3>Chất Lượng Dịch Vụ</h3>
+          <p>Chúng tôi cung cấp thông tin chi tiết về các dịch vụ, bao gồm mô tả, quy trình, thời gian và chi phí. Ngoài ra, hình ảnh thực tế về dịch vụ sẽ được đăng tải để khách hàng có cái nhìn trực quan hơn. Chúng tôi cam kết cung cấp dịch vụ chất lượng, đảm bảo sự hài lòng cho thú cưng của bạn.</p>
+        </div>
+      </div>
+      <div class="policy">
+        <img src="../assets/images/customerHP/boneframe3.png" alt="Bảo mật thông tin">
+        <div>
+          <h3>Bảo Mật Thông Tin</h3>
+          <p>Thông tin cá nhân của khách hàng sẽ được bảo vệ tuyệt đối và không chia sẻ nếu không có sự đồng ý. Khách hàng có thể yêu cầu chỉnh sửa hoặc xóa thông tin cá nhân nếu cần. Chúng tôi cam kết tôn trọng quyền riêng tư của khách hàng.</p>
+        </div>
+      </div>
+      <div class="policy">
+        <img src="../assets/images/customerHP/headphoneframe3.png" alt="Hỗ trợ đặt lịch">
+        <div>
+          <h3>Hỗ Trợ Đặt Lịch</h3>
+          <p>Khách hàng có thể đặt lịch trực tuyến và nhận xác nhận qua email hoặc SMS. Nếu cần thay đổi hoặc hủy lịch hẹn, vui lòng thực hiện trước ít nhất 24 giờ. Mọi thông tin liên hệ được cung cấp đầy đủ để khách hàng có thể dễ dàng kết nối với chúng tôi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+        <img src="../assets/images/customerHP/frame4.png" alt="Background" class="bg-frame4" />
+    
     </main>
     <!-- End: Main -->
 
@@ -195,12 +191,12 @@
                     <div class="contact-item">
                         <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon"
                             class="contact-icon">
-                        <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
+                        <a href="mailto:hieuthaodepgai@gmail.com" class="contact-address">hieuthaodepgai@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon"
                             class="contact-icon">
-                        <a href="tel:0345663153" class="contact-address">0345663153</a>
+                        <a href="tel:099999" class="contact-address">0999999</a>
                     </div>
                 </div>
                 <div class="footer-social">
@@ -271,10 +267,6 @@
 
     <script src="../assets/js/active-link.js"></script>
 
-
-    <!-- intl-tel-input JS -->
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
-    <script src="../assets/js/intl-phone.js"></script>
 </body>
 
 </html>
