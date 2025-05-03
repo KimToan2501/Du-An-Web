@@ -24,9 +24,9 @@ body {
 
 /* End: Main */
 
-/* Start: Form input */
+/* ========== FORM INPUT ========== */
 
-.form-input {
+.pawspa-form__input {
     width: 100%;
     padding: 16px 20px;
     border-radius: 10px;
