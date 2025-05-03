@@ -17,57 +17,59 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
     <link rel="stylesheet" href="../assets/css/account.css">
     <link rel="stylesheet" href="../assets/css/booking.css">
     <title>Account - Detail</title>
 </head>
 <body style="background-color: #FBF6FF;">
     <!-- Start: Header -->
+     <!-- Start: Header -->
     <header id="header">
-        <div class="container flex-between">
+        <div class="pawspa__container pawspa__flex-between">
             <!-- Start: Logo -->
-            <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
-                <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
-                <span class="logo-text">Pawspa</span>
+            <a href="/index.html" id="pawspa-logo" aria-label="Go to homepage" class="pawspa-header__logo">
+                <img src="../assets/images/icons/Union.svg" alt="Logo" class="pawspa-logo__image">
+                <span class="pawspa-logo__text">Pawspa</span>
             </a>
             <!-- End: Logo -->
 
             <!-- Start: Navigation -->
-            <nav id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="./index.html">Trang chủ</a>
+            <nav id="pawspa-nav">
+                <ul class="pawspa-nav__list">
+                    <li class="pawspa-nav__item">
+                        <a href="/index.html">Trang chủ</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="pawspa-nav__item">
                         <a href="#">Dịch vụ</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="pawspa-nav__item">
                         <a href="#">Blog/Tin tức</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="pawspa-nav__item">
                         <a href="#">Giới thiệu</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="pawspa-nav__item">
                         <a href="#">Liên lạc</a>
                     </li>
                 </ul>
             </nav>
             <!-- End: Navigation -->
 
-             <!-- Start: Icon + Action -->
-           <div id="header-icons">
-            <a href="../pages/notifications.html" class="icon-link" aria-label="Notifications">
-                <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
-            </a>
-            <a href="#" class="icon-link" aria-label="Cart">
-                <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
-            </a>
-            <!-- Thay đổi từ Đăng nhập/đăng ký thành avatar -->
-            <div class="avatar-wrapper">
+            <!-- Start: Icon + Action -->
+            <div class="pawspa-header__actions">
+                <a href="#" class="pawspa-icon__link" aria-label="Notifications">
+                    <img src="../assets/images/icons/noti.svg" alt="Notify" class="pawspa-icon__image">
+                </a>
+                <a href="#" class="pawspa-icon__link" aria-label="Cart">
+                    <img src="../assets/images/icons/cart.svg" alt="Cart" class="pawspa-icon__image">
+                </a>
+                <div class="avatar-wrapper">
                 <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
             </div>
             </div>
-        <!-- End: Icon + Action -->
+            <!-- End: Icon + Action -->
         </div>
     </header>
     <!-- End: Header -->
@@ -201,86 +203,88 @@
     </main>
     <!-- End: Main -->
 
-    <!-- Start: Footer -->
+            <!-- Start: Footer -->
     <footer id="footer">
-        <div class="container footer-container">
-            <div class="footer-info">
-                <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
-                <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm
-                    sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
-                <div class="footer-contact">
-                    <div class="contact-item">
-                        <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon"
-                            class="contact-icon">
-                        <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
+        <div class="pawspa__container pawspa__flex-between">
+            <div class="pawspa-footer__info">
+                <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="pawspa-footer__logo">
+                <p class="pawspa-footer__description">
+                    Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm
+                    sóc và tư vấn sức khỏe cho thú cưng của bạn.
+                </p>
+                <div class="pawspa-footer__contact">
+                    <div class="pawspa-footer__contact-item">
+                        <img src="../assets/images/icons/letter.svg" alt="Email" class="pawspa-footer__contact-icon">
+                        <a href="mailto:chaumlp@gmail.com" class="pawspa-footer__contact-address">chaumlp@gmail.com</a>
                     </div>
-                    <div class="contact-item">
-                        <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon"
-                            class="contact-icon">
-                        <a href="tel:0345663153" class="contact-address">0345663153</a>
+                    <div class="pawspa-footer__contact-item">
+                        <img src="../assets/images/icons/phone.svg" alt="Phone" class="pawspa-footer__contact-icon">
+                        <a href="tel:0345663153" class="pawspa-footer__contact-address">0345663153</a>
                     </div>
                 </div>
-                <div class="footer-social">
+                <div class="pawspa-footer__social">
                     <a href="#" title="Instagram">
-                        <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
+                        <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram"
+                            class="pawspa-footer__social-icon">
                     </a>
                     <a href="#" title="Facebook">
-                        <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
+                        <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook"
+                            class="pawspa-footer__social-icon">
                     </a>
                     <a href="#" title="LinkedIn">
-                        <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
+                        <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn"
+                            class="pawspa-footer__social-icon">
                     </a>
                 </div>
             </div>
 
-            <!-- Strat: Hình con chó ở Footer -->
-            <div class="footer-image">
+            <div class="pawspa-footer__image">
                 <div>
                     <div>
                         <img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
                     </div>
                 </div>
             </div>
-            <!-- End: Hình con chó ở Footer -->
 
-            <div class="footer-category">
-                <div class="footer-category-item">
-                    <h3 class="category-title">Dịch vụ</h3>
-                    <ul class="category-list">
-                        <li class="category-list-item">
-                            <a href="#" class="category-item-link">Spa</a>
+            <div class="pawspa-footer__category">
+                <div class="pawspa-footer__category-item">
+                    <h3 class="pawspa-footer__category-title">Dịch vụ</h3>
+                    <ul class="pawspa-footer__category-list">
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Spa</a>
                         </li>
-                        <li class="category-list-item">
-                            <a href="#" class="category-item-link">Cắt tỉa lông</a>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Cắt tỉa lông</a>
                         </li>
-                        <li class="category-list-item">
-                            <a href="#" class="category-item-link">Khách sạn lưu trú</a>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Khách sạn lưu trú</a>
                         </li>
                     </ul>
                 </div>
-                <div class="footer-category-item">
-                    <h3 class="category-title">Nền tảng</h3>
-                    <ul class="category-list">
-                        <li class="category-list-item">
-                            <a href="#" class="category-item-link">Dịch vụ</a>
+                <div class="pawspa-footer__category-item">
+                    <h3 class="pawspa-footer__category-title">Nền tảng</h3>
+                    <ul class="pawspa-footer__category-list">
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Dịch vụ</a>
                         </li>
-                        <li class="category-list-item">
-                            <a href="#" class="category-item-link">Blog/Tin tức</a>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Blog/Tin tức</a>
                         </li>
-                        <li class="category-list-item">
-                            <a href="#" class="category-item-link">Giới thiệu</a>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Giới thiệu</a>
                         </li>
-                        <li class="category-list-item">
-                            <a href="#" class="category-item-link">Liên lạc</a>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Liên lạc</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-image-left">
+
+        <div class="pawspa-footer__image--left">
             <img src="../assets/images/footer/footer-01.svg" alt="">
         </div>
-        <div class="footer-image-right">
+        <div class="pawspa-footer__image--right">
             <img src="../assets/images/footer/footer-02.svg" alt="">
         </div>
     </footer>
