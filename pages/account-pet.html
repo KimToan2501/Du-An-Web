@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
+        <link rel="stylesheet" href="../assets/css/footer.css">
+
     <link rel="stylesheet" href="../assets/css/account-pet.css">
     <title>Account - Pet</title>
     <style>
@@ -104,32 +106,51 @@
 </head>
 <body style="background-color: #FBF6FF;">
     <!-- Start: Header -->
+     <!-- Start: Header -->
     <header id="header">
-        <div class="container flex-between">
-            <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
-                <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
-                <span class="logo-text">Pawspa</span>
+        <div class="pawspa__container pawspa__flex-between">
+            <!-- Start: Logo -->
+            <a href="/index.html" id="pawspa-logo" aria-label="Go to homepage" class="pawspa-header__logo">
+                <img src="../assets/images/icons/Union.svg" alt="Logo" class="pawspa-logo__image">
+                <span class="pawspa-logo__text">Pawspa</span>
             </a>
-            <nav id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="./index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a href="#">Dịch vụ</a></li>
-                    <li class="nav-item"><a href="#">Blog/Tin tức</a></li>
-                    <li class="nav-item"><a href="#">Giới thiệu</a></li>
-                    <li class="nav-item"><a href="#">Liên lạc</a></li>
+            <!-- End: Logo -->
+
+            <!-- Start: Navigation -->
+            <nav id="pawspa-nav">
+                <ul class="pawspa-nav__list">
+                    <li class="pawspa-nav__item">
+                        <a href="/index.html">Trang chủ</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Dịch vụ</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Blog/Tin tức</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Giới thiệu</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Liên lạc</a>
+                    </li>
                 </ul>
             </nav>
-            <div id="header-icons">
-                <a href="../pages/notifications.html" class="icon-link" aria-label="Notifications">
-                    <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
+            <!-- End: Navigation -->
+
+            <!-- Start: Icon + Action -->
+            <div class="pawspa-header__actions">
+                <a href="#" class="pawspa-icon__link" aria-label="Notifications">
+                    <img src="../assets/images/icons/noti.svg" alt="Notify" class="pawspa-icon__image">
                 </a>
-                <a href="#" class="icon-link" aria-label="Cart">
-                    <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
+                <a href="#" class="pawspa-icon__link" aria-label="Cart">
+                    <img src="../assets/images/icons/cart.svg" alt="Cart" class="pawspa-icon__image">
                 </a>
                 <div class="avatar-wrapper">
-                    <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
-                </div>
+                <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
             </div>
+            </div>
+            <!-- End: Icon + Action -->
         </div>
     </header>
     <!-- End: Header -->
