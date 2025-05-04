@@ -1,0 +1,73 @@
+/* Start: hp-hero */
+
+.hp-hero {
+    position: relative;
+    min-height: 810px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hp-hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 809'><path d='M877 774.5C660.2 721.3 164.5 744 0 808.5V0H1440.5L1440 774.5C1361.17 800.833 1093.8 827.7 877 774.5Z' fill='%23F2E2FF'/></svg>") no-repeat bottom;
+    background-size: cover;
+    z-index: 0;
+}
+
+.hp-hero__content {
+    position: relative;
+    z-index: 1;
+    /* padding-top: 350px;
+    padding-left: 120px; */
+    /* max-width: 1200px;
+    margin: 0 auto; */
+}
+
+.hp-hero__text {
+    min-width: 480px;
+}
+
+.hp-hero__subtitle-wrapper {
+    max-width: 386px;
+    margin-bottom: 30px;
+}
+
+.hp-hero__subtitle {
+    color: #595959;
+    font-size: 32px;
+}
+
+.hp-hero__title-wrapper {
+    max-width: 480px;
+}
+
+.hp-hero__title {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 800;
+    color: #410075;
+}
+
+.hp-hero__title>span {
+    color: #A1BE97;
+}
+
+.hp-hero__cta-wrapper {
+    margin-top: 30px;
+}
+
+.hp-hero__cta {
+    background-color: #410075;
+    padding: 10px 25px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* End: hp-hero */

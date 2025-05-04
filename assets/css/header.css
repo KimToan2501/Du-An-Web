@@ -1,6 +1,7 @@
 /* ===== Header ===== */
 #header {
     background-color: #F2E2FF;
+    z-index: -1;
 }
 
 #header>.pawspa__container {
