@@ -1,12 +1,12 @@
 /* ========== FORM WRAPPER ========== */
 
-.pawspa-form__wrapper {
+.form-wrapper {
     display: flex;
     margin-top: 85px;
     margin-bottom: 96px;
 }
 
-.pawspa-form__body {
+.form-body {
     flex: 50%;
     padding: 60px;
     background-color: #FBF6FF;
@@ -15,17 +15,17 @@
 
 /* ========== INPUT GROUP ========== */
 
-.pawspa-form__group {
+.form-group {
     margin-bottom: 31px;
 }
 
 /* ========== ACTION & LINK ========== */
 
-.pawspa-form__actions {
+.form-action {
     margin-top: 50px;
 }
 
-.pawspa-form__link-wrapper {
+.form-link {
     margin-top: 10px;
     text-align: center;
     font-size: 18px;
@@ -34,7 +34,7 @@
 
 /* ========== BACKGROUND SECTION ========== */
 
-.pawspa-form__background {
+.form-background {
     flex: 50%;
     padding: 40px 30px;
     border-radius: 20px;
@@ -45,7 +45,7 @@
     overflow: hidden;
 }
 
-.pawspa-form__slogan {
+.form-slogan {
     font-size: 28px;
     font-weight: bold;
     color: #ffffff;
@@ -55,21 +55,21 @@
     max-width: 400px;
 }
 
-.pawspa-form__background-img {
+.form-background-img {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pawspa-form__background-img > img {
+.form-background-img > img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
-/* ========== OR Separator ========== */
+/* Start: OR Separator */
 
-.pawspa-form__separator {
+.form-separator {
     color: #999999;
     font-size: 12px;
     position: relative;
@@ -78,7 +78,7 @@
     margin-bottom: 10px;
 }
 
-.pawspa-form__separator::after {
+.form-separator::after {
     position: absolute;
     top: 50%;
     left: 0;
@@ -88,7 +88,7 @@
     background-color: #999999;
 }
 
-.pawspa-form__separator::before {
+.form-separator::before {
     position: absolute;
     top: 50%;
     right: 0;
@@ -97,3 +97,5 @@
     height: 1.8px;
     background-color: #999999;
 }
+
+/* End: OR Separator */

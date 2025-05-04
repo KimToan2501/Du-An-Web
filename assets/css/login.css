@@ -1,3 +1,65 @@
+/* Start: Login Form Wrapper */
+
+/* Start: Login Form */
+
+/* Start: Header */
+
+.login-form-header {
+    position: relative;
+}
+
+.login-form-icon {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-form-brand {
+    text-transform: uppercase;
+    color: #410075;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.login-form-description {
+    color: #595959;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+/* End: Header */
+
+/* End: Login Form */
+
+/* Start: Background Visual */
+.login-form-background {
+    flex: 50%;
+    background: radial-gradient(circle at center,
+            #ffffff 0%,
+            #d7f1f6 25%,
+            #a6dce6 50%,
+            #70b2c0 100%);
+
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start;
+    align-items: center;
+    text-align: center; */
+    position: relative;
+    overflow: hidden;
+}
+
+/* End: Background Visual */
+
+
+/* End: Login Form Wrapper */
 /* Start: Login Form Header */
 .pawspa-form__header {
     position: relative;

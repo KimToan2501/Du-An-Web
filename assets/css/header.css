@@ -1,42 +1,47 @@
+/* ===== Layout chung ===== */
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ===== Header ===== */
 #header {
     background-color: #F2E2FF;
 }
 
-#header>.pawspa__container {
+#header>div {
     padding: 33px 0;
 }
 
 /* ===== Logo ===== */
-#pawspa-logo {
+#header-logo {
     display: flex;
     align-items: center;
 }
 
-.pawspa-logo__image {
-    width: 54px;
-    height: 54px;
-}
-
-.pawspa-logo__text {
+.logo-text {
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
     margin-left: 13px;
-    color: #410075;
 }
 
 /* ===== Navigation ===== */
-#pawspa-nav .pawspa-nav__list {
+.nav-list {
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.pawspa-nav__item>a {
+.nav-item>a {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -46,13 +51,13 @@
 }
 
 /* ===== Icons & Actions ===== */
-.pawspa-header__actions {
+#header-icons {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
-.pawspa-icon__link {
+.icon-link {
     width: 44px;
     height: 44px;
     border-radius: 100%;
@@ -63,18 +68,12 @@
     transition: all 0.2s ease-in-out;
 }
 
-.pawspa-icon__link:hover {
+.icon-link:hover {
     box-shadow: 0 4px 8px rgba(65, 0, 117, 0.2);
     transform: translateY(-2px);
 }
 
-.pawspa-icon__image {
-    width: 24px;
-    height: 24px;
-}
-
-/* ===== Auth Links ===== */
-.pawspa-auth__links {
+.auth-links {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -84,25 +83,37 @@
     color: #999999;
 }
 
-.pawspa-auth__link {
+.auth-link {
     color: #999999;
     transition: color 0.2s ease-in-out;
 }
 
-.pawspa-auth__link:hover {
+.auth-link:hover {
     color: #410075;
 }
 
-.pawspa-auth__separator {
+.auth-separator {
     margin: 0 4px;
 }
 
-/* ===== Active Link Styling ===== */
-.pawspa-auth__link.active,
-.pawspa-nav__item>a:hover {
-    color: #410075;
+/* ===== ĐỔI MÀU CHO LINK ĐANG TRONG TRẠNG THÁI "ACTIVE" ===== */
+
+/* 
+ * Khi link trong phần "Đăng nhập / Đăng ký" (auth-link) được active
+ * hoặc khi người dùng di chuột vào link trong menu (nav-item > a:hover),
+ * thì sẽ đổi màu chữ thành màu tím chủ đạo của thương hiệu (#410075)
+ */
+.auth-link.active,
+.nav-item > a:hover {
+  color: #410075;
 }
 
+/* 
+ * Dành cho bất kỳ thẻ <a> nào được gán class "active"
+ * => Áp dụng cho cả link Trang chủ, Dịch vụ, Blog, v.v.
+ * Class này được thêm bằng JavaScript dựa theo URL trang hiện tại
+ */
 a.active {
-    color: #410075;
+  color: #410075;
 }
+  
