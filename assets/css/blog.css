@@ -1,0 +1,270 @@
+.dog-frame1{
+    width: 100%;
+    height: 680px;
+    object-fit:fill;
+  }
+  .frame2{
+    background-color:  #FCF7FF;
+    height: 800px;
+    z-index: -1;
+  }
+  .base-frame2{
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center; /* căn giữa ngang */
+    align-items: center; /* căn giữa dọc */
+    gap: 24px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .dog-image {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    
+  }
+  
+  .content {
+    flex:1;
+  }
+  .div-h1-frame2{
+    display: flex;
+    justify-content: center; /* căn giữa ngang */
+    align-items: center; /* căn giữa dọc */
+   
+  }
+  .h1-frame2{
+    color: #4b0082;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    max-width: 1000px;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #4b0082;
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none; 
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  /* frame3 */
+  
+  .page-container {
+    display: flex;
+    justify-content: center; /* căn giữa ngang */
+    align-items: center; /* căn giữa dọc */
+  }
+  
+  .section {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .section-list {
+    list-style: disc inside;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .section-list li {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .space-frame3{
+    width: 400px;
+  }
+  
+  .space-frame3-right{
+    width: 800px;
+  }
+  
+  .image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .cute-dog-image {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  
+  .sub-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+  
+  
+  /* Các card */
+  
+  .suggested-articles {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .suggested-title {
+    color: #4b0082;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .suggested-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+    width: 250px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 20px 15px 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    color: red;
+  }
+  
+  .card-image {
+    width: 90%;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4b0082;
+    margin-bottom: 5px;
+  }
+  
+  .card-country {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .card-info {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .progress {
+    margin: 5px 0;
+  }
+  
+  .progress p {
+    font-size: 12px;
+    margin: 4px 0;
+  }
+  
+  .bar {
+    background: #eee;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .fill {
+    width: 70%;
+    height: 100%;
+    background: #6a0dad;
+  }
+  
+  .card-description {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .card-description p {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .card-button {
+    background-color: #4b0082;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .card-button:hover {
+    background-color: #5f0dad;
+  }
