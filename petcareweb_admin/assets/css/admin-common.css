@@ -1,0 +1,42 @@
+/* ==== Base ==== */
+@import url('./base/admin-reset.css');
+
+/* ==== Layout ==== */
+@import url('./layout/admin-header.css');
+@import url('./layout/admin-main.css');
+@import url('./layout/admin-sidebar.css');
+
+/* ==== Components ==== */
+@import url('./components/admin-breadcrumb.css');
+@import url('./components/admin-button.css');
+@import url('./components/admin-control.css');
+@import url('./components/admin-dropdown.css');
+@import url('./components/admin-form.css');
+@import url('./components/admin-pagination.css');
+@import url('./components/admin-table.css');
+@import url('./components/admin-modal.css');
+
+/* ==== Pages ==== */
+/* Nếu có file riêng cho từng trang thì import ở đây */
+@import url('./pages/admin-appointment.css');
+@import url('./pages/admin-customer.css');
+
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+
+/* ========================== */
+/* 🔷 CONTAINER CHÍNH TRONG MAIN */
+/* ========================== */
+
+/* Bọc toàn bộ nội dung bên trong main để giới hạn chiều rộng */
+.admin-main__container {
+    max-width: 1200px;
+    /* Giới hạn chiều ngang theo layout chuẩn */
+    margin: 0 auto;
+    /* Căn giữa ngang */
+    padding: 0 16px;
+    /* Padding trái/phải cho đẹp khi responsive */
+}

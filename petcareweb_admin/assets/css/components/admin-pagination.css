@@ -1,0 +1,51 @@
+/* ===== Pagination ===== */
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 26px;
+}
+
+/* Nút số chung */
+.pagination__btn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 10px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Nút số khi hover */
+.pagination__btn:hover:not(.pagination__btn--disabled):not(.pagination__btn--active) {
+    background-color: #f2f4f8;
+    color: #4154F1;
+    border-color: #4154F1;
+}
+
+/* Trang hiện tại */
+.pagination__btn--active {
+    background-color: #fff;
+    color: #4154F1;
+    border: 2px solid #4154F1;
+    font-weight: bold;
+}
+
+/* Nút vô hiệu (mũi tên trái ở trang đầu) */
+.pagination__btn--disabled {
+    background-color: #a3abb4;
+    color: #fff;
+    cursor: not-allowed;
+    border: none;
+}
+
+/* Icon mũi tên */
+.pagination__btn i {
+    font-size: 12px;
+}

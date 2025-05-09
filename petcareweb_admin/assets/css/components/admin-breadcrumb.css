@@ -1,0 +1,32 @@
+/* Khối breadcrumb tổng thể */
+.breadcrumb {
+    display: flex;              
+    /* Xếp ngang */
+    align-items: center;        
+    /* Căn giữa theo chiều dọc */
+    gap: 6px;                   
+    /* Khoảng cách giữa các phần tử */
+    font-size: 14px;
+    color: #989797;             
+    /* Màu mặc định */
+    font-weight: 600;
+}
+
+/* Link breadcrumb thường */
+.breadcrumb__link {
+    color: #989797;
+    text-decoration: none;
+    transition: border-color color 0.2s ease;
+}
+
+.breadcrumb__link:hover {
+    color: #4154F1;
+    /* Màu xanh nổi bật khi hover */
+}
+
+.breadcrumb__link--active {
+    color: #444444;
+    font-weight: 600;
+    pointer-events: none;       
+    /* Không cho click */
+}
