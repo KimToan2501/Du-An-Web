@@ -1,0 +1,182 @@
+/* MAIN content chính */
+.admin-main {
+    margin-left: 300px;
+    /* Chừa không gian cho sidebar cố định */
+    padding-top: 64px;
+    /* Chừa không gian cho header cố định */
+    min-height: calc(100vh - 64px);
+    /* Tính toán phần còn lại bên dưới header */
+    background-color: #f6f8fc;
+    /* Nền xám sáng cho nội dung nổi bật */
+}
+
+/* =========================== */
+/* 🔷 TIÊU ĐỀ CHÍNH - DASHBOARD */
+/* =========================== */
+
+.admin-main__header {
+    padding-top: 26px;
+    padding-left: 26px;
+    margin-bottom: 26px;
+}
+
+.admin-main__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #4154F1;
+    margin-bottom: 4px;
+}
+
+.admin-main__subtitle {
+    font-size: 14px;
+    color: #757575;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* 🔷 LƯỚI CHIA 2 BÊN: CARDS + CHART */
+/* ============================= */
+
+.admin-overview-grid {
+    display: flex;
+    gap: 32px;
+    /* Khoảng cách giữa 2 cột */
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 48px;
+    flex-wrap: wrap;
+    /* Đảm bảo responsive khi màn nhỏ */
+}
+
+/* ============================== */
+/* 🔷 CỘT TRÁI: 4 THẺ THỐNG KÊ */
+/* ============================== */
+
+.admin-overview__left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cột bằng nhau */
+    gap: 26px 33px;
+    /* Hàng: 26px, Cột: 33px */
+    width: 496px;
+    /* Theo đúng kích thước Figma */
+    height: 324px;
+}
+
+/* Mỗi thẻ thống kê */
+.admin-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Tiêu đề trên thẻ */
+.admin-card__label {
+    font-size: 18px;
+    color: #4154F1;
+    margin-bottom: 23px;
+    font-weight: 600;
+}
+
+/* Nhóm icon + giá trị số */
+.admin-card__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icon tròn */
+.admin-card__icon {
+    font-size: 24px;
+    color: #000;
+    background-color: #F6F6FE;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Giá trị số */
+.admin-card__value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4154F1;
+    margin-left: 16px;
+}
+
+/* ================================ */
+/* 🔷 CỘT PHẢI: BIỂU ĐỒ TRÒN */
+/* ================================ */
+
+.admin-overview__right {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-left: 29px;
+}
+
+/* Khối biểu đồ tròn */
+.admin-chart {
+    width: 278px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: 324px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid #DAE3F8;
+}
+
+/* ===== Phần tiêu đề + dropdown ===== */
+.admin-chart__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.admin-chart__label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0B1C33;
+}
+
+.admin-chart__select {
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ===== Vòng tròn biểu đồ ===== */
+.admin-chart__circle {
+    position: relative;
+    width: 213px;
+    height: 213px;
+    margin: 0 auto;
+}
+
+/* Số phần trăm hiển thị giữa vòng tròn */
+.admin-chart__value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: 600;
+    color: #0B1C33;
+}

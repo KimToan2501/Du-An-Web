@@ -1,0 +1,149 @@
+/* ===== Form Wrapper ===== */
+.admin-form-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Form chính ===== */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== Nhóm label + input ===== */
+.admin-form__group label {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+.admin-form__group input,
+.admin-form__group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+    transition: border 0.2s ease;
+}
+
+.admin-form__group input:focus,
+.admin-form__group textarea:focus {
+    border-color: #4154F1;
+    outline: none;
+}
+
+/* ===== Nút Lưu ===== */
+.admin-form__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.admin-form__submit {
+    margin-top: 16px;
+    /* Tạo khoảng cách với input phía trên */
+    padding: 10px 24px;
+    /* Tăng vùng nhấn */
+    font-size: 15px;
+    /* Dễ đọc hơn */
+    font-weight: 600;
+    /* Nét chữ đậm hơn */
+    border-radius: 8px;
+    /* Bo góc mềm mại */
+    display: block;
+    /* Để margin auto hoạt động */
+    margin-left: auto;
+    margin-right: auto;
+    /* Căn giữa nút trong form */
+}
+
+/* Dòng chứa 1 hoặc nhiều nhóm form */
+.admin-form__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Nhóm gồm label + input/select */
+.admin-form__group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 260px;
+}
+
+/* Nhãn label */
+.admin-form__group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Ô nhập liệu (input) */
+.admin-form__input {
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.admin-form__input:focus {
+    border-color: #4154F1;
+    box-shadow: 0 0 0 2px rgba(65, 84, 241, 0.15);
+}
+
+.admin-form__select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.admin-form__select:focus {
+    border-color: #4154F1;
+}
+
+/* Áp dụng riêng cho input lịch */
+.admin-form__input.input-datepicker {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px 18px;
+}
+
+.admin-form__input.input-datepicker:hover,
+.admin-form__input.input-datepicker:focus {
+    border-color: #999;
+}
+
+.admin-form__input.input-datepicker::placeholder {
+    color: #aaa;
+    font-style: italic;
+}

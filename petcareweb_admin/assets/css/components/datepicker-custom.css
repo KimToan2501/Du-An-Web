@@ -1,0 +1,62 @@
+/* Toàn bộ khối lịch */
+.flatpickr-calendar {
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Header: tháng + năm */
+  .flatpickr-months {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Nút điều hướng tháng */
+  .flatpickr-prev-month,
+  .flatpickr-next-month {
+    color: #444;
+    font-size: 18px;
+  }
+  
+  /* Dropdown chọn tháng/năm */
+  .flatpickr-monthDropdown-months,
+  .flatpickr-current-month input {
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* Tên ngày trong tuần (Th2, Th3,...) */
+  .flatpickr-weekdays {
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+  }
+  
+  /* Ngày trong lịch */
+  .flatpickr-day {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+  
+  /* Ngày đang hover */
+  .flatpickr-day:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Ngày đang được chọn */
+  .flatpickr-day.selected {
+    background-color: #e53935;
+    color: white;
+  }
+  
+  /* Ngày hôm nay */
+  .flatpickr-day.today {
+    border: 1px solid #e53935;
+  }
+  

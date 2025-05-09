@@ -1,0 +1,128 @@
+/* ========================= */
+/* 🔷 HEADER CHÍNH TRANG ADMIN */
+/* ========================= */
+.admin-header {
+    position: fixed;
+    /* Cố định ở đầu trang khi cuộn */
+    top: 0;
+    /* Sát lề trên */
+    left: 0;
+    /* Sát trái */
+    width: 100%;
+    /* Chiếm toàn bộ chiều ngang */
+    height: 64px;
+    /* Chiều cao chuẩn */
+    background-color: #fff;
+    /* Nền trắng giúp nội dung nổi bật */
+    z-index: 1100;
+    /* Cao hơn sidebar (1000) để không bị che */
+
+    display: flex;
+    /* Sắp xếp logo + thanh công cụ ngang hàng */
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    padding: 12px;
+    /* Khoảng cách nội dung bên trong */
+    box-shadow: 0 0 10px #757575;
+    /* Đổ bóng nhẹ để tách header khỏi nền */
+}
+
+/* ========================= */
+/* 🔷 LOGO & THƯƠNG HIỆU */
+/* ========================= */
+.admin-header__brand {
+    width: 300px;
+    /* Cùng chiều rộng với sidebar */
+}
+
+/* Link logo tổng thể */
+#admin-header__logo-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Bọc icon + text */
+.admin-header__logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text "Pawspa" trong logo */
+.admin-header__logo-text {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin-left: 13px;
+    color: #410075;
+}
+
+/* ========================= */
+/* 🔷 THANH CÔNG CỤ (SEARCH + AVATAR) */
+/* ========================= */
+.admin-header__toolbar {
+    display: flex;
+    justify-content: space-between;
+    /* Tách search và action ra 2 bên */
+    flex: 2;
+    /* Chiếm toàn bộ không gian còn lại */
+}
+
+/* ===== 🔍 Ô tìm kiếm ===== */
+.admin-header__search-input {
+    border: 1px solid #757575;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    width: 335px;
+}
+
+/* ===== Thông báo + Avatar ===== */
+.admin-header__actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Icon chuông */
+.admin-header__notification {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin-right: 25px;
+}
+
+/* Chấm tròn báo có thông báo */
+.admin-header__notification-indicator {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #0D6EFD;
+    top: -5px;
+    right: -5px;
+}
+
+/* Khối avatar + tên admin */
+.admin-header__profile {
+    display: flex;
+    align-items: center;
+    margin-right: 36px;
+}
+
+/* Hình đại diện admin */
+.admin-header__profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Bo tròn avatar */
+    margin-right: 5px;
+}
+
+/* Tên người dùng (Admin) */
+.admin-header__profile-name {
+    font-weight: bold;
+    color: #410075;
+}
