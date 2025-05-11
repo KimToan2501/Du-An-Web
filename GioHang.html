@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <title>Pawspa - Dịch vụ thú cưng</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Header-Footer.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #FBF6FF;
+    }
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #d1c4e9;
+      color: white;
+    }
+    .step.active .step-circle {
+      background-color: #410075;
+    }
+    .header-nav-link {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #999999;
+      padding: 0 16px;
+      transition: color 0.2s ease-in-out;
+    }
+    .text-purple {
+      color: var(--primary-purple-dark);
+    }
+    .icon-cart {
+      background-color: #410075;
+    }
+    .price-old {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 0.9rem;
+    }
+    .btn-purple {
+      background-color: #6a1b9a;
+      color: white;
+    }
+    .btn-purple:hover {
+      background-color: #4a148c;
+    }
+    .footer-logo {
+      width: 80px;
+    }
+    .footer-img {
+      width: 120px;
+      border-radius: 20px;
+    }
+    .footer-contact i {
+      margin-right: 6px;
+    }
+    .order-box {
+      border: 2px dashed #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: white;
+    }
+    .invoice-line {
+      display: grid;
+      grid-template-columns: 1fr 50px 100px;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .invoice-line span {
+      display: inline-block;
+      text-align: right;
+    }
+    .invoice-line span:first-child {
+      text-align: left;
+    }
+    .toastBox {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      overflow: hidden;
+      padding: 20px;
+      z-index: 9999; /* Tăng z-index để tránh bị che khuất */
+    }
+    .toast {
+      width: 350px;
+      height: 60px;
+      background: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 10px 0;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      position: relative;
+      transform: translateX(100%);
+      animation: moveleft 0.5s linear forwards;
+      border-radius: 8px;
+    }
+    @keyframes moveleft {
+      100% {
+        transform: translateX(0);
+      }
+    }
+    .toast i {
+      margin: 0 15px;
+      font-size: 24px;
+    }
+    .toast.error i {
+      color: #dc3545;
+    }
+    .toast::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      animation: anim 3s linear forwards;
+    }
+    @keyframes anim {
+      100% {
+        width: 0;
+      }
+    }
+    .toast.error::after {
+      background: #dc3545;
+    }
+    .close-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      padding: 5px;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .close-btn i {
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Phần header -->
+  <header id="header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Logo -->
+      <div class="d-flex align-items-center">
+        <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
+          <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
+          <span class="logo-text text-purple">Pawspa</span>        
+        </a>
+      </div>
+      <!-- Menu Desktop -->
+      <nav class="d-none d-md-flex align-items-center">
+        <a class="header-nav-link auth-link" href="#">Trang chủ</a>
+        <a class="header-nav-link auth-link" href="#">Dịch vụ</a>
+        <a class="header-nav-link auth-link" href="#">Blog/Tin tức</a>
+        <a class="header-nav-link auth-link" href="#">Giới thiệu</a>
+        <a class="header-nav-link auth-link" href="#">Liên lạc</a>
+      </nav>
+      <div id="header-icons">
+        <a href="#" class="icon-link" aria-label="Notifications">
+          <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
+        </a>
+        <a href="#" class="icon-link icon-cart" aria-label="Cart">
+          <img src="../assets/images/icons/cart-white.svg" alt="Cart" class="icon-image">
+        </a>
+        <div class="auth-links">
+          <a href="/pages/login.html" class="auth-link">Đăng nhập</a>
+          <span class="auth-separator">/</span>
+          <a href="/pages/register.html" class="auth-link">Đăng ký</a>
+        </div>
+      </div>
+      <!-- Icon menu mobile -->
+      <button class="d-md-none btn text-purple fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <!-- Menu Mobile -->
+    <div class="collapse bg-light d-md-none" id="navbarMobile">
+      <div class="container py-3 d-flex flex-column gap-3">
+        <a class="text-dark text-decoration-none" href="#">Trang chủ</a>
+        <a class="text-dark text-decoration-none" href="#">Dịch vụ</a>
+        <a class="text-dark text-decoration-none" href="#">Blog/Tin tức</a>
+        <a class="text-dark text-decoration-none" href="#">Giới thiệu</a>
+        <a class="text-purple fw-bold text-decoration-none" href="#">Liên lạc</a>
+        <hr class="my-2">
+        <div class="d-flex gap-3">
+          <a href="#"><img src="/IMG/BellSimple.svg" alt="Thông báo" width="24"></a>
+          <a href="#"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng" width="24"></a>
+        </div>
+        <div class="d-flex gap-2 mt-2">
+          <a href="#" class="text-dark text-decoration-none">Đăng nhập</a>
+          <span class="text-muted">/</span>
+          <a href="#" class="text-dark text-decoration-none">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container mt-4">
+    <!-- Progress Steps -->
+    <div class="container-xl">
+      <ul class="d-flex justify-content-center gap-5 text-xs font-semibold text-[#2e0a5a] py-3">
+        <li class="d-flex align-items-center gap-2 step step-1 active">
+          <div class="step-circle">1</div>
+          <span>Giỏ Hàng</span>
+        </li>
+        <li class="d-flex align-items-center gap-2 step-no-bold">
+          <div class="step-circle">2</div>
+          <span>Thông Tin</span>
+        </li>
+        <li class="d-flex align-items-center gap-2 step-no-bold">
+          <div class="step-circle">3</div>
+          <span>Nhân Viên</span>
+        </li>
+        <li class="d-flex align-items-center gap-2 step">
+          <div class="step-circle inactive">4</div>
+          <span>Hoàn Tất</span>
+        </li>
+      </ul>
+    </div>
+    <div class="row step-content step-1-content active">
+      <div class="col-lg-8">
+        <table class="table bg-white rounded">
+          <thead class="table-light">
+            <tr>
+              <th><input type="checkbox" id="mainCheckbox"></th>
+              <th>Dịch Vụ</th>
+              <th>Giá Tiền</th>
+              <th>Số Lượng</th>
+              <th>Thành Tiền</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="service-list">
+            <tr>
+              <td><input type="checkbox" class="service-check" data-name="Cắt tỉa lông chó/mèo" data-price="200000"></td>
+              <td><img src="https://placehold.co/50x50" class="me-2">CẮT TỈA LÔNG CHÓ/MÈO</td>
+              <td class="text-purple">200.000đ <span class="price-old">250.000đ</span></td>
+              <td>
+                <div class="input-group quantity-group" style="width: 120px;">
+                  <button class="btn btn-outline-secondary btn-minus">-</button>
+                  <input type="text" class="form-control text-center quantity-input" value="1">
+                  <button class="btn btn-outline-secondary btn-plus">+</button>
+                </div>
+              </td>
+              <td class="text-purple total-price">200.000đ</td>
+              <td><i class="fa fa-trash text-danger"></i></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" class="service-check" data-name="Tắm chó mèo" data-price="250000"></td>
+              <td><img src="https://placehold.co/50x50" class="me-2">TẮM CHÓ MÈO</td>
+              <td class="text-purple">250.000đ <span class="price-old">300.000đ</span></td>
+              <td>
+                <div class="input-group quantity-group" style="width: 120px;">
+                  <button class="btn btn-outline-secondary btn-minus">-</button>
+                  <input type="text" class="form-control text-center quantity-input" value="1">
+                  <button class="btn btn-outline-secondary btn-plus">+</button>
+                </div>
+              </td>
+              <td class="text-purple total-price">250.000đ</td>
+              <td><i class="fa fa-trash text-danger"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-4">
+        <div class="order-box">
+          <h5>Hóa Đơn <span class="text-muted fs-6">(<span id="selected-count">0</span>) Đã chọn</span></h5>
+          <div id="invoice-items" class="border-bottom my-2 pb-2"></div>
+          <label for="coupon" class="form-label">Mã Giảm</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="code" id="coupon">
+            <button class="btn btn-purple" id="apply-coupon">Xác Nhận</button>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>Sau khi sử dụng mã</span><span id="coupon-discount">0đ</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>Giảm</span><span id="discount-amount">0đ</span>
+          </div>
+          <div class="d-flex justify-content-between fw-bold">
+            <span>Tổng Cộng</span><span id="total-price" class="text-purple">0đ</span>
+          </div>
+          <button class="btn btn-purple w-100 mt-3" id="btnXacNhan">Xác Nhận</button>
+        </div>
+      </div>
+    </div>
+    <!-- Snackbar container -->
+    <div class="toastBox"></div>
+  </main>
+  <!-- Start: Footer -->
+  <footer id="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
+        <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon" class="contact-icon">
+            <a href="/cdn-cgi/l/email-protection#3e5d565f4b53524e7e59535f5752105d5153" class="contact-address"><span class="__cf_email__" data-cfemail="b8dbd0d9cdd5d4c8f8dfd5d9d1d496dbd7d5">[email&#160;protected]</span></a>
+          </div>
+          <div class="contact-item">
+            <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon" class="contact-icon">
+            <a href="tel:0345663153" class="contact-address">0345663153</a>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="#" title="Instagram">
+            <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
+          </a>
+          <a href="#" title="Facebook">
+            <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
+          </a>
+          <a href="#" title="LinkedIn">
+            <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
+          </a>
+        </div>
+      </div>
+      <div class="footer-image">
+        <div>
+          <div>
+            <img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+      <div class="footer-category">
+        <div>
+          <h3 class="category-title">Dịch vụ</h3>
+          <ul class="category-list">
+            <li><a href="#" class="category-item-link">Spa</a></li>
+            <li><a href="#" class="category-item-link">Cắt tỉa lông</a></li>
+            <li><a href="#" class="category-item-link">Khách sạn lưu trú</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="category-title">Nền tảng</h3>
+          <ul class="category-list">
+            <li><a href="#" class="category-item-link">Dịch vụ</a></li>
+            <li><a href="#" class="category-item-link">Blog/Tin tức</a></li>
+            <li><a href="#" class="category-item-link">Giới thiệu</a></li>
+            <li><a href="#" class="category-item-link">Liên lạc</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-image-left">
+      <img src="./assets/images/footer/footer-01.svg" alt="">
+    </div>
+    <div class="footer-image-right">
+      <img src="./assets/images/footer/footer-02.svg" alt="">
+    </div>
+  </footer>
+  <!-- End: Footer -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkboxes = document.querySelectorAll('.service-check');
+      const mainCheckbox = document.querySelector('#mainCheckbox');
+      const invoiceItems = document.getElementById('invoice-items');
+      const totalPriceElem = document.getElementById('total-price');
+      const selectedCount = document.getElementById('selected-count');
+      const couponInput = document.getElementById('coupon');
+      const applyCouponBtn = document.getElementById('apply-coupon');
+      const couponDiscountElem = document.getElementById('coupon-discount');
+      const discountAmountElem = document.getElementById('discount-amount');
+      const toastBox = document.querySelector('.toastBox');
+      let discount = 0;
+
+      // Kiểm tra toastBox có tồn tại không
+      if (!toastBox) {
+        console.error('toastBox không tồn tại! Vui lòng kiểm tra thẻ <div class="toastBox"> trong HTML.');
+      }
+
+      // Hàm hiển thị snackbar
+      function showToast(message, type) {
+        if (!toastBox) {
+          console.error('toastBox không tồn tại! Vui lòng kiểm tra thẻ <div class="toastBox"> trong HTML.');
+          return;
+        }
+        console.log('Showing toast:', message, type); // Debug
+        const toast = document.createElement('div');
+        toast.classList.add('toast', type);
+        toast.innerHTML = `
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+          <i class="fas fa-times-circle"></i>
+          ${message}
+        `;
+        toastBox.appendChild(toast);
+
+        const closeButton = toast.querySelector('.close-btn');
+        closeButton.addEventListener('click', () => {
+          toast.remove();
+        });
+
+        setTimeout(() => {
+          toast.remove();
+        }, 3000);
+      }
+
+      // Hàm lưu trạng thái vào localStorage
+      function saveState() {
+        const state = {
+          services: Array.from(checkboxes).map(checkbox => ({
+            name: checkbox.getAttribute('data-name'),
+            checked: checkbox.checked,
+            quantity: parseInt(checkbox.closest('tr').querySelector('.quantity-input').value)
+          })),
+          coupon: couponInput.value,
+          discount: discount
+        };
+        localStorage.setItem('serviceState', JSON.stringify(state));
+      }
+
+      // Hàm khôi phục trạng thái từ localStorage
+      function restoreState() {
+        const state = JSON.parse(localStorage.getItem('serviceState'));
+        if (state && state.services) {
+          state.services.forEach(service => {
+            const checkbox = document.querySelector(`.service-check[data-name="${service.name}"]`);
+            if (checkbox) {
+              checkbox.checked = service.checked;
+              const row = checkbox.closest('tr');
+              const qtyInput = row.querySelector('.quantity-input');
+              qtyInput.value = service.quantity;
+              updateRow(row);
+
+              if (service.checked) {
+                const price = parseInt(checkbox.getAttribute('data-price'));
+                const item = document.createElement('div');
+                item.className = 'invoice-line';
+                item.setAttribute('data-name', service.name);
+                item.setAttribute('data-price', price);
+                item.setAttribute('data-quantity', service.quantity);
+                item.innerHTML = `
+                  <span>${service.name}</span>
+                  <span class="invoice-qty">${service.quantity}</span>
+                  <span class="invoice-sum">${(price * service.quantity).toLocaleString('vi-VN')}đ</span>`;
+                invoiceItems.appendChild(item);
+              }
+            }
+          });
+          couponInput.value = state.coupon || '';
+          discount = state.discount || 0;
+          couponDiscountElem.textContent = discount.toLocaleString('vi-VN') + 'đ';
+          discountAmountElem.textContent = discount.toLocaleString('vi-VN') + 'đ';
+          updateTotal();
+          checkAllSelected();
+        }
+      }
+
+      // Hàm cập nhật tổng tiền và số lượng dịch vụ đã chọn
+      function updateTotal() {
+        const items = invoiceItems.querySelectorAll('.invoice-line');
+        let total = 0;
+        items.forEach(item => {
+          const qty = parseInt(item.getAttribute('data-quantity')) || 1;
+          const price = parseInt(item.getAttribute('data-price'));
+          total += qty * price;
+        });
+        total -= discount;
+        totalPriceElem.textContent = total.toLocaleString('vi-VN') + 'đ';
+        selectedCount.textContent = items.length;
+      }
+
+      // Hàm kiểm tra tất cả checkbox con có được chọn hay không
+      function checkAllSelected() {
+        const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+        mainCheckbox.checked = allChecked;
+      }
+
+      // Hàm cập nhật hàng trong bảng
+      function updateRow(row) {
+        const price = parseInt(row.querySelector('.service-check').getAttribute('data-price'));
+        const quantity = parseInt(row.querySelector('.quantity-input').value);
+        const totalCell = row.querySelector('.total-price');
+        totalCell.textContent = (price * quantity).toLocaleString('vi-VN') + 'đ';
+      }
+
+      // Xử lý sự kiện checkbox con
+      checkboxes.forEach(box => {
+        box.addEventListener('change', () => {
+          const row = box.closest('tr');
+          const name = box.getAttribute('data-name');
+          const price = parseInt(box.getAttribute('data-price'));
+          const qtyInput = row.querySelector('.quantity-input');
+          const quantity = parseInt(qtyInput.value);
+
+          if (box.checked) {
+            const item = document.createElement('div');
+            item.className = 'invoice-line';
+            item.setAttribute('data-name', name);
+            item.setAttribute('data-price', price);
+            item.setAttribute('data-quantity', quantity);
+            item.innerHTML = `
+              <span>${name}</span>
+              <span class="invoice-qty">${quantity}</span>
+              <span class="invoice-sum">${(price * quantity).toLocaleString('vi-VN')}đ</span>`;
+            invoiceItems.appendChild(item);
+          } else {
+            const existing = invoiceItems.querySelector(`.invoice-line[data-name='${name}']`);
+            if (existing) invoiceItems.removeChild(existing);
+          }
+
+          updateTotal();
+          checkAllSelected();
+          saveState();
+        });
+      });
+
+      // Xử lý checkbox chính
+      mainCheckbox.addEventListener('change', () => {
+        const isChecked = mainCheckbox.checked;
+
+        checkboxes.forEach(checkbox => {
+          checkbox.checked = isChecked;
+          const row = checkbox.closest('tr');
+          const name = checkbox.getAttribute('data-name');
+          const price = parseInt(checkbox.getAttribute('data-price'));
+          const qtyInput = row.querySelector('.quantity-input');
+          const quantity = parseInt(qtyInput.value);
+
+          if (isChecked) {
+            const item = document.createElement('div');
+            item.className = 'invoice-line';
+            item.setAttribute('data-name', name);
+            item.setAttribute('data-price', price);
+            item.setAttribute('data-quantity', quantity);
+            item.innerHTML = `
+              <span>${name}</span>
+              <span class="invoice-qty">${quantity}</span>
+              <span class="invoice-sum">${(price * quantity).toLocaleString('vi-VN')}đ</span>`;
+            invoiceItems.appendChild(item);
+          } else {
+            const existing = invoiceItems.querySelector(`.invoice-line[data-name='${name}']`);
+            if (existing) invoiceItems.removeChild(existing);
+          }
+        });
+
+        updateTotal();
+        saveState();
+      });
+
+      // Xử lý sự kiện thay đổi số lượng
+      document.querySelectorAll('.quantity-group').forEach(group => {
+        const minusBtn = group.querySelector('.btn-minus');
+        const plusBtn = group.querySelector('.btn-plus');
+        const input = group.querySelector('.quantity-input');
+
+        function updateRowQuantity(row) {
+          updateRow(row);
+          const name = row.querySelector('.service-check').getAttribute('data-name');
+          const price = parseInt(row.querySelector('.service-check').getAttribute('data-price'));
+          const quantity = parseInt(input.value);
+          const invoiceLine = invoiceItems.querySelector(`.invoice-line[data-name='${name}']`);
+          if (invoiceLine) {
+            invoiceLine.setAttribute('data-quantity', quantity);
+            invoiceLine.querySelector('.invoice-qty').textContent = quantity;
+            invoiceLine.querySelector('.invoice-sum').textContent = (price * quantity).toLocaleString('vi-VN') + 'đ';
+          }
+          updateTotal();
+          saveState();
+        }
+
+        minusBtn.addEventListener('click', () => {
+          let val = parseInt(input.value);
+          if (val > 1) {
+            input.value = val - 1;
+            updateRowQuantity(group.closest('tr'));
+          }
+        });
+
+        plusBtn.addEventListener('click', () => {
+          let val = parseInt(input.value);
+          input.value = val + 1;
+          updateRowQuantity(group.closest('tr'));
+        });
+      });
+
+      // Xử lý mã giảm giá
+      applyCouponBtn.addEventListener('click', () => {
+        const couponCode = couponInput.value.trim();
+        if (couponCode === 'DISCOUNT10') {
+          discount = 10000;
+        } else {
+          discount = 0;
+        }
+        couponDiscountElem.textContent = discount.toLocaleString('vi-VN') + 'đ';
+        discountAmountElem.textContent = discount.toLocaleString('vi-VN') + 'đ';
+        updateTotal();
+        saveState();
+      });
+
+      // Xử lý nút Xác Nhận
+      const btn = document.getElementById('btnXacNhan');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          const items = invoiceItems.querySelectorAll('.invoice-line');
+          console.log('Số lượng dịch vụ đã chọn:', items.length); // Debug
+          if (items.length === 0) {
+            showToast('Vui lòng chọn ít nhất 1 dịch vụ', 'error');
+            return;
+          }
+
+          const orderData = {
+            services: [],
+            total: parseInt(totalPriceElem.textContent.replace(/[^\d]/g, '')),
+            discount: discount
+          };
+
+          items.forEach(item => {
+            const name = item.getAttribute('data-name');
+            const price = parseInt(item.getAttribute('data-price'));
+            const quantity = parseInt(item.getAttribute('data-quantity'));
+            orderData.services.push({ name, price, quantity });
+          });
+
+          localStorage.setItem('orderData', JSON.stringify(orderData));
+          window.location.href = 'ThôngTin.html';
+        });
+      }
+
+      // Khôi phục trạng thái khi tải trang
+      restoreState();
+
+      // Test snackbar ngay khi tải trang (có thể bỏ comment để kiểm tra)
+      // showToast('Test snackbar ngay khi tải trang', 'error');
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93e24489b87cb001',t:'MTc0Njk3MjcwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
