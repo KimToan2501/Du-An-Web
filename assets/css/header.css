@@ -36,12 +36,19 @@
     padding: 0;
     margin: 0;
 }
-
 .pawspa-nav__item>a {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
     color: #999999;
+    padding: 0 16px;
+    transition: color 0.2s ease-in-out;
+}
+.pawspa-nav__item>a:active {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #d80d0d;
     padding: 0 16px;
     transition: color 0.2s ease-in-out;
 }
@@ -101,9 +108,5 @@
 /* ===== Active Link Styling ===== */
 .pawspa-auth__link.active,
 .pawspa-nav__item>a:hover {
-    color: #410075;
-}
-
-a.active {
     color: #410075;
 }
