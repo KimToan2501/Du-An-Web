@@ -1,0 +1,125 @@
+/* ==== SIDEBAR CHÍNH ==== */
+.admin-sidebar {
+    width: 300px;
+    /* Độ rộng cố định cho sidebar */
+    height: 100vh;
+    /* Chiều cao = toàn bộ chiều cao viewport */
+    background-color: #ffffff;
+    /* Nền trắng để dễ kết hợp màu icon/text */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* Bóng mờ nhẹ bên phải để tách biệt với phần main */
+    position: fixed;
+    /* Cố định sidebar bên trái màn hình */
+    top: 64px;
+    /* Đẩy xuống để chừa chỗ cho header (64px) */
+    /* left: 0; */
+    z-index: 1000;
+    /* Ưu tiên hiển thị trên phần main content */
+}
+
+/* ==== MENU NAVIGATION ==== */
+.admin-sidebar__nav {
+    padding: 20px;
+    /* Padding tổng thể bên trong thanh sidebar */
+}
+
+.admin-sidebar__item {
+    margin-bottom: 10px;
+    /* Khoảng cách giữa các item */
+}
+
+/* ==== LINK CHUNG CHO MỖI ITEM ==== */
+.admin-sidebar__link {
+    display: flex;
+    /* Đặt icon và label nằm trên cùng một dòng */
+    align-items: center;
+    /* Căn giữa icon và text theo chiều dọc */
+    padding: 10px;
+    /* Tạo khoảng cách bên trong */
+    border-radius: 6px;
+    /* Bo góc cho cảm giác mềm mại */
+}
+
+/* ==== ICON & LABEL TRONG LINK ==== */
+.admin-sidebar__icon {
+    font-size: 18px;
+    margin-right: 6px;
+    /* Khoảng cách giữa icon và text */
+    width: 24px;
+    /* Giữ icon đều nhau bất kể nội dung */
+    text-align: center;
+    color: #012970;
+    /* Màu mặc định của icon */
+}
+
+.admin-sidebar__label {
+    font-size: 16px;
+    color: #012970;
+    /* Màu mặc định của chữ */
+}
+
+/* ==== HOVER - Khi rê chuột vào link ==== */
+.admin-sidebar__link:hover {
+    background-color: #F6F9FF;
+    /* Màu nền sáng khi hover */
+}
+
+.admin-sidebar__link:hover .admin-sidebar__label,
+.admin-sidebar__link:hover .admin-sidebar__icon {
+    color: #4154F1;
+    /* Đổi màu chữ & icon khi hover */
+}
+
+/* ==== ACTIVE - Khi mục hiện tại được chọn ==== */
+.admin-sidebar__item--active .admin-sidebar__link {
+    background-color: #F6F9FF;
+    /* Nền giữ nguyên như hover */
+}
+
+.admin-sidebar__item--active .admin-sidebar__label,
+.admin-sidebar__item--active .admin-sidebar__icon {
+    color: #4154F1;
+    /* Màu tím đậm cho mục được chọn */
+}
+
+/* Menu cha có submenu */
+.admin-sidebar__item.has-submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ẩn submenu ban đầu */
+.admin-sidebar__submenu {
+    display: none;
+    margin-left: 36px;
+    margin-top: 6px;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Khi mục cha active thì show submenu */
+.admin-sidebar__item--active .admin-sidebar__submenu {
+    display: flex;
+}
+
+/* Style cho các sublink */
+.admin-sidebar__sublink {
+    font-size: 14px;
+    color: #012970;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: block;
+}
+
+.admin-sidebar__sublink:hover,
+.admin-sidebar__sublink--active {
+    background-color: #F6F9FF;
+    color: #4154F1;
+    font-weight: bold;
+}
+
+.admin-sidebar__sublink--hidden {
+    display: none !important;
+}
+

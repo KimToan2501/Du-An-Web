@@ -1,0 +1,102 @@
+/* =============================== */
+/* 🔷 KHUNG BỌC NGOÀI BẢNG (CONTAINER) */
+/* =============================== */
+.admin-table-wrapper {
+    margin-top: 26px;
+    /* Cách lưới thống kê phía trên */
+    background-color: #ffffff;
+    /* Nền trắng */
+    border-radius: 10px;
+    /* Bo tròn khối bảng */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    /* Bóng đổ nhẹ */
+    padding: 16px;
+    /* Padding trong bảng */
+    overflow-x: auto;
+    /* Giúp bảng tràn ngang vẫn cuộn được */
+}
+
+/* =============================== */
+/* 🔷 BẢNG CHÍNH */
+/* =============================== */
+.admin-table {
+    width: 100%;
+    /* Chiếm toàn bộ khối cha */
+    border-collapse: collapse;
+    /* Gộp đường viền */
+    font-size: 14px;
+    color: #333;
+}
+
+/* =============================== */
+/* 🔷 TIÊU ĐỀ BẢNG */
+/* =============================== */
+.admin-table__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #012970;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* =============================== */
+/* 🔷 PHẦN THEAD (ĐẦU BẢNG) */
+/* =============================== */
+.admin-table thead th {
+    background-color: #F6F6FE;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 13px;
+    color: #444444;
+    border-bottom: 1px solid #444444;
+}
+
+/* =============================== */
+/* 🔷 PHẦN TBODY (NỘI DUNG DỮ LIỆU) */
+/* =============================== */
+.admin-table tbody td {
+    padding: 12px;
+    border-top: 1px solid #ececec;
+    vertical-align: top;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    vertical-align: middle;
+    /* Căn giữa các dữ liệu trong một <tr> theo chiều dọc */
+}
+
+/* =============================== */
+/* 🔷 EMAIL & MÃ NHÂN VIÊN (dạng phụ bên dưới) */
+/* =============================== */
+.admin-table__email,
+.admin-table__code {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* =============================== */
+/* 🔷 TRẠNG THÁI */
+/* =============================== */
+.status {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.status--pending {
+    color: #FF4861;
+    /* đỏ */
+    /* đỏ - chờ duyệt */
+}
+
+.status--inprogress {
+    color: #4154F1;
+    /* xanh dương - đang xử lý */
+}
+
+.status--success {
+    color: #11B216;
+    /* xanh lá - đã xong */
+}

@@ -1,33 +1,26 @@
-/* Start: Register Form Wrapper */
+/* ========== REGISTER FORM HEADER ========== */
 
-/* Start: Register Form */
-
-/* Start: Header */
-
-.register-form-header {
+.pawspa-register__header {
     position: relative;
     margin-bottom: 36px;
 }
 
-.register-form-icon {
+.pawspa-register__icon {
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.register-form-title {
+.pawspa-register__title {
     text-transform: uppercase;
     color: #410075;
     font-weight: bold;
     font-size: 36px;
 }
 
-/* End: Header */
+/* ========== INPUT PHONE (intl-tel-input) ========== */
 
-/* Start: Input */
-
-/* Tăng chiều rộng của input bên trong thư viện */
 .iti {
     width: 100%;
 }
@@ -35,13 +28,11 @@
 .iti__tel-input {
     width: 100%;
     padding-left: 90px !important;
-    /* Dời text sang phải để không đè lên cờ + mã vùng */
     box-sizing: border-box;
 }
 
 .iti--separate-dial-code .iti__selected-flag {
     background-color: #fff;
-    /* Màu nền cùng màu input */
     border-right: 1px solid #ccc;
 }
 
@@ -49,32 +40,20 @@
     padding-left: 10px;
 }
 
-/* End: Input */
+/* ========== BACKGROUND VISUAL ========== */
 
-/* End: Register Form */
-
-/* Start: Background Visual */
-.register-form-background {
+.pawspa-form__background--register {
     flex: 50%;
     background: radial-gradient(circle at center,
             #ffffff 0%,
             #d7f1f6 25%,
             #A1BE97 50%,
             #A1BE97 100%);
-
     padding: 40px 30px;
     border-radius: 20px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start;
-    align-items: center;
-    text-align: center; */
     position: relative;
     overflow: hidden;
 }
-
-/* End: Background Visual */
-
-
-/* End: Register Form Wrapper */

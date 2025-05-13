@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS dùng chung -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+    <link rel="stylesheet" href="../assets/css/account.css">
+    <link rel="stylesheet" href="../assets/css/booking.css">
+    <title>Account - Detail</title>
+</head>
+<body style="background-color: #FBF6FF;">
+    <!-- Start: Header -->
+     <!-- Start: Header -->
+    <header id="header">
+        <div class="pawspa__container pawspa__flex-between">
+            <!-- Start: Logo -->
+            <a href="/index.html" id="pawspa-logo" aria-label="Go to homepage" class="pawspa-header__logo">
+                <img src="../assets/images/icons/Union.svg" alt="Logo" class="pawspa-logo__image">
+                <span class="pawspa-logo__text">Pawspa</span>
+            </a>
+            <!-- End: Logo -->
+
+            <!-- Start: Navigation -->
+            <nav id="pawspa-nav">
+                <ul class="pawspa-nav__list">
+                    <li class="pawspa-nav__item">
+                        <a href="/index.html">Trang chủ</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Dịch vụ</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Blog/Tin tức</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Giới thiệu</a>
+                    </li>
+                    <li class="pawspa-nav__item">
+                        <a href="#">Liên lạc</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End: Navigation -->
+
+            <!-- Start: Icon + Action -->
+            <div class="pawspa-header__actions">
+                <a href="#" class="pawspa-icon__link" aria-label="Notifications">
+                    <img src="../assets/images/icons/noti.svg" alt="Notify" class="pawspa-icon__image">
+                </a>
+                <a href="#" class="pawspa-icon__link" aria-label="Cart">
+                    <img src="../assets/images/icons/cart.svg" alt="Cart" class="pawspa-icon__image">
+                </a>
+                <div class="avatar-wrapper">
+                <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
+            </div>
+            </div>
+            <!-- End: Icon + Action -->
+        </div>
+    </header>
+    <!-- End: Header -->
+    <main class="main-wrapper">
+    
+        <!-- Thanh điều hướng bên trái -->
+        <div class="container">
+        <aside class="sidebar">
+            <div class="user-info">
+                <img src="../assets/images/avatar.png" alt="Avatar" class="user-avatar">
+                
+                <div class="user-meta">
+                    <div class="user-name">Katy Nguyen</div>
+                    <div class="user-role">Dashboard <span class="role-type">User</span></div>
+                    <img src="../ArrowsCounterClockwise.png" alt="Refresh" class="refresh-icon">
+                </div>
+            </div>
+            <nav class="user-nav">
+                <ul>
+                    <li class="active"><a href="/pages/account.html">Tài khoản của tôi</a></li>
+                    <li><a href="/pages/booking.html">Đặt lịch</a></li>
+                    <li><a href="/pages/notifications.html">Thông báo</a></li>
+                </ul>
+            </nav>
+        </aside>
+        </div>
+        <!-- Nội dung tài khoản -->
+        <section class="account-main">
+            <div class="account-tabs">
+                <button class="tab active">
+                    <img src="/assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon">
+                    <a href="/pages/account-detail.html"> Chi tiết tài khoản </a> 
+                </button>
+                <button class="tab">
+                    <img src="/assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon">
+                    <a href="/pages/account-pet.html" style = "color: #999">Thú cưng của bạn</a>
+                </button>
+            </div>
+
+            <!-- loyalty   -->
+            <div class="loyalty-card">
+                <div class="loyalty-info">
+                    <div class="loyalty-header">
+                        <h3>Loyalty</h3>
+                    </div>
+                    <div class="loyalty-points">
+                        <div class="points-number">5,000</div>
+                        <div class="points-label">điểm</div>
+                        <!-- <div class="loyalty-rank">Vàng</div> -->
+                    </div>
+                    <div class="loyalty-rank">
+                        Vàng
+                    </div>
+                    <div class="loyalty-bar-wrapper">
+                        <div class="loyalty-bar-bg">
+                            <div class="loyalty-bar-fill" style="width: 50%;"></div>
+                        </div>
+                        <div class="loyalty-bar-labels">
+                            <span>4,000</span>
+                            <span>5,000</span>
+                            <span>10,000</span>
+                        </div>
+                    </div>
+                    <a href="/pages/account.html" class="view-detail">Xem chi tiết</a>
+                </div>
+                <div class="loyalty-badges img">
+                    <img src="/assets/images/account/rank.svg" alt="rank">
+                </div>
+            </div>
+
+        <!-- thông tin -->
+            <div>
+                <div class="info-card">
+                    <div class="card-header">
+                        <h3>Thông Tin</h3>
+                        <button class="edit-btn">
+                            Chỉnh sửa <img src="/assets/images/account/PencilSimpleLine.svg" alt="Edit">
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-group">
+                            <div class="info-item">
+                                <img src="/assets/images/account/UserList.svg" alt="User" class="info-icon">
+                            <div class="info-content">
+                                <div class="info-label">Họ tên</div>
+                                <div class="info-text">Nguyen Thien Phu</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <img src="/assets/images/account/email.svg" alt="Email" class="info-icon">
+                            <div class="info-content">
+                                <div class="info-label">Email</div>
+                                <div class="info-text">anhdansgyn@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <img src="/assets/images/account/Phone.svg" alt="Phone" class="info-icon">
+                            <div class="info-content">
+                                <div class="info-label">Số điện thoại</div>
+                                <div class="info-text">(093) 8772 - 416</div>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <img src="/assets/images/account/MapPin.svg" alt="Address" class="info-icon">
+                            <div class="info-content">
+                                <div class="info-label">Địa chỉ</div>
+                                <div class="info-text">3517 W. Gray St. Utica, Pennsylvania 57867</div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="card-header">
+                    <h3>Tài Khoản</h3>
+                    <button class="edit-btn">
+                        Chỉnh sửa <img src="/assets/images/account/PencilSimpleLine.svg" alt="Edit">
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="account-info">
+                        <img src="/assets/images/account/paypal.svg" alt="Paypal" class="payment-icon">
+                    <div class="payment-details">
+                        <div class="account-number">4221 **** **** ****</div>
+                    <div class="account-name">Nguyen Thien Phu</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <!-- End: Main -->
+
+            <!-- Start: Footer -->
+    <footer id="footer">
+        <div class="pawspa__container pawspa__flex-between">
+            <div class="pawspa-footer__info">
+                <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="pawspa-footer__logo">
+                <p class="pawspa-footer__description">
+                    Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm
+                    sóc và tư vấn sức khỏe cho thú cưng của bạn.
+                </p>
+                <div class="pawspa-footer__contact">
+                    <div class="pawspa-footer__contact-item">
+                        <img src="../assets/images/icons/letter.svg" alt="Email" class="pawspa-footer__contact-icon">
+                        <a href="mailto:chaumlp@gmail.com" class="pawspa-footer__contact-address">chaumlp@gmail.com</a>
+                    </div>
+                    <div class="pawspa-footer__contact-item">
+                        <img src="../assets/images/icons/phone.svg" alt="Phone" class="pawspa-footer__contact-icon">
+                        <a href="tel:0345663153" class="pawspa-footer__contact-address">0345663153</a>
+                    </div>
+                </div>
+                <div class="pawspa-footer__social">
+                    <a href="#" title="Instagram">
+                        <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram"
+                            class="pawspa-footer__social-icon">
+                    </a>
+                    <a href="#" title="Facebook">
+                        <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook"
+                            class="pawspa-footer__social-icon">
+                    </a>
+                    <a href="#" title="LinkedIn">
+                        <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn"
+                            class="pawspa-footer__social-icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="pawspa-footer__image">
+                <div>
+                    <div>
+                        <img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pawspa-footer__category">
+                <div class="pawspa-footer__category-item">
+                    <h3 class="pawspa-footer__category-title">Dịch vụ</h3>
+                    <ul class="pawspa-footer__category-list">
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Spa</a>
+                        </li>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Cắt tỉa lông</a>
+                        </li>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Khách sạn lưu trú</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pawspa-footer__category-item">
+                    <h3 class="pawspa-footer__category-title">Nền tảng</h3>
+                    <ul class="pawspa-footer__category-list">
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Dịch vụ</a>
+                        </li>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Blog/Tin tức</a>
+                        </li>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Giới thiệu</a>
+                        </li>
+                        <li class="pawspa-footer__category-list-item">
+                            <a href="#" class="pawspa-footer__category-item-link">Liên lạc</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="pawspa-footer__image--left">
+            <img src="../assets/images/footer/footer-01.svg" alt="">
+        </div>
+        <div class="pawspa-footer__image--right">
+            <img src="../assets/images/footer/footer-02.svg" alt="">
+        </div>
+    </footer>
+    <!-- End: Footer -->
+
+    <script src="../assets/js/active-link.js"></script>
+
+</body>
+
+</html>

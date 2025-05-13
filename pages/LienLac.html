@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../asset/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/style_LienLac.css ">
+    <!-- <link rel="stylesheet" href="./assets/css/header.css"> -->
+    
+    
+
+    <title>LienLac</title>
+    <style>
+        /* Button styles */
+  .header-nav-link
+  {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #999999;
+    padding: 0 16px;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .btn-purple {
+    background-color: var(--primary-purple-dark);
+    color: white;
+  }
+  
+  .btn-purple:hover {
+    background-color: #350060;
+    color: white;
+  }
+  
+  /* Text color */
+  .text-purple {
+    color: var(--primary-purple-dark);
+  }
+  
+  /* Footer background */
+  
+    </style>
+</head>
+<body> 
+    <!-- Phần header -->
+    <header id="header">
+      <div class="container d-flex justify-content-between align-items-center ">
+        
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+          <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
+            <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
+          <span class="logo-text text-purple">Pawspa</span>        
+        </div>
+    
+        <!-- Menu Desktop -->
+        <nav class="d-none d-md-flex  align-items-center">
+          <a class="header-nav-link auth-link " href="#">Trang chủ</a>
+          <a class="header-nav-link auth-link" href="#">Dịch vụ</a>
+          <a class="header-nav-link auth-link" href="#">Blog/Tin tức</a>
+          <a class="header-nav-link auth-link" href="#">Giới thiệu</a>
+          <a class="header-nav-link text-purple text-decoration-none " href="#">Liên lạc</a>
+        </nav>
+        <!-- <div class="info">
+          <div class="icon_container">
+            <a href="#" class="icon_thongbao icon-link:hover "><img src="/IMG/BellSimple.svg" alt="Thông báo"></a>
+            <a href="#" class="icon_giohang icon-link:hover"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng"></a>
+          </div>
+          <div class="auth_links ">
+            <a href="#">Đăng nhập</a>
+            <span style="color:#999;font-size: 18px;">/</span>
+            <a href="#">Đăng ký</a>
+          </div>
+        </div> -->
+        <div id="header-icons">
+          <a href="#" class="icon-link" aria-label="Notifications">
+              <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
+          </a>
+          <a href="#" class="icon-link" aria-label="Cart">
+              <img src="../assets/images/icons/cart.svg" alt="Cart" class="icon-image">
+          </a>
+          <div class="auth-links">
+              <a href="/pages/login.html" class="auth-link">Đăng nhập</a>
+              <span class="auth-separator">/</span>
+              <a href="/pages/register.html" class="auth-link">Đăng ký</a>
+          </div>
+      </div>
+    
+        <!-- Icon menu mobile -->
+        <button class="d-md-none btn text-purple fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    
+      <!-- Menu Mobile -->
+      <div class="collapse bg-light d-md-none" id="navbarMobile">
+        <div class="container py-3 d-flex flex-column gap-3">
+          <a class="text-dark text-decoration-none" href="#">Trang chủ</a>
+          <a class="text-dark text-decoration-none" href="#">Dịch vụ</a>
+          <a class="text-dark text-decoration-none" href="#">Blog/Tin tức</a>
+          <a class="text-dark text-decoration-none" href="#">Giới thiệu</a>
+          <a class="text-purple fw-bold text-decoration-none" href="#">Liên lạc</a>
+    
+          <hr class="my-2">
+          <div class="d-flex gap-3">
+            <a href="#"><img src="../IMG/BellSimple.svg" alt="Thông báo" width="24"></a>
+            <a href="#"><img src=".. /IMG/ShoppingCartSimple.svg" alt="Giỏ hàng" width="24"></a>
+          </div>
+          <div class="d-flex gap-2 mt-2">
+            <a href="#" class="text-dark text-decoration-none">Đăng nhập</a>
+            <span class="text-muted">/</span>
+            <a href="#" class="text-dark text-decoration-none">Đăng ký</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+
+    
+    <!-- phần thông tin liên hệ  -->
+
+<main class="container py-5">
+    <div class="row g-5"> <!-- Dòng với khoảng cách giữa các cột là 5 -->
+        <!-- Cột trái - Form liên hệ -->
+        <div class="col-lg-6">
+            <h2 class="fs-2 fw-bold text-purple mb-4">BẠN CẦN HỖ TRỢ ?</h2>
+            <form class="d-flex flex-column gap-3"> <!-- Form dạng flex column với khoảng cách 3 -->
+            <input class="form-control p-3" placeholder="Tên" type="text"/>
+            <input class="form-control p-3" placeholder="Số điện thoại" type="text"/>
+            <input class="form-control p-3" placeholder="Email" type="email"/>
+            <textarea class="form-control p-3" placeholder="Lời nhắn" rows="4"></textarea>
+            <div class="d-flex gap-3"> <!-- Nhóm nút -->
+                <button class="btn btn-purple px-4 py-2" type="submit">Submit</button>
+                <button class="btn btn-light text-dark px-4 py-2" type="reset">Refresh</button>
+            </div>
+            </form>
+        </div>
+    
+        <!-- Cột phải - Hình ảnh và mô tả -->
+        <div class="col-lg-6">
+          <div class="image-container position-relative">
+            <img alt="Cat" class="img-fluid rounded mb-3" src="../IMG/Rectangle 397.png"/>
+            <div class="text-overlay">
+                <p class="">
+                  Chúng tôi quan tâm đến nhu cầu của thú cưng của bạn! Hãy để lại thông tin liên lạc của bạn và chúng tôi sẽ cập nhật cho bạn những ưu đãi tốt nhất về dịch vụ cho thú cưng. Đừng bỏ lỡ cơ hội cung cấp những thứ tốt nhất cho những bé pet của bạn!                </p>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</main>
+
+<!-- Start: Footer -->
+<footer id="footer">
+  <div class="container footer-container">
+      <div class="footer-info">
+          <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
+          <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
+          <div class="footer-contact">
+              <div class="contact-item">
+                  <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon" class="contact-icon">
+                  <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                  <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon" class="contact-icon">
+                  <a href="tel:0345663153" class="contact-address">0345663153</a>
+              </div>
+          </div>
+          <div class="footer-social">
+              <a href="#" title="Instagram">
+                  <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
+              </a>
+              <a href="#" title="Facebook">
+                  <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
+              </a>
+              <a href="#" title="LinkedIn">
+                  <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
+              </a>
+          </div>
+      </div>
+
+      <!-- Hình ảnh ở footer -->
+      <div class="footer-image">
+          <div>
+              <div>
+                  <img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
+              </div>
+          </div>
+      </div>
+
+      <div class="footer-category">
+        <!-- Dịch vụ -->
+        <div>
+            <h3 class="category-title">Dịch vụ</h3>
+            <ul class="category-list">
+                <li><a href="#" class="category-item-link">Spa</a></li>
+                <li><a href="#" class="category-item-link">Cắt tỉa lông</a></li>
+                <li><a href="#" class="category-item-link">Khách sạn lưu trú</a></li>
+            </ul>
+        </div>
+        
+        <!-- Nền tảng -->
+        <div>
+            <h3 class="category-title">Nền tảng</h3>
+            <ul class="category-list">
+                <li><a href="#" class="category-item-link">Dịch vụ</a></li>
+                <li><a href="#" class="category-item-link">Blog/Tin tức</a></li>
+                <li><a href="#" class="category-item-link">Giới thiệu</a></li>
+                <li><a href="#" class="category-item-link">Liên lạc</a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer-image-left">
+      <img src="../assets/images/footer/footer-01.svg" alt="">
+  </div>
+  <div class="footer-image-right">
+      <img src="../assets/images/footer/footer-02.svg" alt="">
+  </div>
+</footer>
+
+<!-- End: Footer -->
+
+    <script src="../asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

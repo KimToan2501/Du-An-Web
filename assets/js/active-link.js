@@ -27,7 +27,7 @@ links.forEach(link => link.classList.remove("active"));
 // ✅ BƯỚC 5: Duyệt từng link để so sánh đường dẫn
 for (const link of links) {
   // 🚫 Bỏ qua nếu <a> nằm trong phần logo (thường là <a id="header-logo">)
-  if (link.closest("#header-logo")) continue;
+  if (link.closest("#pawspa-logo")) continue;
 
   // 📌 Lấy href từ thẻ <a>
   const href = link.getAttribute("href");

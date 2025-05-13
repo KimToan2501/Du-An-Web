@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+  <title>Pawspa - Dịch vụ thú cưng</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Header-Footer.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #FBF6FF;
+      color: #3a3a3a;
+    }
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #d1c4e9;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .step.active .step-circle {
+      background-color: #410075;
+    }
+    .header-nav-link
+  {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #999999;
+    padding: 0 16px;
+    transition: color 0.2s ease-in-out;
+  }
+  /* Text color */
+  .text-purple {
+    color: var(--primary-purple-dark);
+  }
+  /* icon-cart */
+  .icon-cart
+  {
+    background-color: #410075;
+  }
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      background-color: #4caf50;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .info-box {
+      border: 1px solid #e6e1f9;
+      border-radius: 8px;
+      background-color: white;
+    }
+    .order-box {
+      border: 2px dashed #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: white;
+    }
+    .price-old {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 0.9rem;
+    }
+    .btn-purple {
+      background-color: #6a1b9a;
+      color: white;
+    }
+    .btn-purple:hover {
+      background-color: #4a148c;
+    }
+    .invoice-line {
+      display: grid;
+      grid-template-columns: 1fr 50px 100px;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .invoice-line span {
+      display: inline-block;
+      text-align: right;
+    }
+    .invoice-line span:first-child {
+      text-align: left;
+    }
+    .table th {
+      color: #3f0a75;
+      font-weight: 600;
+    }
+    .table td.price {
+      color: #3f0a75;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Phần header -->
+  <header id="header">
+    <div class="container d-flex justify-content-between align-items-center ">
+      
+      <!-- Logo -->
+      <div class="d-flex align-items-center">
+        <a href="/index.html" id="header-logo" aria-label="Go to homepage" class="flex-center">
+          <img src="../assets/images/icons/Union.svg" alt="Logo" class="logo-image">
+        <span class="logo-text text-purple">Pawspa</span>        
+      </div>
+  
+      <!-- Menu Desktop -->
+      <nav class="d-none d-md-flex  align-items-center">
+        <a class="header-nav-link auth-link " href="#">Trang chủ</a>
+        <a class="header-nav-link auth-link" href="#">Dịch vụ</a>
+        <a class="header-nav-link auth-link" href="#">Blog/Tin tức</a>
+        <a class="header-nav-link auth-link" href="#">Giới thiệu</a>
+        <a class="header-nav-link auth-link " href="#">Liên lạc</a>
+      </nav>
+      <!-- <div class="info">
+        <div class="icon_container">
+          <a href="#" class="icon_thongbao icon-link:hover "><img src="/IMG/BellSimple.svg" alt="Thông báo"></a>
+          <a href="#" class="icon_giohang icon-link:hover"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng"></a>
+        </div>
+        <div class="auth_links ">
+          <a href="#">Đăng nhập</a>
+          <span style="color:#999;font-size: 18px;">/</span>
+          <a href="#">Đăng ký</a>
+        </div>
+      </div> -->
+      <div id="header-icons">
+        <a href="#" class="icon-link "  aria-label="Notifications">
+            <img src="../assets/images/icons/noti.svg" alt="Notify" class="icon-image">
+        </a>
+        <a href="#" class="icon-link icon-cart" aria-label="Cart">
+            <img src="../assets/images/icons/cart-white.svg" alt="Cart" class="icon-image">
+        </a>
+        <div class="auth-links">
+            <a href="/pages/login.html" class="auth-link">Đăng nhập</a>
+            <span class="auth-separator">/</span>
+            <a href="/pages/register.html" class="auth-link">Đăng ký</a>
+        </div>
+    </div>
+  
+      <!-- Icon menu mobile -->
+      <button class="d-md-none btn text-purple fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  
+    <!-- Menu Mobile -->
+    <div class="collapse bg-light d-md-none" id="navbarMobile">
+      <div class="container py-3 d-flex flex-column gap-3">
+        <a class="text-dark text-decoration-none" href="#">Trang chủ</a>
+        <a class="text-dark text-decoration-none" href="#">Dịch vụ</a>
+        <a class="text-dark text-decoration-none" href="#">Blog/Tin tức</a>
+        <a class="text-dark text-decoration-none" href="#">Giới thiệu</a>
+        <a class="text-purple fw-bold text-decoration-none" href="#">Liên lạc</a>
+  
+        <hr class="my-2">
+        <div class="d-flex gap-3">
+          <a href="#"><img src="/IMG/BellSimple.svg" alt="Thông báo" width="24"></a>
+          <a href="#"><img src="/IMG/ShoppingCartSimple.svg" alt="Giỏ hàng" width="24"></a>
+        </div>
+        <div class="d-flex gap-2 mt-2">
+          <a href="#" class="text-dark text-decoration-none">Đăng nhập</a>
+          <span class="text-muted">/</span>
+          <a href="#" class="text-dark text-decoration-none">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Main Content -->
+  <main class="flex-grow-1">
+    <!-- Progress Steps -->
+    <section class="container my-5">
+      <div class="d-flex justify-content-center gap-5 text-xs text-[#3f0a75] mb-4">
+        <div class="d-flex align-items-center gap-2 step active">
+          <div class="step-circle">1</div>
+          <span> Giỏ Hàng</span>
+        </div>
+        <div class="d-flex align-items-center gap-2 step active">
+          <div class="step-circle">2</div>
+          <span>Thông Tin</span>
+        </div>
+        <div class="d-flex align-items-center gap-2 step active">
+          <div class="step-circle">3</div>
+          <span>Nhân Viên</span>
+        </div>
+        <div class="d-flex align-items-center gap-2 step active">
+          <div class="step-circle">4</div>
+          <span>Hoàn Tất</span>
+        </div>
+      </div>
+
+      <!-- Success Icon -->
+      <div class="d-flex justify-content-center my-4">
+        <div class="success-icon">
+          <i class="fas fa-check text-white text-3xl"></i>
+        </div>
+      </div>
+
+      <!-- Success Text -->
+      <h2 class="text-center text-[#1a1a1a] fw-bold fs-4 mb-3">THÀNH CÔNG</h2>
+      <p class="text-center text-[#6b6b6b] text-sm mx-auto" style="max-width: 750px;">
+        Thanh toán của bạn đã thành công! Cám ơn bạn đã mua hàng. Một email xác nhận đã được gửi và đơn hàng của bạn hiện đang được xử lý. Chúng tôi đánh giá cao sự tin tưởng của bạn và mong muốn được phục vụ bạn một lần nữa!
+      </p>
+
+      <!-- Info Box -->
+      <div class="info-box p-4 mx-auto my-4" style="max-width: 750px;">
+        <h3 class="fw-bold text-[#3f0a75] mb-3">Thông Tin</h3>
+        <p class="d-flex align-items-center gap-2 mb-2">
+          <i class="far fa-user text-[#3a3a3a]"></i>
+          <span id="info-name">Dane Nguyen</span>
+        </p>
+        <p class="d-flex align-items-center gap-2 mb-2">
+          <i class="fas fa-paw text-[#3a3a3a]"></i>
+          <span id="info-pet-ids">Không xác định</span>
+        </p>
+        <p class="d-flex align-items-center gap-2 mb-2">
+          <i class="fas fa-phone-alt text-[#3a3a3a]"></i>
+          <span id="info-phone">(093) 8772 - 416</span>
+        </p>
+        <p class="d-flex align-items-center gap-2 mb-2">
+          <i class="fas fa-map-marker-alt text-[#3a3a3a]"></i>
+          <span id="info-address">4517 Washington Ave. Manchester, Kentucky 39495</span>
+        </p>
+        <p class="d-flex align-items-center gap-2 mb-2">
+          <i class="fas fa-clock text-[#3a3a3a]"></i>
+          <span id="info-time">Không xác định</span>
+        </p>
+        <p class="d-flex align-items-center gap-2 mb-2">
+          <i class="fas fa-credit-card text-[#3a3a3a]"></i>
+          <span id="info-payment">Không xác định</span>
+        </p>
+      </div>
+
+      <!-- Order Code Box -->
+      <div class="order-box p-4 mx-auto my-4" style="max-width: 750px;">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <p class="fw-bold text-[#3f0a75] mb-0">
+            Mã hóa <span class="fw-normal">đơn</span>: <span class="text-[#3f0a75]">#BS3214421312342</span>
+          </p>
+          <a href="#" class="btn btn-purple btn-sm d-flex align-items-center gap-1 text-decoration-none">
+            <i class="far fa-copy"></i>
+            <span>Copy Code</span>
+          </a>
+        </div>
+        <p class="d-flex align-items-center gap-2 text-[#9e9e9e] mb-3">
+          <i class="fas fa-award"></i>
+          <span>+1000 Point</span>
+        </p>
+        <!-- Staff Confirmation -->
+        <div class="text-sm mb-2">
+          <span>Nhân viên được chọn: </span>
+          <span id="staff-selected" class="fw-bold text-[#3f0a75]">Không xác định</span>
+        </div>
+        <!-- Invoice Lines -->
+        <div id="invoice-lines" class="text-sm mb-2">
+          <!-- Dịch vụ sẽ được thêm động từ JS -->
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+          <span>Giảm giá</span>
+          <span id="discount-amount">0đ</span>
+        </div>
+        <div class="d-flex justify-content-between fw-bold">
+          <span>Tổng Cộng</span>
+          <span id="total-price" class="text-[#3f0a75]">0đ</span>
+        </div>
+        <!-- Back Button -->
+      </div>
+    </section>
+  </main>
+
+<!-- Start: Footer -->
+<footer id="footer">
+  <div class="container footer-container">
+      <div class="footer-info">
+          <img src="../assets/images/icons/Union.svg" alt="Logo Pawspa" class="footer-logo">
+          <p class="footer-description">Chào mừng đến với Cuddle & Care Pets! Chúng tôi cung cấp các dịch vụ chăm sóc và tư vấn sức khỏe cho thú cưng của bạn.</p>
+          <div class="footer-contact">
+              <div class="contact-item">
+                  <img src="../assets/images/icons/letter.svg" alt="Email" aria-label="Email icon" class="contact-icon">
+                  <a href="mailto:chaumlp@gmail.com" class="contact-address">chaumlp@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                  <img src="../assets/images/icons/phone.svg" alt="Phone" aria-label="Phone icon" class="contact-icon">
+                  <a href="tel:0345663153" class="contact-address">0345663153</a>
+              </div>
+          </div>
+          <div class="footer-social">
+              <a href="#" title="Instagram">
+                  <img src="../assets/images/icons/social-media/ins.svg" alt="Instagram" class="social-icon">
+              </a>
+              <a href="#" title="Facebook">
+                  <img src="../assets/images/icons/social-media/fb.svg" alt="Facebook" class="social-icon">
+              </a>
+              <a href="#" title="LinkedIn">
+                  <img src="../assets/images/icons/social-media/link.svg" alt="LinkedIn" class="social-icon">
+              </a>
+          </div>
+      </div>
+
+      <!-- Hình ảnh ở footer -->
+      <div class="footer-image">
+          <div>
+              <div>
+                  <img src="../assets/images/footer/Rectangle 170.svg" alt="" aria-hidden="true">
+              </div>
+          </div>
+      </div>
+
+      <div class="footer-category">
+        <!-- Dịch vụ -->
+        <div>
+            <h3 class="category-title">Dịch vụ</h3>
+            <ul class="category-list">
+                <li><a href="#" class="category-item-link">Spa</a></li>
+                <li><a href="#" class="category-item-link">Cắt tỉa lông</a></li>
+                <li><a href="#" class="category-item-link">Khách sạn lưu trú</a></li>
+            </ul>
+        </div>
+        
+        <!-- Nền tảng -->
+        <div>
+            <h3 class="category-title">Nền tảng</h3>
+            <ul class="category-list">
+                <li><a href="#" class="category-item-link">Dịch vụ</a></li>
+                <li><a href="#" class="category-item-link">Blog/Tin tức</a></li>
+                <li><a href="#" class="category-item-link">Giới thiệu</a></li>
+                <li><a href="#" class="category-item-link">Liên lạc</a></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+
+  <div class="footer-image-left">
+      <img src="./assets/images/footer/footer-01.svg" alt="">
+  </div>
+  <div class="footer-image-right">
+      <img src="./assets/images/footer/footer-02.svg" alt="">
+  </div>
+</footer>
+
+<!-- End: Footer -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- JavaScript to display data -->
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hiển thị nhân viên
+      const staff = getQueryParam('staff');
+      const staffSelectedElement = document.querySelector('#staff-selected');
+      if (staff) {
+        staffSelectedElement.textContent = decodeURIComponent(staff);
+        sessionStorage.setItem('selectedStaff', staff);
+      } else {
+        staffSelectedElement.textContent = 'Không xác định';
+      }
+
+      // Hiển thị thông tin khách hàng
+      const formData = JSON.parse(localStorage.getItem('formData'));
+      if (formData) {
+        document.getElementById('info-name').textContent = formData.name || 'Không xác định';
+        document.getElementById('info-pet-ids').textContent = formData.petIds?.join(', ') || 'Không xác định';
+        document.getElementById('info-phone').textContent = formData.phone || 'Không xác định';
+        document.getElementById('info-address').textContent = formData.address || 'Không xác định';
+        document.getElementById('info-time').textContent = formData.time ? `${formData.date} ${formData.time}` : 'Không xác định';
+        document.getElementById('info-payment').textContent = formData.paymentMethod === 'card' ? `Card (${formData.cardNumber})` : formData.paymentMethod === 'momo' ? `Momo (${formData.momoPhone})` : 'Tiền mặt';
+      }
+
+      // Hiển thị dịch vụ và tổng tiền
+      const orderData = JSON.parse(localStorage.getItem('orderData'));
+      const invoiceLines = document.getElementById('invoice-lines');
+      const totalPrice = document.getElementById('total-price');
+      const discountAmount = document.getElementById('discount-amount');
+      if (orderData && orderData.services) {
+        orderData.services.forEach(service => {
+          const item = document.createElement('div');
+          item.className = 'invoice-line';
+          item.innerHTML = `
+            <span>${service.name}</span>
+            <span class="text-center">${service.quantity}</span>
+            <span class="price">${(service.price * service.quantity).toLocaleString('vi-VN')}₫</span>`;
+          invoiceLines.appendChild(item);
+        });
+        totalPrice.textContent = orderData.total.toLocaleString('vi-VN') + '₫';
+        discountAmount.textContent = orderData.discount.toLocaleString('vi-VN') + '₫';
+      }
+    });
+
+    function goBackToPage3() {
+      window.location.href = 'Nhanvien.html';
+    }
+  </script>
+</body>
+</html>
