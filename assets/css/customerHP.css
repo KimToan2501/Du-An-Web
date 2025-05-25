@@ -263,3 +263,22 @@
     z-index: 2;
     margin-top: -75px;
   }
+  
+  .pawspa-auth__avatar {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.pawspa-avatar__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #410075;
+    transition: box-shadow 0.2s;
+}
+
+.pawspa-avatar__img:hover {
+    box-shadow: 0 0 0 3px #e1d6f7;
+}
