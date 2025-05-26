@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/petcareweb_admin/assets/css/admin-common.css">
+    <link rel="stylesheet" href="../../assets/css/admin-common.css">
 
 
 </head>
@@ -126,34 +126,34 @@
 
             <!-- Khối form thêm khách hàng -->
             <section class="admin-form-wrapper">
-                <form class="admin-form">
+                <form class="admin-form" method="post" action="add-customer-process.php">
                     <!-- Nhập họ tên -->
                     <div class="admin-form__group">
                         <label for="fullName" class="admin-form__label">Họ và tên</label>
-                        <input type="text" id="fullName" class="admin-form__input" placeholder="Nhập họ tên..." />
+                        <input type="text" id="fullName" class="admin-form__input" placeholder="Nhập họ tên..." name="name"/>
                     </div>
 
                     <!-- Nhập email -->
                     <div class="admin-form__group">
                         <label for="email" class="admin-form__label">Email</label>
                         <input type="email" id="email" class="admin-form__input"
-                            placeholder="Nhập tài khoản email..." />
+                            placeholder="Nhập tài khoản email..." name="email"/>
                     </div>
 
                     <!-- Nhập số điện thoại -->
                     <div class="admin-form__group">
                         <label for="phone" class="admin-form__label">Số điện thoại</label>
-                        <input type="text" id="phone" class="admin-form__input" placeholder="Nhập số điện thoại..." />
+                        <input type="text" id="phone" class="admin-form__input" placeholder="Nhập số điện thoại..." name="phone"/>
                     </div>
 
                     <!-- Nhập địa chỉ -->
                     <div class="admin-form__group">
                         <label for="address" class="admin-form__label">Địa chỉ</label>
-                        <textarea id="address" class="admin-form__textarea" placeholder="Nhập địa chỉ..."></textarea>
+                        <textarea id="address" class="admin-form__textarea" placeholder="Nhập địa chỉ..." name="address"></textarea>
                     </div>
 
                     <!-- Nút lưu -->
-                    <button type="submit" class="btn btn--primary admin-form__submit">Lưu</button>
+                    <button type="submit" class="btn btn--primary admin-form__submit">Thêm</button>
                 </form>
             </section>
 

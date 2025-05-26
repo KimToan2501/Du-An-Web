@@ -1,5 +1,92 @@
+<?php
+require_once 'connect.php';
+session_start();
+
+$user_id = 1;
+
+// Truy vấn thông tin người dùng
+$sql = "SELECT 
+            a.name,
+            a.email,
+            a.phone,
+            a.address,
+            lp.points,
+            lp.loyalty_rank
+        FROM accounts a 
+        JOIN loyalty_points lp ON a.user_id = lp.user_id
+        WHERE a.user_id = ?";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$accounts = null;
+$points = 0;
+$rank = '';
+$progressPercent = 0;
+
+if ($result->num_rows > 0) {
+    $accounts = $result->fetch_assoc();
+    $points = (int)$accounts['points'];
+    $rank = $accounts['loyalty_rank'];
+
+    // Tính phần trăm tiến trình
+    if ($points < 4000) {
+        $progressPercent = ($points / 4000) * 33;
+    } elseif ($points < 5000) {
+        $progressPercent = 33 + (($points - 4000) / 1000) * 33;
+    } elseif ($points < 10000) {
+        $progressPercent = 66 + (($points - 5000) / 5000) * 34;
+    } else {
+        $progressPercent = 100;
+    }
+    $progressPercent = round($progressPercent, 2); // Làm tròn để hiển thị đẹp hơn
+}
+
+// Hàm dịch rank sang tiếng Việt
+function translateRank($rank) {
+    switch ($rank) {
+        case 'Bronze':
+            return '<span class="rank-text bronze">Hạng Đồng</span>';
+        case 'Silver':
+            return '<span class="rank-text silver">Hạng Bạc</span>';
+        case 'Gold':
+            return '<span class="rank-text gold">Hạng Vàng</span>';
+        case 'Diamond':
+            return '<span class="rank-text diamond">Hạng Kim Cương</span>';
+        default:
+            return '<span class="rank-text">Không xác định</span>';
+    }
+}
+function determineRank($points) {
+    if ($points >= 10000) {
+        return 'Diamond';
+    } elseif ($points >= 5000) {
+        return 'Gold';
+    } elseif ($points >= 4000) {
+        return 'Silver';
+    } else {
+        return 'Bronze';
+    }
+}
+
+$newRank = determineRank($points);
+if($rank !== $newRank) {
+    // Cập nhật lại rank trong cơ sở dữ liệu
+    $updateSql = "UPDATE loyalty_points SET loyalty_rank = ? WHERE user_id = ?";
+    $updateStmt = $conn->prepare($updateSql);
+    $updateStmt->bind_param("si", $newRank, $user_id);
+    $updateStmt->execute();
+    $rank= $newRank;
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,9 +110,9 @@
     <link rel="stylesheet" href="../assets/css/booking.css">
     <title>Account - Detail</title>
 </head>
+
 <body style="background-color: #FBF6FF;">
     <!-- Start: Header -->
-     <!-- Start: Header -->
     <header id="header">
         <div class="pawspa__container pawspa__flex-between">
             <!-- Start: Logo -->
@@ -66,66 +153,63 @@
                     <img src="../assets/images/icons/cart.svg" alt="Cart" class="pawspa-icon__image">
                 </a>
                 <div class="avatar-wrapper">
-                <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
-            </div>
+                    <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
+                </div>
             </div>
             <!-- End: Icon + Action -->
         </div>
     </header>
-    <!-- End: Header -->
+
     <main class="main-wrapper">
-    
-        <!-- Thanh điều hướng bên trái -->
         <div class="container">
-        <aside class="sidebar">
-            <div class="user-info">
-                <img src="../assets/images/avatar.png" alt="Avatar" class="user-avatar">
-                
-                <div class="user-meta">
-                    <div class="user-name">Katy Nguyen</div>
-                    <div class="user-role">Dashboard <span class="role-type">User</span></div>
-                    <img src="../ArrowsCounterClockwise.png" alt="Refresh" class="refresh-icon">
+            <aside class="sidebar">
+                <div class="user-info">
+                    <img src="../assets/images/avatar.png" alt="Avatar" class="user-avatar">
+
+                    <div class="user-meta">
+                        <div class="user-name">Katy Nguyen</div>
+                        <div class="user-role">Dashboard <span class="role-type">User</span></div>
+                        <img src="../ArrowsCounterClockwise.png" alt="Refresh" class="refresh-icon">
+                    </div>
                 </div>
-            </div>
-            <nav class="user-nav">
-                <ul>
-                    <li class="active"><a href="/pages/account.html">Tài khoản của tôi</a></li>
-                    <li><a href="/pages/booking.html">Đặt lịch</a></li>
-                    <li><a href="/pages/notifications.html">Thông báo</a></li>
-                </ul>
-            </nav>
-        </aside>
+                <nav class="user-nav">
+                    <ul>
+                        <li class="active"><a href="/pages/account.html">Tài khoản của tôi</a></li>
+                        <li><a href="/pages/booking.html">Đặt lịch</a></li>
+                        <li><a href="/pages/notifications.html">Thông báo</a></li>
+                    </ul>
+                </nav>
+            </aside>
         </div>
-        <!-- Nội dung tài khoản -->
+
         <section class="account-main">
             <div class="account-tabs">
                 <button class="tab active">
-                    <img src="/assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon">
-                    <a href="/pages/account-detail.html"> Chi tiết tài khoản </a> 
+                    <img src="../assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon" />
+                    <a href="/pages/account-detail.php"> Chi tiết tài khoản </a>
                 </button>
                 <button class="tab">
-                    <img src="/assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon">
-                    <a href="/pages/account-pet.html" style = "color: #999">Thú cưng của bạn</a>
+                    <img src="../assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon" />
+                    <a href="/pages/account-pet.php" style="color: #999">Thú cưng của bạn</a>
                 </button>
             </div>
 
-            <!-- loyalty   -->
+
             <div class="loyalty-card">
                 <div class="loyalty-info">
                     <div class="loyalty-header">
                         <h3>Loyalty</h3>
                     </div>
                     <div class="loyalty-points">
-                        <div class="points-number">5,000</div>
+                        <div class="points-number"><?php echo number_format($points); ?></div>
                         <div class="points-label">điểm</div>
-                        <!-- <div class="loyalty-rank">Vàng</div> -->
                     </div>
                     <div class="loyalty-rank">
-                        Vàng
+                        <?php echo translateRank($rank); ?>
                     </div>
                     <div class="loyalty-bar-wrapper">
                         <div class="loyalty-bar-bg">
-                            <div class="loyalty-bar-fill" style="width: 50%;"></div>
+                            <div class="loyalty-bar-fill" style="width: <?php echo $progressPercent; ?>%;"></div>
                         </div>
                         <div class="loyalty-bar-labels">
                             <span>4,000</span>
@@ -135,75 +219,78 @@
                     </div>
                     <a href="/pages/account.html" class="view-detail">Xem chi tiết</a>
                 </div>
-                <div class="loyalty-badges img">
-                    <img src="/assets/images/account/rank.svg" alt="rank">
-                </div>
+            </div>
+            <!-- <div class="loyalty-badges img">
+                <img src="/assets/images/account/rank.svg" alt="rank">
+            </div> -->
             </div>
 
-        <!-- thông tin -->
+            <!-- Thông tin tài khoản từ DB -->
             <div>
                 <div class="info-card">
                     <div class="card-header">
                         <h3>Thông Tin</h3>
                         <button class="edit-btn">
-                            Chỉnh sửa <img src="/assets/images/account/PencilSimpleLine.svg" alt="Edit">
+                            Chỉnh sửa <img src="../assets/images/account/PencilSimpleLine.svg" alt="Edit" />
                         </button>
                     </div>
                     <div class="card-body">
-                        <div class="info-group">
-                            <div class="info-item">
-                                <img src="/assets/images/account/UserList.svg" alt="User" class="info-icon">
-                            <div class="info-content">
-                                <div class="info-label">Họ tên</div>
-                                <div class="info-text">Nguyen Thien Phu</div>
+                        <?php if ($accounts): ?>
+                            <div class="info-group">
+                                <div class="info-item">
+                                    <img src="../assets/images/account/UserList.svg" alt="User" class="info-icon" />
+                                    <div class="info-content">
+                                        <div class="info-label">Họ tên</div>
+                                        <div class="info-text"><?= htmlspecialchars($accounts['name']) ?></div>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <img src="../assets/images/account/email.svg" alt="Email" class="info-icon" />
+                                    <div class="info-content">
+                                        <div class="info-label">Email</div>
+                                        <div class="info-text"><?= htmlspecialchars($accounts['email']) ?></div>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <img src="../assets/images/account/Phone.svg" alt="Phone" class="info-icon" />
+                                    <div class="info-content">
+                                        <div class="info-label">Số điện thoại</div>
+                                        <div class="info-text"><?= htmlspecialchars($accounts['phone']) ?></div>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <img src="../assets/images/account/MapPin.svg" alt="Address" class="info-icon" />
+                                    <div class="info-content">
+                                        <div class="info-label">Địa chỉ</div>
+                                        <div class="info-text"><?= htmlspecialchars($accounts['address']) ?></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="info-item">
-                            <img src="/assets/images/account/email.svg" alt="Email" class="info-icon">
-                            <div class="info-content">
-                                <div class="info-label">Email</div>
-                                <div class="info-text">anhdansgyn@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <img src="/assets/images/account/Phone.svg" alt="Phone" class="info-icon">
-                            <div class="info-content">
-                                <div class="info-label">Số điện thoại</div>
-                                <div class="info-text">(093) 8772 - 416</div>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <img src="/assets/images/account/MapPin.svg" alt="Address" class="info-icon">
-                            <div class="info-content">
-                                <div class="info-label">Địa chỉ</div>
-                                <div class="info-text">3517 W. Gray St. Utica, Pennsylvania 57867</div>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <div class="info-card">
-                <div class="card-header">
-                    <h3>Tài Khoản</h3>
-                    <button class="edit-btn">
-                        Chỉnh sửa <img src="/assets/images/account/PencilSimpleLine.svg" alt="Edit">
-                    </button>
-                </div>
-                <div class="card-body">
-                    <div class="account-info">
-                        <img src="/assets/images/account/paypal.svg" alt="Paypal" class="payment-icon">
-                    <div class="payment-details">
-                        <div class="account-number">4221 **** **** ****</div>
-                    <div class="account-name">Nguyen Thien Phu</div>
+                        <?php else: ?>
+                            <p>Không tìm thấy thông tin người dùng.</p>
+                        <?php endif; ?>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-    </main>
-    <!-- End: Main -->
 
-            <!-- Start: Footer -->
+                <div class="info-card">
+                    <div class="card-header">
+                        <h3>Tài Khoản</h3>
+                        <button class="edit-btn">
+                            Chỉnh sửa <img src="../assets/images/account/PencilSimpleLine.svg" alt="Edit" />
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="account-info">
+                            <img src="../assets/images/account/paypal.svg" alt="Paypal" class="payment-icon" />
+                            <div class="payment-details">
+                                <div class="account-number">4221 **** **** ****</div>
+                                <div class="account-name"><?= htmlspecialchars($accounts['name'] ?? '') ?></div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+    </main>
+
     <footer id="footer">
         <div class="pawspa__container pawspa__flex-between">
             <div class="pawspa-footer__info">
@@ -288,10 +375,12 @@
             <img src="../assets/images/footer/footer-02.svg" alt="">
         </div>
     </footer>
-    <!-- End: Footer -->
 
     <script src="../assets/js/active-link.js"></script>
-
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>

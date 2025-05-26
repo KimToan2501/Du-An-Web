@@ -1,18 +1,52 @@
+<?php
+require_once 'connect.php';
+session_start();
+
+$user_id = 1;
+
+// Truy vấn thông tin người dùng
+$sql = "SELECT 
+           p.name,
+           p.type,
+           p.age,
+           p.breed
+        FROM pets p
+        
+        WHERE p.user_id = ?";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$pets = [];
+while ($row = $result->fetch_assoc()) {
+    $pets[] = $row;
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <!-- CSS dùng chung -->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/header.css">
-        <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
 
     <link rel="stylesheet" href="../assets/css/account-pet.css">
     <title>Account - Pet</title>
@@ -22,32 +56,39 @@
             margin: 0 auto;
             padding: 20px;
         }
+
         .pet-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
-        .pet-table th, .pet-table td {
+
+        .pet-table th,
+        .pet-table td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
+
         .pet-info {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .pet-avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
         }
+
         .pet-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
+
         .btn {
             padding: 8px 16px;
             border: none;
@@ -55,10 +96,12 @@
             cursor: pointer;
             font-size: 14px;
         }
+
         .add-pet {
             background-color: #6b21a8;
             color: white;
         }
+
         .update-pet {
             background-color: #f0f0f0;
             color: #333;
@@ -66,10 +109,12 @@
             align-items: center;
             gap: 5px;
         }
+
         .edit-icon {
             width: 16px;
             height: 16px;
         }
+
         /* Pagination Styles */
         .pagination {
             display: flex;
@@ -77,10 +122,13 @@
             list-style: none;
             padding: 20px 0;
         }
+
         .pagination li {
             margin: 0 5px;
         }
-        .pagination a, .pagination span {
+
+        .pagination a,
+        .pagination span {
             display: inline-block;
             padding: 8px 12px;
             text-decoration: none;
@@ -89,24 +137,29 @@
             border-radius: 5px;
             transition: all 0.3s ease;
         }
+
         .pagination a:hover {
             background-color: #e9ecef;
         }
+
         .pagination .active a {
             background-color: #6b21a8;
             color: white;
             border-color: #6b21a8;
         }
-        .pagination .disabled a, .pagination .disabled span {
+
+        .pagination .disabled a,
+        .pagination .disabled span {
             color: #6c757d;
             cursor: not-allowed;
             border-color: #ddd;
         }
     </style>
 </head>
+
 <body style="background-color: #FBF6FF;">
     <!-- Start: Header -->
-     <!-- Start: Header -->
+    <!-- Start: Header -->
     <header id="header">
         <div class="pawspa__container pawspa__flex-between">
             <!-- Start: Logo -->
@@ -147,8 +200,8 @@
                     <img src="../assets/images/icons/cart.svg" alt="Cart" class="pawspa-icon__image">
                 </a>
                 <div class="avatar-wrapper">
-                <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
-            </div>
+                    <img src="../assets/images/avatar.png" alt="Avatar" class="avatar-image">
+                </div>
             </div>
             <!-- End: Icon + Action -->
         </div>
@@ -179,23 +232,24 @@
         <section class="account-main">
             <div class="account-tabs">
                 <button class="tab">
-                    <img src="/assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon">
-                    <a href="/pages/account-detail.html">Chi tiết tài khoản</a>
+                    <img src="../assets/images/account/user gear.svg" alt="Chi tiết tài khoản" class="tab-icon">
+                    <a href="/pages/account-detail.php">Chi tiết tài khoản</a>
                 </button>
                 <button class="tab active">
-                    <img src="/assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon">
-                    <a href="/pages/account-pet.html" style="color: #999">Thú cưng của bạn</a>
+                    <img src="../assets/images/account/paw.svg" alt="Thú cưng của bạn" class="tab-icon">
+                    <a href="/pages/account-pet.php" style="color: #999">Thú cưng của bạn</a>
                 </button>
             </div>
             <div class="pet-container">
                 <div class="pet-header">
                     <h2>Thú Cưng Của Bạn</h2>
                     <div class="pet-actions">
-                        <button class="btn add-pet" style="width: 140px;">
+                        <button class="btn add-pet" style="width: 150px;">
                             Thêm thú cưng <span>+</span>
                         </button>
                         <button class="btn update-pet" style="width: 200px;">
-                            Cập nhật về thú cưng <img src="/assets/images/account/PencilSimpleLine.svg" alt="edit" class="edit-icon">
+                            Cập nhật về thú cưng <img src="../assets/images/account/PencilSimpleLine.svg" alt="edit"
+                                class="edit-icon">
                         </button>
                     </div>
                 </div>
@@ -218,7 +272,7 @@
         </section>
     </main>
 
-        <!-- Start: Footer -->
+    <!-- Start: Footer -->
     <footer id="footer">
         <div class="pawspa__container pawspa__flex-between">
             <div class="pawspa-footer__info">
@@ -308,146 +362,142 @@
     <script src="../assets/js/active-link.js"></script>
     <script src="../assets/js/account-pet.js"></script>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const paginationContainer = document.querySelector('.pagination');
-        const petTableBody = document.querySelector('#pet-table-body');
-        const petsPerPage = 3;
-        let currentPage = 1;
+        document.addEventListener('DOMContentLoaded', function () {
+            const paginationContainer = document.querySelector('.pagination');
+            const petTableBody = document.querySelector('#pet-table-body');
+            const petsPerPage = 3;
+            let currentPage = 1;
 
-        // Sample pet data
-        const petData = [
-            { name: 'Webb', type: 'Mèo', age: 2, breed: 'Mèo anh', avatar: '/assets/images/account/webb.png' },
-            { name: 'Rob', type: 'Chó', age: 4, breed: 'Chó chăn cừu', avatar: '/assets/images/account/rob.png' },
-            { name: 'Miles', type: 'Chim', age: 5, breed: 'Chim két', avatar: '/assets/images/account/miles.png' },
-            { name: 'Luna', type: 'Mèo', age: 3, breed: 'Mèo Ba Tư', avatar: '/assets/images/account/webb.png' },
-            { name: 'Max', type: 'Chó', age: 6, breed: 'Golden Retriever', avatar: '/assets/images/account/rob.png' },
-            { name: 'Tweety', type: 'Chim', age: 1, breed: 'Vẹt', avatar: '/assets/images/account/miles.png' },
-            { name: 'Bella', type: 'Mèo', age: 4, breed: 'Mèo Xiêm', avatar: '/assets/images/account/webb.png' },
-            { name: 'Rocky', type: 'Chó', age: 2, breed: 'Bulldog', avatar: '/assets/images/account/rob.png' },
-            { name: 'Sunny', type: 'Chim', age: 3, breed: 'Chim hoàng yến', avatar: '/assets/images/account/miles.png' },
-            { name: 'Coco', type: 'Mèo', age: 5, breed: 'Mèo Ragdoll', avatar: '/assets/images/account/webb.png' }
-        ];
+            // Lấy dữ liệu pets từ PHP dưới dạng JSON
+            const petData = <?php echo json_encode($pets); ?>;
 
-        const totalPages = Math.ceil(petData.length / petsPerPage);
-
-        function showPage(pageNumber) {
-            currentPage = pageNumber;
-            const startIndex = (pageNumber - 1) * petsPerPage;
-            const endIndex = startIndex + petsPerPage;
-            const currentPets = petData.slice(startIndex, endIndex);
-
-            // Render pet table
-            petTableBody.innerHTML = '';
-            currentPets.forEach(pet => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>></td>
-                    <td>
-                        <div class="pet-info">
-                            <img src="${pet.avatar}" alt="${pet.name}" class="pet-avatar">
-                            ${pet.name}
-                        </div>
-                    </td>
-                    <td>${pet.type}</td>
-                    <td>${pet.age}</td>
-                    <td>${pet.breed}</td>
-                `;
-                petTableBody.appendChild(row);
+            // Thêm avatar mặc định cho mỗi pet (bạn có thể bổ sung trường avatar trong DB nếu muốn)
+            petData.forEach(pet => {
+                pet.avatar = '/assets/images/account/default-pet.png'; // avatar mặc định
             });
 
-            updatePagination(pageNumber);
-            document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
-        }
+            const totalPages = Math.ceil(petData.length / petsPerPage);
 
-        function updatePagination(activePage) {
-            paginationContainer.innerHTML = '';
+            function showPage(pageNumber) {
+                currentPage = pageNumber;
+                const startIndex = (pageNumber - 1) * petsPerPage;
+                const endIndex = startIndex + petsPerPage;
+                const currentPets = petData.slice(startIndex, endIndex);
 
-            // Previous button
-            const prevLi = document.createElement('li');
-            const prevButton = document.createElement('a');
-            prevButton.href = '#';
-            prevButton.textContent = '«';
-            if (activePage === 1) {
-                prevLi.classList.add('disabled');
-            } else {
-                prevButton.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    if (activePage > 1) showPage(activePage - 1);
+                // Render pet table
+                petTableBody.innerHTML = '';
+                currentPets.forEach(pet => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                <td>></td>
+                <td>
+                    <div class="pet-info">
+                        <img src="${pet.avatar}" alt="${pet.name}" class="pet-avatar">
+                        ${pet.name}
+                    </div>
+                </td>
+                <td>${pet.type}</td>
+                <td>${pet.age}</td>
+                <td>${pet.breed}</td>
+            `;
+                    petTableBody.appendChild(row);
                 });
-            }
-            prevLi.appendChild(prevButton);
-            paginationContainer.appendChild(prevLi);
 
-            // Always show first page
-            paginationContainer.appendChild(createPageLink(1, activePage));
-
-            // Add ellipsis if needed
-            if (activePage > 4) {
-                paginationContainer.appendChild(createEllipsis());
+                updatePagination(pageNumber);
+                document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
             }
 
-            // Show 3 pages before and after active page
-            let startPage = Math.max(2, activePage - 2);
-            let endPage = Math.min(totalPages - 1, activePage + 2);
+            function updatePagination(activePage) {
+                paginationContainer.innerHTML = '';
 
-            for (let i = startPage; i <= endPage; i++) {
-                paginationContainer.appendChild(createPageLink(i, activePage));
+                // Previous button
+                const prevLi = document.createElement('li');
+                const prevButton = document.createElement('a');
+                prevButton.href = '#';
+                prevButton.textContent = '«';
+                if (activePage === 1) {
+                    prevLi.classList.add('disabled');
+                } else {
+                    prevButton.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        if (activePage > 1) showPage(activePage - 1);
+                    });
+                }
+                prevLi.appendChild(prevButton);
+                paginationContainer.appendChild(prevLi);
+
+                // Always show first page
+                paginationContainer.appendChild(createPageLink(1, activePage));
+
+                // Ellipsis if needed
+                if (activePage > 4) {
+                    paginationContainer.appendChild(createEllipsis());
+                }
+
+                let startPage = Math.max(2, activePage - 2);
+                let endPage = Math.min(totalPages - 1, activePage + 2);
+
+                for (let i = startPage; i <= endPage; i++) {
+                    paginationContainer.appendChild(createPageLink(i, activePage));
+                }
+
+                if (activePage < totalPages - 3) {
+                    paginationContainer.appendChild(createEllipsis());
+                }
+
+                if (totalPages > 1) {
+                    paginationContainer.appendChild(createPageLink(totalPages, activePage));
+                }
+
+                // Next button
+                const nextLi = document.createElement('li');
+                const nextButton = document.createElement('a');
+                nextButton.href = '#';
+                nextButton.textContent = '»';
+                if (activePage === totalPages) {
+                    nextLi.classList.add('disabled');
+                } else {
+                    nextButton.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        if (activePage < totalPages) showPage(activePage + 1);
+                    });
+                }
+                nextLi.appendChild(nextButton);
+                paginationContainer.appendChild(nextLi);
             }
 
-            // Add ellipsis if needed
-            if (activePage < totalPages - 3) {
-                paginationContainer.appendChild(createEllipsis());
-            }
-
-            // Always show last page
-            if (totalPages > 1) {
-                paginationContainer.appendChild(createPageLink(totalPages, activePage));
-            }
-
-            // Next button
-            const nextLi = document.createElement('li');
-            const nextButton = document.createElement('a');
-            nextButton.href = '#';
-            nextButton.textContent = '»';
-            if (activePage === totalPages) {
-                nextLi.classList.add('disabled');
-            } else {
-                nextButton.addEventListener('click', function (e) {
+            function createPageLink(pageNumber, activePage) {
+                const pageLi = document.createElement('li');
+                const pageLink = document.createElement('a');
+                pageLink.href = '#';
+                pageLink.textContent = pageNumber;
+                if (pageNumber === activePage) {
+                    pageLi.classList.add('active');
+                }
+                pageLink.addEventListener('click', function (e) {
                     e.preventDefault();
-                    if (activePage < totalPages) showPage(activePage + 1);
+                    showPage(pageNumber);
                 });
+                pageLi.appendChild(pageLink);
+                return pageLi;
             }
-            nextLi.appendChild(nextButton);
-            paginationContainer.appendChild(nextLi);
-        }
 
-        function createPageLink(pageNumber, activePage) {
-            const pageLi = document.createElement('li');
-            const pageLink = document.createElement('a');
-            pageLink.href = '#';
-            pageLink.textContent = pageNumber;
-            if (pageNumber === activePage) {
-                pageLi.classList.add('active');
+            function createEllipsis() {
+                const ellipsisLi = document.createElement('li');
+                const ellipsisSpan = document.createElement('span');
+                ellipsisSpan.textContent = '...';
+                ellipsisLi.classList.add('disabled');
+                ellipsisLi.appendChild(ellipsisSpan);
+                return ellipsisLi;
             }
-            pageLink.addEventListener('click', function (e) {
-                e.preventDefault();
-                showPage(pageNumber);
-            });
-            pageLi.appendChild(pageLink);
-            return pageLi;
-        }
 
-        function createEllipsis() {
-            const ellipsisLi = document.createElement('li');
-            const ellipsisSpan = document.createElement('span');
-            ellipsisSpan.textContent = '...';
-            ellipsisLi.classList.add('disabled');
-            ellipsisLi.appendChild(ellipsisSpan);
-            return ellipsisLi;
-        }
-
-        showPage(1);
-    });
+            showPage(1);
+        });
     </script>
+
 </body>
+
 </html>
+<?php
+$conn->close();
+?>
