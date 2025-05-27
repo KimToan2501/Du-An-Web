@@ -63,7 +63,7 @@ $sql = "SELECT b.booking_id, a.name AS customer_name, a.email, s.name AS staff_n
     JOIN accounts a ON b.user_id = a.user_id
     LEFT JOIN booking_details bd ON b.booking_id = bd.booking_id
     LEFT JOIN services sv ON bd.service_id = sv.service_id
-    LEFT JOIN staff s ON bd.service_id = s.staff_id
+    LEFT JOIN staff s ON bd.staff_id = s.staff_id
     ORDER BY b.created_at DESC";
 $res = $conn->query($sql);
 $stt = 1;
