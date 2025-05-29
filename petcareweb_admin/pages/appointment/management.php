@@ -59,8 +59,8 @@ require_once("../../../pages/connect.php");
 // Query lấy danh sách lịch hẹn
 $sql = "SELECT b.booking_id, a.name AS customer_name, a.email, s.name AS staff_name,
     sv.name AS service_name, bd.price, b.status, b.booking_date, b.created_at
-    FROM bookings b
-    JOIN accounts a ON b.user_id = a.user_id
+    FROM accounts a
+    JOIN bookings b ON b.user_id = a.user_id
     LEFT JOIN booking_details bd ON b.booking_id = bd.booking_id
     LEFT JOIN services sv ON bd.service_id = sv.service_id
     LEFT JOIN staff s ON bd.staff_id = s.staff_id
