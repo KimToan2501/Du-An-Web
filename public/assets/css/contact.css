@@ -1,0 +1,436 @@
+:root {
+  --primary-purple-dark: #410075;
+  --primary-purple-light: #e5c3ff;
+  --neutral-gray: #999;
+  --header-bg: #f2e2ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* Header styles */
+/* ===== Layout chung ===== */
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Header ===== */
+#header {
+  background-color: #f2e2ff;
+}
+
+#header > div {
+  padding: 33px 0;
+}
+
+/* ===== Logo ===== */
+#header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 13px;
+}
+
+/* ===== Navigation ===== */
+.nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item > a {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #999999;
+  padding: 0 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+/* ===== Icons & Actions ===== */
+#header-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background-color: #e5c3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-link:hover {
+  box-shadow: 0 4px 8px rgba(65, 0, 117, 0.2);
+  transform: translateY(-2px);
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #999999;
+}
+
+.auth-link {
+  color: #999999;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  color: #410075;
+}
+
+.auth-separator {
+  margin: 0 4px;
+}
+
+/* ===== ĐỔI MÀU CHO LINK ĐANG TRONG TRẠNG THÁI "ACTIVE" ===== */
+
+/* 
+* Khi link trong phần "Đăng nhập / Đăng ký" (auth-link) được active
+* hoặc khi người dùng di chuột vào link trong menu (nav-item > a:hover),
+* thì sẽ đổi màu chữ thành màu tím chủ đạo của thương hiệu (#410075)
+*/
+.auth-link.active,
+.nav-item > a:hover {
+  color: #410075;
+}
+
+/* 
+* Dành cho bất kỳ thẻ <a> nào được gán class "active"
+* => Áp dụng cho cả link Trang chủ, Dịch vụ, Blog, v.v.
+* Class này được thêm bằng JavaScript dựa theo URL trang hiện tại
+*/
+a.active {
+  color: #410075;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Icon container styles */
+.info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon_container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon_container a {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  padding: 10px 12px;
+  border-radius: 300px;
+  background: var(--Primary-Purple4, #e5c3ff);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0; /* Đặt chữ ở phía dưới của hình */
+  left: 0;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); Màu nền bán trong suốt cho chữ dễ đọc */
+  color: rgb(239, 217, 217); /* Màu chữ trắng */
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+.auth_links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.auth_links a {
+  color: var(--neutral-gray);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth_links a:hover {
+  color: var(--primary-purple-dark);
+  text-decoration: none;
+}
+
+/* Menu mobile styles - CHỈ HIỆN TRÊN MOBILE */
+.navbar-collapse {
+  display: none;
+  background-color: var(--header-bg);
+  padding: 0 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  /* Trên mobile - hiển thị menu dạng danh sách */
+  body {
+    padding-top: 80px; /* Tạo khoảng trống cho fixed header */
+  }
+
+  .header-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1020;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-collapse.show {
+    display: block;
+    max-height: 500px;
+    padding: 15px;
+  }
+
+  #navbarCollapse .header-nav-link {
+    display: block;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 992px) {
+  /* Trên desktop - ẩn menu mobile */
+  .navbar-collapse {
+    display: none !important;
+  }
+
+  /* Hiển thị menu ngang */
+  .header-nav-desktop {
+    display: flex !important;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Start: Main */
+
+/* main {
+    height: 1000px;
+} */
+
+/* End: Main */
+
+/* Start: Footer */
+#footer {
+  position: relative;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 585' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><path d='M609 29.5167C319.8 -7.68333 81.5 -1.98333 0 5.51667V584.517H1440V29.5167C1347.5 53.5167 970.5 76.0167 609 29.5167Z' fill='%23F1E0FF'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom center;
+  padding-top: 175px;
+  padding-bottom: 175px;
+}
+.footer-image-left {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-image-right {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+}
+
+.footer-container {
+  display: flex;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-info {
+  flex: 25%;
+}
+
+.footer-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 20px;
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-address {
+  color: #252525;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-image {
+  flex: 40%;
+}
+
+.footer-category {
+  display: flex;
+  justify-content: space-between;
+  flex: 35%;
+  gap: 20px;
+}
+
+.col-lg-6 {
+  flex: 1; /* Đảm bảo mỗi phần tử chiếm một nửa không gian */
+  min-width: 300px; /* Đảm bảo các phần tử không quá nhỏ khi màn hình thu nhỏ */
+}
+.category-list {
+  list-style-type: none; /* Xóa dấu chấm đầu dòng mặc định */
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 15px; /* Khoảng cách giữa các mục */
+  font-size: 18px;
+}
+
+.category-list a {
+  color: #595959; /* Màu cho liên kết */
+  text-decoration: none; /* Xóa gạch chân */
+  font-weight: bold;
+}
+
+.category-list a:hover {
+  color: #410075; /* Màu khi hover */
+}
+
+.category-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.category-list-item {
+  margin-bottom: 20px;
+}
+
+.category-item-link {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #595959;
+}
+
+/* Start: Hình con chó */
+.footer-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-image {
+  position: relative;
+}
+
+.footer-image > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+
+.footer-image > div,
+.footer-image > div > div {
+  width: 251px;
+  height: 284px;
+  border: 1.5px dashed #595959;
+  border-radius: 4px;
+}
+
+.footer-image > div > div {
+  background-color: #a1be97;
+  border: 8px solid white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform: rotate(30deg);
+  overflow: hidden;
+}
+
+.footer-image > div > div > img {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg) scale(1.4) rotateY(180deg);
+}
+
+/* end footer */

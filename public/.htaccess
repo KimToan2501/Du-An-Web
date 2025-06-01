@@ -1,0 +1,54 @@
+# Tăng giới hạn upload file cho PHP
+php_value upload_max_filesize 10M
+php_value post_max_size 12M
+php_value max_file_uploads 20
+php_value memory_limit 128M
+php_value max_input_time 300
+php_value max_execution_time 300
+
+# URL Rewriting
+RewriteEngine On
+
+# Chuyển tất cả request về index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Cho phép CORS
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+
+# Xử lý preflight OPTIONS request
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Bảo mật thư mục uploads - chặn thực thi script
+<Directory "public/uploads">
+    <FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|sh|cgi)$">
+        Order Deny,Allow
+        Deny from all
+    </FilesMatch>
+    
+    # Chỉ cho phép các file ảnh
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|bmp|svg)$">
+        Order Allow,Deny
+        Allow from all
+    </FilesMatch>
+</Directory>
+
+# Chặn truy cập vào các file nhạy cảm
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(env|log|ini|conf|bak|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Security Headers
+Header always set X-Frame-Options DENY
+Header always set X-Content-Type-Options nosniff
+Header always set X-XSS-Protection "1; mode=block"

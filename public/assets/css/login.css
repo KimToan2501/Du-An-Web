@@ -1,0 +1,65 @@
+/* Start: Login Form Header */
+.pawspa-form__header {
+  position: relative;
+}
+
+.pawspa-form__icon {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pawspa-form__brand {
+  text-transform: uppercase;
+  color: #410075;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.pawspa-form__description {
+  color: #595959;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+/* End: Login Form Header */
+
+/* Start: Remember + Forgot Password */
+.pawspa-form__options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pawspa-form__link--forgot {
+  color: #410075;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.pawspa-form__link--forgot:hover {
+  text-decoration: underline;
+}
+
+/* End: Remember + Forgot Password */
+
+/* Start: Background Visual */
+.pawspa-form__background--login {
+  flex: 50%;
+  background: radial-gradient(circle at center, #ffffff 0%, #d7f1f6 25%, #a6dce6 50%, #70b2c0 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* End: Background Visual */

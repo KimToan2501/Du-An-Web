@@ -1,0 +1,121 @@
+.product-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.product-image {
+  height: 220px;
+  object-fit: cover;
+}
+.price {
+  font-weight: bold;
+  color: #6f42c1;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9em;
+}
+.rating {
+  color: #fbc02d;
+}
+.service-section {
+  padding: 40px 0;
+}
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #6f42c1;
+  text-transform: uppercase;
+}
+.pet-banner {
+  background: linear-gradient(to right, #f6e9fd, #f6e9fd);
+  border-radius: 12px;
+  padding: 20px 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.pet-banner .banner-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.banner-dog {
+  height: 150px;
+}
+
+.banner-sign {
+  height: 100px;
+}
+
+.banner-text {
+  text-align: center;
+}
+
+.banner-text h3 {
+  color: #6f42c1;
+  font-weight: bold;
+  margin: 0;
+}
+
+.banner-text h5 {
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0 0;
+}
+
+.banner-products img {
+  height: 150px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .pet-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-products {
+    margin-top: 15px;
+  }
+}
+.nav-item .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+/* Hiện menu con khi hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Styling cho item bên trong dropdown */
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 20px;
+  white-space: nowrap;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}

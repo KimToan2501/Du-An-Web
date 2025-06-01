@@ -1,0 +1,57 @@
+# Thư mục và file hệ thống
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Thư mục vendor của Composer (thường không nên đưa vào git)
+/vendor/
+
+# File cấu hình Composer
+composer.phar
+
+# Các file cấu hình môi trường
+.env
+.env.local
+.env.*.local
+
+# Thư mục cache và logs
+/logs/
+/cache/
+/tmp/
+# Thư mục chứa các file tạm thời
+/public/uploads/
+
+# Các file cấu hình IDE và editor
+/.idea/
+/.vscode/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.komodotools
+/.netbeans/
+/nbproject/
+
+# File cấu hình WAMP/XAMPP (nếu có)
+/.htaccess.local
+/php.ini
+
+# File tạm thời và backup
+*.bak
+*.swp
+*.swo
+*~
+*.log
+
+# File upload và media (tùy theo dự án)
+/uploads/
+/media/
+
+# File cấu hình cơ sở dữ liệu cục bộ
+/config/database.local.php
+
+# Các file biên dịch PHP
+*.phpunit.result.cache
+.phpunit.cache
+
+# Các file cấu hình cụ thể cho dự án (nếu có)
+# /config/app.local.php

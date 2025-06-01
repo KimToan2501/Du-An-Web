@@ -1,0 +1,12 @@
+:root {
+  --purple-primary: #8b5cf6;
+  --purple-light: #a78bfa;
+  --purple-dark: #7c3aed;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+
+  --purple-accent: #8b5cf6;
+  --gray-light: #d3d3d3;
+  --white: #ffffff;
+  --success: #22c55e;
+}

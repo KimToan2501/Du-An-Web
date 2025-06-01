@@ -1,0 +1,286 @@
+/*zz ====== Booking Page Style (booking.css) ====== */
+
+/* Cập nhật css cho phần header của trang đơn đã đặt */
+.avatar-wrapper {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Layout 2 cột */
+.main-wrapper {
+  display: flex;
+  gap: 32px;
+  padding: 40px 0;
+}
+
+/* Sidebar trái */
+.sidebar {
+  width: 250px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-left: 8px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #111;
+}
+
+.user-role {
+  font-size: 14px;
+  color: #888;
+}
+
+.role-type {
+  color: #6a0dad; /* tím đậm */
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.refresh-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refresh-icon img {
+  width: 16px;
+  height: 16px;
+  filter: invert(21%) sepia(92%) saturate(7481%) hue-rotate(267deg) brightness(94%) contrast(102%);
+  cursor: pointer;
+}
+
+.user-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-nav ul li {
+  margin: 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.user-nav ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  display: block;
+  font-size: 15px;
+}
+
+.user-nav ul li.active a {
+  color: #410075;
+  font-weight: 700;
+}
+
+.user-nav ul li.active {
+  border-bottom: 1.5px solid #410075;
+}
+
+.user-nav ul li a:hover {
+  color: #410075;
+  font-weight: 700;
+}
+
+.user-nav ul li:hover {
+  border-bottom: 1.5px solid #410075;
+}
+
+/* Booking content phải */
+.booking-content {
+  flex: 1;
+}
+
+/* Thanh tìm kiếm + tabs */
+.booking-filter {
+  margin-bottom: 24px;
+  margin-right: 40px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  background-color: #fdf4ff;
+}
+
+.booking-tabs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.booking-tabs li {
+  padding: 6px 16px;
+  border-radius: 20px;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.booking-tabs li.active {
+  background-color: #410075;
+  color: white;
+}
+
+.booking-tabs li:hover {
+  background-color: #410075;
+  color: white;
+}
+
+/* Bảng đặt lịch */
+.booking-table {
+  /* background-color: white; */
+  background-color: #fdf4ff;
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+  margin-right: 40px;
+}
+
+.booking-row {
+  display: grid;
+  grid-template-columns: 1.2fr 2.8fr 1.5fr 1.2fr 1.5fr;
+  padding: 14px 20px;
+  border-bottom: 1px solid #f2e2ff;
+  align-items: center;
+  font-size: 14px;
+  color: #595959;
+}
+
+.booking-row:last-child {
+  border-bottom: none;
+}
+
+.booking-header {
+  background-color: #f9f5ff;
+  font-weight: 600;
+  color: #410075;
+}
+
+.service-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #595959;
+}
+
+.status {
+  display: inline-flex; /* đổi từ inline-block sang inline-flex */
+  align-items: center;
+  justify-content: center;
+  min-width: 120px; /* cố định chiều rộng tối thiểu */
+  height: 36px; /* cố định chiều cao */
+  padding: 0 12px; /* padding hai bên */
+  border-radius: 20px; /* bo tròn mềm mại */
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  background-color: grey; /* màu mặc định, sẽ override bởi class riêng */
+  white-space: nowrap; /* không cho chữ xuống dòng */
+}
+
+.status-processing {
+  background-color: #1778ee;
+}
+
+.status-pending {
+  background-color: #ffd414;
+}
+
+.status-done {
+  background-color: #13d97a;
+}
+
+.status-cancelled {
+  background-color: #db1212;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f9f5ff;
+  color: #410075;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.pagination a.active {
+  background-color: #410075;
+  color: white;
+  box-shadow: 0 4px 8px rgba(65, 0, 117, 0.2);
+}
+
+.pagination a:hover:not(.active):not(.disabled) {
+  background-color: #f2e2ff;
+  transform: translateY(-2px);
+}
+
+.pagination a.prev,
+.pagination a.next {
+  font-weight: bold;
+}
+
+.pagination a.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

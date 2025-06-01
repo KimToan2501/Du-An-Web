@@ -1,0 +1,223 @@
+/* Reset mặc định và các kiểu chung */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Pet Knowledge Section */
+.pet-knowledge-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pet-top-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.pet-img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.rounded-xl {
+  border-radius: 20px;
+}
+
+.pet-knowledge-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.pet-knowledge-left {
+  flex: 1;
+}
+
+.pet-large-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.pet-knowledge-right {
+  flex: 2;
+}
+
+.pet-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #410075;
+}
+
+.pet-list {
+  list-style: none;
+}
+
+.pet-list li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.pet-list li:before {
+  content: "•";
+  color: #410075;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Company Info Section */
+.company-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.company-left {
+  flex: 2;
+}
+
+.company-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #410075;
+  margin-bottom: 20px;
+}
+
+.company-about,
+.company-consult {
+  margin-bottom: 20px;
+}
+
+.company-about h4,
+.company-consult h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.company-about p,
+.company-consult p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.service-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.service-green {
+  border-left: 5px solid #28a745;
+}
+
+.service-purple {
+  border-left: 5px solid #6f42c1;
+}
+
+.service-info h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-info p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  background: #410075;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background: #6f42c1;
+}
+
+.company-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.company-dog-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #410075;
+}
+
+.big-dog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pet-knowledge-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-right {
+    justify-content: center;
+  }
+
+  .service-cards {
+    flex-direction: column;
+  }
+
+  .pet-img {
+    width: 150px;
+  }
+
+  .company-dog-circle {
+    width: 200px;
+    height: 200px;
+  }
+}

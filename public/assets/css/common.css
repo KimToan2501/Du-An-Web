@@ -1,0 +1,128 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.pawspa__container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pawspa__flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Start: Main */
+
+/* main {
+    height: 1000px;
+} */
+
+/* End: Main */
+
+/* ========== FORM INPUT ========== */
+
+.pawspa-form__input {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.pawspa-form__input:focus {
+  border-color: #410075;
+  box-shadow: 0 0 0 3px rgba(65, 0, 117, 0.15);
+}
+
+.pawspa-form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #595959;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.pawspa-form__checkbox-input {
+  width: 16px;
+  height: 16px;
+  accent-color: #410075;
+  cursor: pointer;
+}
+
+.pawspa-form__checkbox-label {
+  font-size: 14px;
+  line-height: 1.4;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* ========== BUTTON STYLE ========== */
+
+.pawspa-btn {
+  outline: none;
+  border: 0;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pawspa-btn--primary {
+  background-color: #410075;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pawspa-btn--primary:hover {
+  background-color: #5b0aa5;
+  box-shadow: 0 4px 10px rgba(65, 0, 117, 0.2);
+}
+
+.pawspa-btn--outline {
+  background-color: transparent;
+  color: #595959;
+  border: 1px solid #cccccc;
+}
+
+.pawspa-btn--outline:hover {
+  border-color: #410075;
+  color: #410075;
+}
+
+.pawspa-btn--social {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* CSS để ẩn control của input number */
+.no-controls {
+  /* Ẩn spinner trong Chrome, Safari, Edge */
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  padding: 0;
+}
+
+.no-controls::-webkit-outer-spin-button,
+.no-controls::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Ẩn spinner trong Firefox */
+.no-controls[type="number"] {
+  -moz-appearance: textfield;
+}

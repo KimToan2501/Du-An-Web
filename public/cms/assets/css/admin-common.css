@@ -1,0 +1,114 @@
+/* ==== Base ==== */
+@import url("./base/admin-reset.css");
+
+/* ==== Layout ==== */
+@import url("./layout/admin-header.css");
+@import url("./layout/admin-main.css");
+@import url("./layout/admin-sidebar.css");
+
+/* ==== Components ==== */
+@import url("./components/admin-breadcrumb.css");
+@import url("./components/admin-button.css");
+@import url("./components/admin-control.css");
+@import url("./components/admin-dropdown.css");
+@import url("./components/admin-form.css");
+@import url("./components/admin-pagination.css");
+@import url("./components/admin-table.css");
+@import url("./components/admin-modal.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* ========================== */
+/* 🔷 CONTAINER CHÍNH TRONG MAIN */
+/* ========================== */
+
+/* Bọc toàn bộ nội dung bên trong main để giới hạn chiều rộng */
+.admin-main__container {
+  max-width: 1200px;
+  /* Giới hạn chiều ngang theo layout chuẩn */
+  margin: 0 auto;
+  /* Căn giữa ngang */
+  padding: 0 16px;
+  /* Padding trái/phải cho đẹp khi responsive */
+}
+
+.mt-1 {
+  margin-top: 16px;
+}
+
+.mt-2 {
+  margin-top: 32px;
+}
+
+.mt-3 {
+  margin-top: 48px;
+}
+
+.ml-2 {
+  margin-left: 16px;
+}
+
+.avatar-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.avatar-preview--small {
+  width: 50px;
+  height: 50px;
+}
+
+.image-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.group-avatar-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-slot-selection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.time-slot-selection .btn {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.time-slot-selection .booked:disabled {
+  opacity: 0.5;
+  background: #64e2b7;
+  cursor: not-allowed;
+  color: black;
+}
+
+.time-slot-selection .outdated-checked:disabled {
+  opacity: 0.5;
+  background: #2c3ecb;
+  cursor: not-allowed;
+  color: white;
+}

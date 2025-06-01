@@ -1,0 +1,150 @@
+/* =============================== */
+/* 🔷 KHUNG BỌC NGOÀI BẢNG (CONTAINER) */
+/* =============================== */
+.admin-table-wrapper {
+  margin-top: 26px;
+  /* Cách lưới thống kê phía trên */
+  background-color: #ffffff;
+  /* Nền trắng */
+  border-radius: 10px;
+  /* Bo tròn khối bảng */
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  /* Bóng đổ nhẹ */
+  padding: 16px;
+  /* Padding trong bảng */
+  overflow-x: auto;
+  /* Cho phép scroll ngang */
+  overflow-y: visible;
+  /* Không ẩn phần dọc */
+  white-space: nowrap;
+  /* Ngăn không cho text xuống dòng */
+  max-width: 100%;
+  /* Giới hạn chiều rộng tối đa */
+}
+
+/* =============================== */
+/* 🔷 BẢNG CHÍNH */
+/* =============================== */
+.admin-table {
+  width: 100%;
+  /* Chiếm toàn bộ khối cha */
+  min-width: max-content;
+  /* Đảm bảo bảng có đủ chiều rộng cho nội dung */
+  border-collapse: collapse;
+  /* Gộp đường viền */
+  font-size: 14px;
+  color: #333;
+  table-layout: auto;
+  /* Cho phép bảng tự điều chỉnh kích thước cột */
+}
+
+/* =============================== */
+/* 🔷 TIÊU ĐỀ BẢNG */
+/* =============================== */
+.admin-table__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #012970;
+  text-align: center;
+  margin-bottom: 16px;
+  white-space: normal;
+  /* Cho phép tiêu đề xuống dòng nếu cần */
+}
+
+/* =============================== */
+/* 🔷 PHẦN THEAD (ĐẦU BẢNG) */
+/* =============================== */
+.admin-table thead th {
+  background-color: #f6f6fe;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 13px;
+  color: #444444;
+  border-bottom: 1px solid #444444;
+  white-space: nowrap;
+  /* Không cho text header xuống dòng */
+  min-width: fit-content;
+  /* Đảm bảo cột có đủ rộng cho nội dung */
+}
+
+/* =============================== */
+/* 🔷 PHẦN TBODY (NỘI DUNG DỮ LIỆU) */
+/* =============================== */
+.admin-table tbody td {
+  padding: 12px;
+  border-top: 1px solid #ececec;
+  vertical-align: middle;
+  /* Căn giữa các dữ liệu trong một ô theo chiều dọc */
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  white-space: nowrap;
+  /* Không cho text trong ô xuống dòng */
+  min-width: fit-content;
+  /* Đảm bảo ô có đủ rộng cho nội dung */
+  transition: background-color 0.2s ease;
+}
+
+/* Tùy chọn: Hover effect khác */
+.admin-table tbody tr:hover td {
+  background-color: #e8f4fd;
+  transform: scale(1.005);
+}
+
+/* =============================== */
+/* 🔷 STYLING CHO SCROLLBAR (TÙY CHỌN) */
+/* =============================== */
+.admin-table-wrapper::-webkit-scrollbar {
+  height: 8px;
+  /* Chiều cao của thanh scroll ngang */
+}
+
+.admin-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.admin-table-wrapper::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.admin-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* =============================== */
+/* 🔷 EMAIL & MÃ NHÂN VIÊN (dạng phụ bên dưới) */
+/* =============================== */
+.admin-table__email,
+.admin-table__code {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* =============================== */
+/* 🔷 TRẠNG THÁI */
+/* =============================== */
+.status {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.status--pending {
+  color: #ff4861;
+  /* đỏ */
+  /* đỏ - chờ duyệt */
+}
+
+.status--inprogress {
+  color: #4154f1;
+  /* xanh dương - đang xử lý */
+}
+
+.status--success {
+  color: #11b216;
+  /* xanh lá - đã xong */
+}
