@@ -1,4 +1,7 @@
 {
+  "name": "pawspa/du-an-web",
+  "description": "Pawspa - Pet Care Service Web Application",
+  "license": "proprietary",
   "require": {
     "bramus/router": "~1.6",
     "vlucas/phpdotenv": "^5.6",
@@ -16,3 +19,4 @@
     "process-timeout": 0
   }
 }
+
