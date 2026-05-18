@@ -53,8 +53,8 @@ pipeline {
                 sh 'cp .env.example .env || touch .env'
                 
                 // Chỉ build và khởi động lại service 'app' (chứa code PHP mới)
-                // Không gọi 'docker-compose down' để tránh vô tình tắt luôn Jenkins!
-                sh 'docker-compose up -d --build app'
+                // Phải chỉ định -p du-an-web để Docker hiểu là đang cập nhật project gốc chứ không phải tạo project mới (gây xung đột tên container)
+                sh 'docker-compose -p du-an-web up -d --build app'
             }
         }
     }
