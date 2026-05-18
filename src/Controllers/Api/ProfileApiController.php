@@ -6,7 +6,7 @@ use App\Core\Auth;
 use App\Core\Hash;
 use App\Core\RestApi;
 use App\Core\Uploader;
-use App\models\Account;
+use App\Models\Account;
 use Exception;
 
 class ProfileApiController

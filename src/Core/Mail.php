@@ -54,6 +54,16 @@ class Mail
         $this->mailer->AltBody = $altBody;
       }
 
+      if (empty($_ENV['MAIL_USERNAME'])) {
+        error_log("--- MOCK MAIL ---");
+        error_log("To: $to");
+        error_log("Subject: $subject");
+        error_log("Body: $body");
+        error_log("-----------------");
+        $this->mailer->clearAddresses();
+        return true;
+      }
+
       $result = $this->mailer->send();
 
       // Clear recipients for next email

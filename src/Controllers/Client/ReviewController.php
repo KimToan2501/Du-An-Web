@@ -4,7 +4,7 @@ namespace App\Controllers\Client;
 
 use App\Core\Auth;
 use App\Core\RestApi;
-use App\models\Account;
+use App\Models\Account;
 use App\Models\Review;
 use App\Models\Booking;
 use App\Models\Service;

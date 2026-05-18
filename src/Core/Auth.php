@@ -4,7 +4,7 @@ namespace App\Core;
 
 use App\Core\Cookies;
 use App\Middlewares\AuthMiddleware;
-use App\models\Account;
+use App\Models\Account;
 
 class Auth
 {

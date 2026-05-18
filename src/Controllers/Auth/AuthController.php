@@ -8,7 +8,7 @@ use App\Core\RestApi;
 use App\Core\Mail;
 use App\Core\UserRole;
 use App\Middlewares\AuthMiddleware;
-use App\models\Account;
+use App\Models\Account;
 use Exception;
 
 class AuthController

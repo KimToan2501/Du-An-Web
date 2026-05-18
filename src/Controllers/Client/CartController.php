@@ -1,6 +1,6 @@
 <?php
 
-namespace App\controllers\client;
+namespace App\Controllers\Client;
 
 use App\Core\Auth;
 use App\Core\RestApi;

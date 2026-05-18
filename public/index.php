@@ -1,7 +1,7 @@
 <?php
 
 use App\Controllers\Error\ErrorController;
-use App\models\Account;
+use App\Models\Account;
 
 session_start();
 
@@ -69,10 +69,10 @@ set_exception_handler(function ($exception) {
 try {
 
 
-  $dotenv = Dotenv\Dotenv::createImmutable(ROOT_DIR, '.env.local');
-  $dotenv->load();
+  $dotenv = Dotenv\Dotenv::createImmutable(ROOT_DIR, '.env');
+  $dotenv->safeLoad();
 
-  define('BASE_URL', $_ENV['BASE_URL'] ?: 'http://localhost:8080');
+  define('BASE_URL', $_ENV['BASE_URL'] ?? 'http://localhost:8000');
 
   // Connect to database
   $servername = $_ENV['DB_HOST'];
@@ -111,7 +111,7 @@ try {
   $router = new \Bramus\Router\Router();
 
   // Define routes
-  require_once ROOT_DIR . '/src/routes/web.php';
+  require_once ROOT_DIR . '/src/Routes/web.php';
 
   // Run it!
   $router->run();

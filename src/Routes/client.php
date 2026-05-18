@@ -1,13 +1,13 @@
 <?php
 
-use App\controllers\client\BlogController;
+use App\Controllers\Client\BlogController;
 use App\Controllers\Client\BookingController;
 use App\Controllers\Admin\BookingController as BookingAdminController;
 use App\Controllers\Api\ProfileApiController;
 use App\Controllers\Client\CartController;
 use App\Controllers\Client\DiscountController;
 use App\Controllers\Client\HomeController;
-use App\controllers\client\PetController;
+use App\Controllers\Client\PetController;
 use App\Controllers\Client\ProfileController;
 use App\Controllers\Client\ReviewController;
 use App\Controllers\Client\ServiceController;
@@ -23,8 +23,8 @@ $router->before('GET|POST', '/booking.*', function () {
 
 // Middleware cho các routes cần auth
 $authRequiredRoutes = [
-  'GET' => ['/cart/info', '/cart/staff', '/cart/finish', '/cart/finish/success', '/booking/review'],
-  'POST' => ['/cart/save-booking-info', '/cart/clear-booking-info', '/cart/save-customer-info', '/cart/save-staff-schedule', '/cart/confirm-booking']
+  'GET' => ['/cart/info', '/cart/staff', '/cart/finished', '/cart/finished/success'],
+  'POST' => ['/cart/save-booking-info', '/cart/clear-booking-info', '/cart/save-customer-info', '/cart/save-staff-schedule', '/cart/confirm-booking', '/booking/review']
 ];
 
 foreach ($authRequiredRoutes as $method => $routes) {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\controllers\client;
+namespace App\Controllers\Client;
 
 use App\Core\UserRole;
-use App\models\Account;
+use App\Models\Account;
 use App\Models\Service;
 use App\Models\Review;
 use App\Models\ServiceType;

@@ -1,4 +1,3 @@
-
 <?php
 
 // Tạo instance của ErrorController
