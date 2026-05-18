@@ -16,13 +16,13 @@ pipeline {
 
         stage('Composer Validate') {
             steps {
-                sh 'composer validate || true'
+                sh 'docker run --rm -v ${WORKSPACE}:/app -w /app composer:2 composer validate'
             }
         }
 
         stage('PHP Syntax Check') {
             steps {
-                sh 'find src public -name "*.php" -print0 | xargs -0 -n1 php -l'
+                sh 'docker run --rm -v ${WORKSPACE}:/app -w /app php:8.2-cli bash -c "find src public -name \'*.php\' -print0 | xargs -0 -n1 php -l"'
             }
         }
 
