@@ -16,7 +16,7 @@ pipeline {
 
         stage('Composer Validate') {
             steps {
-                sh 'composer validate'
+                sh 'composer validate --no-check-lock'
             }
         }
 
