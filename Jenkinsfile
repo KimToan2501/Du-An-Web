@@ -49,8 +49,12 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'docker-compose down || true'
-                sh 'docker-compose up -d --build'
+                // Tạo file .env giả lập từ .env.example vì Git không lưu file .env
+                sh 'cp .env.example .env || touch .env'
+                
+                // Chỉ build và khởi động lại service 'app' (chứa code PHP mới)
+                // Không gọi 'docker-compose down' để tránh vô tình tắt luôn Jenkins!
+                sh 'docker-compose up -d --build app'
             }
         }
     }
